@@ -37,11 +37,6 @@ d3.csv("csv/teste2.csv", function(error, data) {
 
   });
 
-  fatFederacao.forEach(function(d){
-    console.log(d.nome);
-    console.log(d.faturamento);
-  });
-
   var menorFaturamento = d3.min(fatFederacao, function(d){ return d.faturamento});
   var maiorFaturamento = d3.max(fatFederacao, function(d){ return d.faturamento});
   var medioFaturamento = (maiorFaturamento + menorFaturamento)/2;
@@ -53,35 +48,16 @@ d3.csv("csv/teste2.csv", function(error, data) {
                 .append("svg")
                 .attr("width", width)
                 .attr("height", height)
-                .attr("transform", "translate(5 , 0)");
+                .attr("transform", "translate(0 , 0)");
 
   var widthScale = d3.scaleLinear()
                     .domain([menorFaturamento, maiorFaturamento])
                     .range([5, width - 100])
-                    .nice();
-  var x_axis = d3.axisBottom()
-        .scale(widthScale);
-
-  var xAxisTranslate = 10;
-
-  canvas.append("g")
-    .attr("transform", "translate(0 , " + xAxisTranslate  +")")
-    .call(x_axis); 
+                    .nice(); 
 
   var colorScale = d3.scaleLinear()
                     .domain([menorFaturamento, medioFaturamento, maiorFaturamento])
                     .range(['#F74444','#E4F744', '#44F771']);
-
-    var nome = canvas.selectAll("text")
-    .data(fatFederacao)
-    .enter()
-    .append("text")
-      .text(function(d){ return d.nome})
-      .attr("x", function(d){return widthScale(d.faturamento) + 10})
-      .attr("y", function(d, i){ return (i+1) * 25 + 15})
-      .attr("fill", "black")
-      .attr("font-size", 20)
-      .attr("font-family", "sans-serif");
 
     var bars = canvas.selectAll("rect")
               .data(fatFederacao)
@@ -99,6 +75,43 @@ d3.csv("csv/teste2.csv", function(error, data) {
           .duration(1500)
           .attr("width", function(d){ return widthScale(d.faturamento); })
           .attr("fill", function(d){ return colorScale(d.faturamento); });
+
+
+  var nome = canvas.selectAll("text")
+    .data(fatFederacao)
+    .enter()
+    .append("text")
+      
+      .attr("x", function(d){return widthScale(d.faturamento) + 10})
+      .attr("y", function(d, i){ return (i+1) * 25 + 15})
+      .attr("fill", "black")
+      .attr("font-size", 15)
+      .attr("font-family", "sans-serif");
+
+    nome
+      .transition()
+      .delay(1500)
+        .text(function(d){ return d.nome});
+
+
+  var x_axis = d3.axisBottom()
+        .scale(widthScale);
+
+  var xAxisTranslate = 5;
+
+  canvas.append("g")
+    .attr("transform", "translate(0 , " + xAxisTranslate  +")")
+    .call(x_axis);
+
+
+  var x_axis2 = d3.axisBottom()
+        .scale(widthScale);
+
+  var xAxisTranslate2 = height - 280;
+
+  canvas.append("g")
+    .attr("transform", "translate(0 , " + xAxisTranslate2  +")")
+    .call(x_axis2);
 
   
 });

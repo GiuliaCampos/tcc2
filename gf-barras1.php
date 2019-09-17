@@ -1,5 +1,5 @@
 <head>
-	<title>Gráfico 1</title>
+	<title>Gráfico Faturamento</title>
 	<!-- <link rel="stylesheet" href="css/estilo.css"> -->
 	<link rel="stylesheet" href="css/bootstrap.css">
 </head>

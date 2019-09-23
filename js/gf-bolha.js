@@ -98,6 +98,40 @@ d3.csv("csv/teste2.csv", function(error, data) {
   //Uma cor diferente para cada circle
   var color = d3.scaleOrdinal(d3.schemeCategory20);
 
+  // create a tooltip
+  var Tooltip = d3.select("#div_template")
+    .append("div")
+    .style("opacity", 0)
+    .attr("class", "tooltip")
+    .style("background-color", "white")
+    .style("border", "solid")
+    .style("border-width", "2px")
+    .style("border-radius", "5px")
+    .style("padding", "5px")
+
+  // Three function that change the tooltip when user hover / move / leave a cell
+  var mouseover = function(d) {
+    Tooltip
+      .style("opacity", 1)
+    d3.select(this)
+      .style("stroke", "black")
+      .style("opacity", 1)
+  }
+  var mousemove = function(d) {
+    Tooltip
+      .html("Nome: " + d.nome + "<br>Faturamento: " + d.faturamento
+        + "<br>Nº Projetos: " + d.n_projetos + "<br>Projetos de Impacto: " + d.projetos_impacto)
+      .style("left", (d3.mouse(this)[0]+10) + "px")
+      .style("top", (d3.mouse(this)[1]) + "px")
+  }
+  var mouseleave = function(d) {
+    Tooltip
+      .style("opacity", 0)
+    d3.select(this)
+      .style("stroke", "none")
+      .style("opacity", 0.8)
+  }
+
 
   //Criando um circulo para cada posição do Array Federação
   var circulo = canvas.selectAll("circle")
@@ -108,11 +142,14 @@ d3.csv("csv/teste2.csv", function(error, data) {
                     .attr("cy", 10)
                     .attr("r", 5)
                     .attr("fill","black")
-                    .on("mouseup",function(d){
-                        d3.select(this);
+                    .on("mouseover", mouseover)
+                    .on("mousemove", mousemove)
+                    .on("mouseleave", mouseleave);
+                    // .on("mouseup",function(d){
+                    //     d3.select(this);
                                     
-                        console.log(d.nome);
-                    });
+                    //     console.log(d.nome);
+                    // });
 
     //Adicionando uma animação ao carregar a página
     circulo

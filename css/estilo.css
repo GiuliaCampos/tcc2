@@ -1,0 +1,24 @@
+.container{
+	padding: 0;
+	margin: 0;
+	display: flex;
+}
+.informacao{
+	justify-content: flex-end;
+	align-items: right;
+}
+
+.nome{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.titulo{
+	padding-left: 100px;
+	padding-top: 10px;
+}
+
+.legenda{
+	padding-left: 70px;
+}

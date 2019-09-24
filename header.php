@@ -14,10 +14,11 @@
 	<div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
 		<ul class="navbar-nav mr-auto">
 			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Graficos de Bolha</a>
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ScatterPlot</a>
 				<div class="dropdown-menu">
 					<a class="dropdown-item" href="index.php?menu=gf-bolha">Faturamento x nº Proj</a>
 					<a class="dropdown-item" href="index.php?menu=gf-bolha-pib">Faturamento x Pib Estadual</a>
+					<a class="dropdown-item" href="index.php?menu=gf-scatterplot-cluster">Cluster Ejs</a>
 					<div class="dropdown-divider"></div>
 					<a class="dropdown-item" href="index.php?menu=bubble">Bolhas</a>
 				</div>
@@ -25,8 +26,8 @@
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Graficos de Barras</a>
 				<div class="dropdown-menu">
-					<a class="dropdown-item" href="index.php?menu=gf-barras1">Faturamento Estadual</a>
-					<a class="dropdown-item" href="index.php?menu=grafico-barras">Empilhamento</a>
+					<a class="dropdown-item" href="index.php?menu=gf-faturamento-estadualBarras">Faturamento Estadual</a>
+					<a class="dropdown-item" href="index.php?menu=gf-empilhamento">Empilhamento</a>
 				</li>
 			</ul>
 			<!-- <form class="form-inline my-2 my-lg-0">

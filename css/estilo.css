@@ -21,4 +21,6 @@
 
 .legenda{
 	padding-left: 70px;
+	flex-direction: row;
+	display: flex;
 }

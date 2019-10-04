@@ -9,16 +9,9 @@
 		</div>
 		<div class="informacao" style="width: 20%;">
 			<p class="legenda">
-				<b>Legenda:</b> <br> x= Faturamento, y= Projetos 
-			</p>
-			<p class="legenda">
-				Vermelho: cluster 1 <br>
-				Amarelo: cluster 2 <br>
-				Verde: cluster 3 <br>
-				Azul: cluster 4 <br>
-				Roxo: cluster 5
+				<b>Legenda:</b> eixo x= Faturamento, eixo y= PIB, raio=ticket médio
 			</p>		
 		</div>
 	</div>
 <script src="d3/d3.min.js"></script>
-<script src="js/scatterplot-cluster.js"></script>
+<script src="js/scatterplot-cluster5.js"></script>

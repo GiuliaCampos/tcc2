@@ -8,9 +8,9 @@
 			<div id="div_template"></div>
 		</div>
 		<div class="informacao" style="width: 20%;">
-			<p class="legenda">
+			<!-- <p class="legenda">
 				<b>Legenda:</b> <br> x= Faturamento, y= Projetos 
-			</p>
+			</p> -->
 			<p class="legenda">
 				Vermelho: cluster 1 <br>
 				Amarelo: cluster 2 <br>
@@ -21,4 +21,4 @@
 		</div>
 	</div>
 <script src="d3/d3.min.js"></script>
-<script src="js/scatterplot-cluster.js"></script>
+<script src="js/parallel-coordinates-cluster.js"></script>

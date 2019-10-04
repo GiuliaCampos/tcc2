@@ -13,13 +13,16 @@ d3.csv("csv/teste2.csv", function(error, data) {
     d.NPS = +d.NPS;
     d.PROJETOS_IMPACTO = +d.PROJETOS_IMPACTO;
 
-    ej.push({
-      nome: d.EMPRESA_JUNIOR,
-      federacao: d.FED,
-      cluster: d.CLUSTER,
-      faturamento: d.FATURAMENTO,
-      n_projetos: d.N_PROJETOS
-    });
+    if(d.CLUSTER == 4){
+      ej.push({
+        nome: d.EMPRESA_JUNIOR,
+        federacao: d.FED,
+        cluster: d.CLUSTER,
+        faturamento: d.FATURAMENTO,
+        n_projetos: d.N_PROJETOS
+      });
+    }
+    
   });
 
   //EIXO X =  FATURAMENTO
@@ -45,7 +48,7 @@ d3.csv("csv/teste2.csv", function(error, data) {
 
   //Escala no eixo x
   var widthScale = d3.scaleLinear()
-                    .domain([menorFaturamento, 600000])
+                    .domain([menorFaturamento, maiorFaturamento])
                     .range([1, width - 200])
                     .nice();
   var x_axis = d3.axisBottom()
@@ -53,7 +56,7 @@ d3.csv("csv/teste2.csv", function(error, data) {
 
   //Escala no eixo y
   var heightScale = d3.scaleLinear()
-                      .domain([menorProjetos, 200])
+                      .domain([menorProjetos, maiorProjetos])
                       .range([height/1.5, 0])
                       .nice();
   var y_axis = d3.axisLeft()

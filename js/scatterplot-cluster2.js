@@ -13,15 +13,19 @@ d3.csv("csv/teste2.csv", function(error, data) {
     d.NPS = +d.NPS;
     d.PROJETOS_IMPACTO = +d.PROJETOS_IMPACTO;
 
-    ej.push({
-      nome: d.EMPRESA_JUNIOR,
-      federacao: d.FED,
-      cluster: d.CLUSTER,
-      faturamento: d.FATURAMENTO,
-      n_projetos: d.N_PROJETOS
-    });
+    if(d.CLUSTER == 2){
+      ej.push({
+        nome: d.EMPRESA_JUNIOR,
+        federacao: d.FED,
+        cluster: d.CLUSTER,
+        faturamento: d.FATURAMENTO,
+        n_projetos: d.N_PROJETOS
+      });
+    }
+    
   });
 
+  console.log(ej);
   //EIXO X =  FATURAMENTO
   //EIXO Y = N_projetos
 
@@ -30,6 +34,7 @@ d3.csv("csv/teste2.csv", function(error, data) {
   var maiorFaturamento = d3.max(ej, function(d){ return d.faturamento});
   var menorProjetos = d3.min(ej, function(d){ return d.n_projetos});
   var maiorProjetos = d3.max(ej, function(d){ return d.n_projetos});
+  console.log(maiorFaturamento);
 
   //Dimensões do meu svg
   var width = 1200;
@@ -45,7 +50,7 @@ d3.csv("csv/teste2.csv", function(error, data) {
 
   //Escala no eixo x
   var widthScale = d3.scaleLinear()
-                    .domain([menorFaturamento, 600000])
+                    .domain([menorFaturamento, maiorFaturamento])
                     .range([1, width - 200])
                     .nice();
   var x_axis = d3.axisBottom()
@@ -53,7 +58,7 @@ d3.csv("csv/teste2.csv", function(error, data) {
 
   //Escala no eixo y
   var heightScale = d3.scaleLinear()
-                      .domain([menorProjetos, 200])
+                      .domain([menorProjetos, maiorProjetos])
                       .range([height/1.5, 0])
                       .nice();
   var y_axis = d3.axisLeft()

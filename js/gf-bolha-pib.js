@@ -133,7 +133,7 @@ d3.csv("csv/teste2.csv", function(error, data) {
       .style("opacity", 0)
     d3.select(this)
       .style("stroke", "none")
-      .style("opacity", 0.8)
+      .style("opacity", 1)
   }
 
 
@@ -142,8 +142,8 @@ d3.csv("csv/teste2.csv", function(error, data) {
     .data(Federacao)
     .enter()
     .append("circle")
-    .attr("cx", 10)
-    .attr("cy", 10)
+    .attr("cx", function(d){ return (widthScale(d.faturamento))+50;})
+    .attr("cy", function(d){ return (heightScale(d.pib));})
     .attr("r", 5)
     .attr("fill","black")
     .on("mouseover", mouseover)
@@ -160,9 +160,9 @@ d3.csv("csv/teste2.csv", function(error, data) {
     //Adicionando uma animação ao carregar a página
     circulo
       .transition()
-      .duration(2000)
-      .attr("cy", function(d){ return (heightScale(d.pib));})
-      .attr("cx", function(d){ return (widthScale(d.faturamento))+50;})
+      .duration(500)
+      // .attr("cy", function(d){ return (heightScale(d.pib));})
+      // .attr("cx", function(d){ return (widthScale(d.faturamento))+50;})
       .transition()
       .attr("r", function(d){ return raioScale(d.ticket); })
       .attr("fill",function(d,i){return color(i);});

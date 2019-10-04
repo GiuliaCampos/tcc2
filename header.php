@@ -24,12 +24,27 @@
 				</div>
 			</li>
 			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ScatterPlot Cluster</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="index.php?menu=gf-scatterplot-cluster1">Cluster 1</a>
+					<a class="dropdown-item" href="index.php?menu=gf-scatterplot-cluster2">Cluster 2</a>
+					<a class="dropdown-item" href="index.php?menu=gf-scatterplot-cluster3">Cluster 3</a>
+					<a class="dropdown-item" href="index.php?menu=gf-scatterplot-cluster4">Cluster 4</a>
+					<a class="dropdown-item" href="index.php?menu=gf-scatterplot-cluster5">Cluster 5</a>
+				</div>
+			</li>
+			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Graficos de Barras</a>
 				<div class="dropdown-menu">
 					<a class="dropdown-item" href="index.php?menu=gf-faturamento-estadualBarras">Faturamento Estadual</a>
 					<a class="dropdown-item" href="index.php?menu=gf-empilhamento">Empilhamento</a>
-				</li>
-			</ul>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Coordenada Paralela</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="index.php?menu=parallel-coordinates-cluster">Coordenadas Paralelas</a>
+			</li>
+		</ul>
 			<!-- <form class="form-inline my-2 my-lg-0">
 				<input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
 				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>

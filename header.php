@@ -38,11 +38,14 @@
 				<div class="dropdown-menu">
 					<a class="dropdown-item" href="index.php?menu=gf-faturamento-estadualBarras">Faturamento Estadual</a>
 					<a class="dropdown-item" href="index.php?menu=gf-empilhamento">Empilhamento</a>
+				</div>
 			</li>
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Coordenada Paralela</a>
 				<div class="dropdown-menu">
-					<a class="dropdown-item" href="index.php?menu=parallel-coordinates-cluster">Coordenadas Paralelas</a>
+					<a class="dropdown-item" href="index.php?menu=parallel-coordinates-cluster">Cluster</a>
+					<a class="dropdown-item" href="index.php?menu=parallel-coordinates-part-eventos">Participação em eventos</a>
+				</div>
 			</li>
 		</ul>
 			<!-- <form class="form-inline my-2 my-lg-0">

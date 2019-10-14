@@ -24,6 +24,7 @@ function montarConjuntoEjs(){
             cluster: auxCluster,
             faturamento: d.FATURAMENTO,
             n_projetos: d.N_PROJETOS,
+            meta_partc: 0,
             n_membros: 0,
             tempoProj: 1,
             indice: 0
@@ -33,9 +34,16 @@ function montarConjuntoEjs(){
 
         data1.forEach(function(d){
           ej.forEach(function(e, index){
+            var qntMembros;
             if(d.EMPRESA_JUNIOR == e.nome){
               d.MEMBROS = +d.MEMBROS;
               e.n_membros = d.MEMBROS;
+              d.META_participacao_eventos = +d.META_participacao_eventos;
+              e.meta_partc = d.META_participacao_eventos;
+
+              qntMembros = (d.MEMBROS * d.META_participacao_eventos)/100;
+              e.meta_partc = qntMembros;
+
               if( (d.TEMPO_MEDIO_DIAS == "NaN") || (d.TEMPO_MEDIO_DIAS == "N/A")){
                 e.tempoProj = 1;
               }
@@ -61,7 +69,6 @@ async function start(){
   var calculaIndiceCluster = ej.forEach(function(d){
     var indice;
     indice = (d.tempoProj * d.n_projetos * d.faturamento) / (d.n_membros);
-    d.indice =  indice;
     if(indice < 118523) d.cluster = 1;
     else if((indice > 118523)&&(indice < 544805)) d.cluster = 2;
     else if((indice > 544805)&&(indice < 1480970)) d.cluster = 3;
@@ -71,9 +78,9 @@ async function start(){
       d.indice = 4943242;
     }
   });
-  
+
   // set the dimensions and margins of the graph
-  var margin = {top: 30, right: 50, bottom: 10, left: 50},
+  var margin = {top: 30, right: 50, bottom: 10, left: 70},
       width = 800 - margin.left - margin.right,
       height = 600 - margin.top - margin.bottom;
 
@@ -91,23 +98,17 @@ async function start(){
       .range(['#F55F4F','#FFFF6A','#59F54F', '#4FF5F2', '#C66AFF']);
 
     // Here I set the list of dimension manually to control the order of axis:
-    dimensions = ["tempoProj", "faturamento", "n_projetos", "n_membros", "indice"];
+    dimensions = ["faturamento", "n_membros", "meta_partc"];
 
     // For each dimension, I build a linear scale. I store all in a y object
     var y = {};
 
-    var maiorProjetos = d3.max(ej, function(d){ return d.n_projetos});
-    var menorProjetos = d3.min(ej, function(d){ return d.n_projetos});
     var maiorFaturamento = d3.max(ej, function(d){ return d.faturamento});
     var menorFaturamento = d3.min(ej, function(d){ return d.faturamento});
     var maiorMembros = d3.max(ej, function(d){ return d.n_membros});
     var menorMembros = d3.min(ej, function(d){ return d.n_membros});
-    var maiorTempo = d3.max(ej, function(d){ return d.tempoProj});
-    var menorTempo = d3.min(ej, function(d){ return d.tempoProj});
-
-    y["n_projetos"] = d3.scaleLinear()
-    .domain([menorProjetos, maiorProjetos])
-    .range([height, 0]);
+    var maiorPart = d3.max(ej, function(d){ return d.meta_partc});
+    var menorPart = d3.min(ej, function(d){ return d.meta_partc});
 
     y["faturamento"] = d3.scaleLinear()
     .domain([menorFaturamento, maiorFaturamento])
@@ -117,8 +118,8 @@ async function start(){
     .domain([menorMembros, maiorMembros])
     .range([height, 0]);
 
-    y["tempoProj"] = d3.scaleLinear()
-    .domain([menorTempo, maiorTempo])
+    y["meta_partc"] = d3.scaleLinear()
+    .domain([menorPart, 100])
     .range([height, 0]);
 
     y["indice"] = d3.scaleLinear()
@@ -151,7 +152,7 @@ async function start(){
   var mousemove = function(d) {
     Tooltip
       .html("Nome: " + d.nome + "<br>Faturamento: " + d.faturamento
-        + "<br>Projetos: " + d.n_projetos + "<br>Cluster: " + d.cluster)
+        + "<br>Membros: " + d.n_membros + "<br>Participação: " + d.meta_partc)
       .style("left", (d3.mouse(this)[0]+10) + "px")
       .style("top", (d3.mouse(this)[1]) + "px")
   }

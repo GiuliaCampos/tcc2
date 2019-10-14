@@ -1,4 +1,4 @@
-EMPRESA_JUNIOR,FEDERACAO,TEMPO_MEDIO_DIAS,META_participação_eventos,META_Impacto,MES,FATURAMENTO,PROJETOS,N_ACOES_COMPARTILHADAS,ESTADO,CIDADE,MEMBROS
+EMPRESA_JUNIOR,FEDERACAO,TEMPO_MEDIO_DIAS,META_participacao_eventos,META_Impacto,MES,FATURAMENTO,PROJETOS,N_ACOES_COMPARTILHADAS,ESTADO,CIDADE,MEMBROS
 CEFET Jr. Consultoria,RioJunior,27.71,80,28,1,3821.53,1,0,RJ,Rio de Janeiro,30
 CEFET Jr. Consultoria,RioJunior,27.71,80,28,2,9062.74,5,0,RJ,Rio de Janeiro,30
 CEFET Jr. Consultoria,RioJunior,27.71,80,28,3,9331.34,1,0,RJ,Rio de Janeiro,30
@@ -151,8 +151,8 @@ Agro Júnior Consultoria e Assistência Agronômica,Goiás Júnior,365,80,2,1,96
 Agro Júnior Consultoria e Assistência Agronômica,Goiás Júnior,365,80,2,2,0,0,0,GO,Palmeiras de Goiás,9
 Agro Júnior Consultoria e Assistência Agronômica,Goiás Júnior,365,80,2,3,0,0,0,GO,Palmeiras de Goiás,9
 dAgro Júnior Consultoria e Assistência Agronômicad,dGoiás Júniord,d365d,d80d,d2d,d4d,d0d,d0d,d0d,dGOd,dPalmeiras de Goiásd,d9d
-dElementus Júnior Consultoriad,dFEJEPEd,d36.11d,d90d,d25d,d1d,d10046.04d,d4d,d2d,dPEd,dRecifed,d34d
-dElementus Júnior Consultoriad,dFEJEPEd,d36.11d,d90d,d25d,d2d,d6890.74d,d3d,1,PE,Recife,34
+Elementus Júnior Consultoria,FEJEPE,36.11,90,25,1,10046.04,4,2,PE,Recife,34
+Elementus Júnior Consultoria,FEJEPE,36.11,90,25,2,6890.74,3,1,PE,Recife,34
 Elementus Júnior Consultoria,FEJEPE,36.11,90,25,3,350,1,0,PE,Recife,34
 Elementus Júnior Consultoria,FEJEPE,36.11,90,25,4,5201.14,1,1,PE,Recife,34
 MAE Jr,Piauí Júnior,7.5,80,1,1,850,2,1,PI,Floriano,10

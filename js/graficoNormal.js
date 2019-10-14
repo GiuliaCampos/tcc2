@@ -2,48 +2,7 @@
 //ACOES_COMPARTILHADAS,PARTICIPACAO,NPS,PROJETOS_IMPACTO
 var fatFederacao = [];
 
-d3.csv("csv/teste2.csv", function(error, data) {
-  d3.csv("csv/pib_uf.csv", function(error, data1){
-  //Criando o vetor com cada federação e faturamento igual a 0
-  data.forEach(function(d){
-    data1.forEach(function(e){
-      var controle = true;
-      fatFederacao.forEach(function(f){
-        if(d.FED == f.nome)
-          controle = false;
-      });
-      if(controle){
-        fatFederacao.push({
-          nome: d.FED,
-          faturamento : 0,
-          estado: null
-        });
-      }
-    });
-  });
 
-  data.forEach(function(d) {
-    data1.forEach(function(e){
-      //Transformando em valores inteiros
-      d.CLUSTER = +d.CLUSTER;
-      d.PORCENTAGEM = +d.PORCENTAGEM;
-      d.N_PROJETOS = +d.N_PROJETOS;
-      d.FATURAMENTO = +d.FATURAMENTO;
-      d.ACOES_COMPARTILHADAS = +d.ACOES_COMPARTILHADAS;
-      d.PARTICIPACAO = +d.PARTICIPACAO;
-      d.NPS = +d.NPS;
-      d.PROJETOS_IMPACTO = +d.PROJETOS_IMPACTO;
-
-      //Somando meta de faturamento da ej a meta da sua própria federação
-      fatFederacao.forEach(function(f){
-        if(d.FED == f.nome)
-          f.faturamento += d.FATURAMENTO;
-        if(f.nome == e.federacao){
-          f.estado = e.Unidade;
-        }
-      });
-    });
-  });
 
   var menorFaturamento = d3.min(fatFederacao, function(d){ return d.faturamento});
   var maiorFaturamento = d3.max(fatFederacao, function(d){ return d.faturamento});

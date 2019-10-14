@@ -48,6 +48,7 @@ d3.csv("csv/teste2.csv", function(error, data) {
                     .domain([menorFaturamento, 600000])
                     .range([1, width - 200])
                     .nice();
+                    
   var x_axis = d3.axisBottom()
     .scale(widthScale);
 

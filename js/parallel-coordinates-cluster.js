@@ -1,75 +1,78 @@
 var ej = [];
+var base = new metodosBase();
+base.montarConjuntoEjs();
+//montarConjuntoEjs()
+//{
+//   return new Promise((resolve, reject) => {
+//     d3.csv("csv/teste2.csv", function(error, data) {
+//       d3.csv("csv/monthly_editado.csv", function(error, data1){
 
-function montarConjuntoEjs(){
-  return new Promise((resolve, reject) => {
-    d3.csv("csv/teste2.csv", function(error, data) {
-      d3.csv("csv/monthly_editado.csv", function(error, data1){
+//         var auxCluster;
+//         data.forEach(function(d){
+//           if(d.CLUSTER == "S/N") auxCluster = 1;
+//           else auxCluster = +d.CLUSTER;
 
-        var auxCluster;
-        data.forEach(function(d){
-          if(d.CLUSTER == "S/N") auxCluster = 1;
-          else auxCluster = +d.CLUSTER;
+//           d.PORCENTAGEM = +d.PORCENTAGEM;
+//           d.N_PROJETOS = +d.N_PROJETOS;
+//           d.FATURAMENTO = +d.FATURAMENTO;
+//           d.ACOES_COMPARTILHADAS = +d.ACOES_COMPARTILHADAS;
+//           d.PARTICIPACAO_EVENTOS = +d.PARTICIPACAO_EVENTOS;
+//           d.NPS = +d.NPS;
+//           d.PROJETOS_IMPACTO = +d.PROJETOS_IMPACTO;
 
-          d.PORCENTAGEM = +d.PORCENTAGEM;
-          d.N_PROJETOS = +d.N_PROJETOS;
-          d.FATURAMENTO = +d.FATURAMENTO;
-          d.ACOES_COMPARTILHADAS = +d.ACOES_COMPARTILHADAS;
-          d.PARTICIPACAO_EVENTOS = +d.PARTICIPACAO_EVENTOS;
-          d.NPS = +d.NPS;
-          d.PROJETOS_IMPACTO = +d.PROJETOS_IMPACTO;
+//           ej.push({
+//             nome: d.EMPRESA_JUNIOR,
+//             federacao: d.FED,
+//             cluster: auxCluster,
+//             faturamento: d.FATURAMENTO,
+//             n_projetos: d.N_PROJETOS,
+//             n_membros: 0,
+//             tempoProj: 1,
+//             indice_2020: 0
+//           });
 
-          ej.push({
-            nome: d.EMPRESA_JUNIOR,
-            federacao: d.FED,
-            cluster: auxCluster,
-            faturamento: d.FATURAMENTO,
-            n_projetos: d.N_PROJETOS,
-            n_membros: 0,
-            tempoProj: 1,
-            indice: 0
-          });
+//         });
 
-        });
+//         data1.forEach(function(d){
+//           ej.forEach(function(e, index){
+//             if(d.EMPRESA_JUNIOR == e.nome){
+//               d.MEMBROS = +d.MEMBROS;
+//               e.n_membros = d.MEMBROS;
+//               if( (d.TEMPO_MEDIO_DIAS == "NaN") || (d.TEMPO_MEDIO_DIAS == "N/A")){
+//                 e.tempoProj = 1;
+//               }
+//               else{
+//                 d.TEMPO_MEDIO_DIAS = +d.TEMPO_MEDIO_DIAS;
+//                 e.tempoProj = d.TEMPO_MEDIO_DIAS;
+//               }
+//             }
+//             if(ej.length === index + 1){
+//               resolve(ej);
+//             }
+//           });
+//         });
 
-        data1.forEach(function(d){
-          ej.forEach(function(e, index){
-            if(d.EMPRESA_JUNIOR == e.nome){
-              d.MEMBROS = +d.MEMBROS;
-              e.n_membros = d.MEMBROS;
-              if( (d.TEMPO_MEDIO_DIAS == "NaN") || (d.TEMPO_MEDIO_DIAS == "N/A")){
-                e.tempoProj = 1;
-              }
-              else{
-                d.TEMPO_MEDIO_DIAS = +d.TEMPO_MEDIO_DIAS;
-                e.tempoProj = d.TEMPO_MEDIO_DIAS;
-              }
-            }
-            if(ej.length === index + 1){
-              resolve(ej);
-            }
-          });
-        });
-
-      });
-    });
-  });
-}
+//       });
+//     });
+//   });
+// }
 
 async function start(){
-  await montarConjuntoEjs(); 
+  await base.montarConjuntoEjs(); 
 
   var calculaIndiceCluster = ej.forEach(function(d){
     var indice;
     indice = (d.tempoProj * d.n_projetos * d.faturamento) / (d.n_membros);
-    d.indice =  indice;
-    if(indice < 118523) d.cluster = 1;
-    else if((indice > 118523)&&(indice < 544805)) d.cluster = 2;
-    else if((indice > 544805)&&(indice < 1480970)) d.cluster = 3;
-    else if((indice > 1480970)&&(indice < 4943241)) d.cluster = 4;
-    else {
-      d.cluster = 5;
-      d.indice = 4943242;
-    }
+    d.indice_2020 =  indice;
+    // if(indice < 118523) d.cluster = 1;
+    // else if((indice > 118523)&&(indice < 544805)) d.cluster = 2;
+    // else if((indice > 544805)&&(indice < 1480970)) d.cluster = 3;
+    // else if((indice > 1480970)&&(indice < 4943241)) d.cluster = 4;
+    // else {
+    //   d.cluster = 5;
+    //   d.indice = 4943242;
+    // }
+    if(indice > 4943241)d.indice_2020 = 4943242;
   });
   
   // set the dimensions and margins of the graph
@@ -91,7 +94,7 @@ async function start(){
       .range(['#F55F4F','#FFFF6A','#59F54F', '#4FF5F2', '#C66AFF']);
 
     // Here I set the list of dimension manually to control the order of axis:
-    dimensions = ["tempoProj", "faturamento", "n_projetos", "n_membros", "indice"];
+    dimensions = ["tempoProj", "n_projetos", "n_membros", "indice_2020", "faturamento"];
 
     // For each dimension, I build a linear scale. I store all in a y object
     var y = {};
@@ -121,7 +124,7 @@ async function start(){
     .domain([menorTempo, maiorTempo])
     .range([height, 0]);
 
-    y["indice"] = d3.scaleLinear()
+    y["indice_2020"] = d3.scaleLinear()
     .domain([1, 4943241])
     .nice()
     .range([height, 0]);

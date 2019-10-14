@@ -14,4 +14,5 @@
 		</div>
 	</div>
 <script src="d3/d3.min.js"></script>
+<script src="js/metodosBase.js"></script>
 <script src="js/scatterplot-cluster2.js"></script>

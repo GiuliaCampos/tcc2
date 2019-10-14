@@ -1,4 +1,4 @@
-var width = 1200,
+var width = 800,
 height = 700;
 
 var nodes = d3.range(500).map(function() { return {radius: Math.random() * 12 + 4}; }),
@@ -16,7 +16,7 @@ var force = d3.layout.force()
 
 force.start();
 
-var svg = d3.select(".teste").append("svg")
+var svg = d3.select(".grafico").append("svg")
 .attr("width", width)
 .attr("height", height);
 

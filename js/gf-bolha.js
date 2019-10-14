@@ -53,7 +53,7 @@ d3.csv("csv/teste2.csv", function(error, data) {
 
 
   //Dimensões do meu svg
-  var width = 1100;
+  var width = 700;
   var height = 750;
 
   //Criação do svg

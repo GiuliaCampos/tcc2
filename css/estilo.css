@@ -6,6 +6,8 @@
 .informacao{
 	justify-content: flex-end;
 	align-items: right;
+	display: flex;
+	flex-direction: column;
 }
 
 .nome{
@@ -19,8 +21,16 @@
 	padding-top: 10px;
 }
 
-.legenda{
+.tituloPrincipal{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+/*.legenda{
 	padding-left: 70px;
 	flex-direction: row;
 	display: flex;
-}
+	width: 100%
+}*/

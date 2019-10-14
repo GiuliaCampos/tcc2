@@ -24,4 +24,5 @@
 	</div>
 
 <script src="d3/d3.min.js"></script>
+<script src="js/metodosBase.js"></script>
 <script src="js/graficoNormal.js"></script>

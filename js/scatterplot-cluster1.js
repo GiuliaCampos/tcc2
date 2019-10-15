@@ -1,32 +1,8 @@
 var ej = [];
+var base = new metodosBase();
 
-d3.csv("csv/teste2.csv", function(error, data) {
-
-  data.forEach(function(d) {
-    //Transformando em valores inteiros
-    d.CLUSTER = +d.CLUSTER;
-    d.PORCENTAGEM = +d.PORCENTAGEM;
-    d.N_PROJETOS = +d.N_PROJETOS;
-    d.FATURAMENTO = +d.FATURAMENTO;
-    d.ACOES_COMPARTILHADAS = +d.ACOES_COMPARTILHADAS;
-    d.PARTICIPACAO_EVENTOS = +d.PARTICIPACAO_EVENTOS;
-    d.NPS = +d.NPS;
-    d.PROJETOS_IMPACTO = +d.PROJETOS_IMPACTO;
-
-    if(d.CLUSTER == 1){
-      ej.push({
-        nome: d.EMPRESA_JUNIOR,
-        federacao: d.FED,
-        cluster: d.CLUSTER,
-        faturamento: d.FATURAMENTO,
-        n_projetos: d.N_PROJETOS
-      });
-    }
-    
-  });
-
-  //EIXO X =  FATURAMENTO
-  //EIXO Y = N_projetos
+async function start(){
+  await base.montarConjuntoEjsCluster(1); 
 
   //Usados para criar as escalas do gráfico
   var menorFaturamento = d3.min(ej, function(d){ return d.faturamento});
@@ -56,7 +32,7 @@ d3.csv("csv/teste2.csv", function(error, data) {
 
   //Escala no eixo y
   var heightScale = d3.scaleLinear()
-                      .domain([menorProjetos, maiorProjetos])
+                      .domain([menorProjetos, maiorProjetos+10])
                       .range([height/1.5, 0])
                       .nice();
   var y_axis = d3.axisLeft()
@@ -124,5 +100,6 @@ d3.csv("csv/teste2.csv", function(error, data) {
       .on("mouseover", mouseover)
       .on("mousemove", mousemove)
       .on("mouseleave", mouseleave);
+}
 
-  });
+  start()

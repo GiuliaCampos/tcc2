@@ -11,8 +11,8 @@
 </head>
 <body>
 	<?php
-		include('header.php');
-		include('conteudo.php');
+		include('php/header.php');
+		include('php/conteudo.php');
 	 ?>
 </body>
 </html>

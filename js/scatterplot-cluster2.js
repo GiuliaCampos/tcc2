@@ -1,40 +1,14 @@
 var ej = [];
+var base = new metodosBase();
 
-d3.csv("csv/teste2.csv", function(error, data) {
-
-  data.forEach(function(d) {
-    //Transformando em valores inteiros
-    d.CLUSTER = +d.CLUSTER;
-    d.PORCENTAGEM = +d.PORCENTAGEM;
-    d.N_PROJETOS = +d.N_PROJETOS;
-    d.FATURAMENTO = +d.FATURAMENTO;
-    d.ACOES_COMPARTILHADAS = +d.ACOES_COMPARTILHADAS;
-    d.PARTICIPACAO_EVENTOS = +d.PARTICIPACAO_EVENTOS;
-    d.NPS = +d.NPS;
-    d.PROJETOS_IMPACTO = +d.PROJETOS_IMPACTO;
-
-    if(d.CLUSTER == 2){
-      ej.push({
-        nome: d.EMPRESA_JUNIOR,
-        federacao: d.FED,
-        cluster: d.CLUSTER,
-        faturamento: d.FATURAMENTO,
-        n_projetos: d.N_PROJETOS
-      });
-    }
-    
-  });
-
-  console.log(ej);
-  //EIXO X =  FATURAMENTO
-  //EIXO Y = N_projetos
+async function start(){
+  await base.montarConjuntoEjsCluster(2); 
 
   //Usados para criar as escalas do gráfico
   var menorFaturamento = d3.min(ej, function(d){ return d.faturamento});
   var maiorFaturamento = d3.max(ej, function(d){ return d.faturamento});
   var menorProjetos = d3.min(ej, function(d){ return d.n_projetos});
   var maiorProjetos = d3.max(ej, function(d){ return d.n_projetos});
-  console.log(maiorFaturamento);
 
   //Dimensões do meu svg
   var width = 1200;
@@ -98,6 +72,7 @@ d3.csv("csv/teste2.csv", function(error, data) {
       .style("stroke", "black")
       .style("opacity", 1)
   }
+
   var mousemove = function(d) {
     Tooltip
       .html("Nome: " + d.nome + "<br>Faturamento: " + d.faturamento
@@ -105,6 +80,7 @@ d3.csv("csv/teste2.csv", function(error, data) {
       .style("left", (d3.mouse(this)[0]+10) + "px")
       .style("top", (d3.mouse(this)[1]) + "px")
   }
+
   var mouseleave = function(d) {
     Tooltip
       .style("opacity", 0)
@@ -126,5 +102,5 @@ d3.csv("csv/teste2.csv", function(error, data) {
       .on("mouseover", mouseover)
       .on("mousemove", mousemove)
       .on("mouseleave", mouseleave);
-
-  });
+}
+start();

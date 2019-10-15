@@ -9,9 +9,12 @@
 		</div>
 		<div class="informacao" style="width: 20%;">
 			<p class="legenda">
-				<b>Legenda:</b> eixo x= Faturamento, eixo y= PIB, raio=ticket médio
+				<div class="infoLegenda"><b>Legenda:</b></div>
+				<div class="infoLegenda">Eixo X: Faturamento</div>
+				<div class="infoLegenda">Eixo Y: Nº de Projetos</div>
 			</p>		
 		</div>
 	</div>
 <script src="d3/d3.min.js"></script>
+<script src="js/metodosBase.js"></script>
 <script src="js/scatterplot-cluster1.js"></script>

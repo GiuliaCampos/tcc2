@@ -2,12 +2,7 @@
 	padding: 0;
 	margin: 0;
 	display: flex;
-}
-.informacao{
-	justify-content: flex-end;
-	align-items: right;
-	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 }
 
 .nome{
@@ -19,6 +14,7 @@
 .titulo{
 	padding-left: 100px;
 	padding-top: 10px;
+	text-align: center;
 }
 
 .tituloPrincipal{
@@ -28,9 +24,43 @@
 	justify-content: center;
 }
 
-/*.legenda{
-	padding-left: 70px;
-	flex-direction: row;
+.informacao{
+	margin-top: 30px;
 	display: flex;
-	width: 100%
-}*/
+	flex-direction: column;
+}
+
+.infoLegenda{
+	display: inline;
+	width: max-content; /* para forcar o elemento a ocupar a largura do que tem dentro dele */
+}
+
+.legenda{
+	/*padding-left: 70px;*/
+	/*flex-direction: row;*/
+	/*display: flex;*/
+}
+
+.sombraLegenda{
+	text-shadow: 1px 1px 1px black;
+}
+
+.vermelho{
+	color: #F55F4F;
+}
+
+.amarelo{
+	color: #FFFF6A;
+}
+
+.verde{
+	color: #59F54F;
+}
+
+.ciano{
+	color: #4FF5F2;
+}
+
+.roxo{
+	color: #C66AFF;
+}

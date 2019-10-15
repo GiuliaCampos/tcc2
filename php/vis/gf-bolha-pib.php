@@ -8,9 +8,11 @@
 			<div id="div_template"></div>
 		</div>
 		<div class="informacao" style="width: 20%;">
-			<p class="legenda">
-				<b>Legenda:</b> eixo x= Faturamento, eixo y= PIB, raio=ticket médio
-			</p>
+				<div class="infoLegenda"><b>Legenda:</b></div>
+				<div class="infoLegenda">Eixo X: Faturamento;</div>
+				<div class="infoLegenda">Eixo Y: PIB;</div>
+				<div class="infoLegenda">Raio: Ticket médio</div>
+
 			<!-- <h6>Nome: </h6>
 			<h6 id="nomeFed"> </h6>
 			<h6>Faturamento: </h6>
@@ -22,4 +24,5 @@
 		</div>
 	</div>
 <script src="d3/d3.min.js"></script>
+<script src="js/metodosBase.js"></script>
 <script src="js/gf-bolha-pib.js"></script>

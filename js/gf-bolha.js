@@ -1,59 +1,21 @@
-//EMPRESA,FED,CLUSTER,FATURAMENTO,PORCENTAGEM,N_PROJETOS,
-//ACOES_COMPARTILHADAS,PARTICIPACAO,NPS,PROJETOS_IMPACTO
-var Federacao = [];
+var federacao = [];
+var base = new metodosBase();
 
-d3.csv("csv/teste2.csv", function(error, data) {
-  //Criando o vetor com cada federação e faturamento igual a 0
-  data.forEach(function(d){
-    var controle = true;
-    Federacao.forEach(function(f){
-      if(d.FED == f.nome)
-        controle = false;
-    });
-    if(controle){
-      Federacao.push({
-        nome: d.FED,
-        faturamento : 0,
-        n_projetos : 0,
-        projetos_impacto : 0
-      });
-    }
-  });
-
-  data.forEach(function(d) {
-    //Transformando em valores inteiros
-    d.CLUSTER = +d.CLUSTER;
-    d.PORCENTAGEM = +d.PORCENTAGEM;
-    d.N_PROJETOS = +d.N_PROJETOS;
-    d.FATURAMENTO = +d.FATURAMENTO;
-    d.ACOES_COMPARTILHADAS = +d.ACOES_COMPARTILHADAS;
-    d.PARTICIPACAO_EVENTOS = +d.PARTICIPACAO_EVENTOS;
-    d.NPS = +d.NPS;
-    d.PROJETOS_IMPACTO = +d.PROJETOS_IMPACTO;
-
-    //Somando as metas da ej, a meta da sua própria federação
-    Federacao.forEach(function(f){
-      if(d.FED == f.nome){
-        f.faturamento += d.FATURAMENTO;
-        f.n_projetos += d.N_PROJETOS;
-        f.projetos_impacto += d.PROJETOS_IMPACTO;
-      }
-    });
-
-  });
-
+async function start(){
+  federacao = await base.getFed();
+  await base.montarConjuntoFederacao(federacao); 
 
   //Usados para criar as escalas do gráfico
-  var menorFaturamento = d3.min(Federacao, function(d){ return d.faturamento});
-  var maiorFaturamento = d3.max(Federacao, function(d){ return d.faturamento});
-  var maiorProjetos = d3.max(Federacao, function(d){ return d.n_projetos});
-  var menorProjetos = d3.min(Federacao, function(d){ return d.n_projetos});
-  var maiorProjetosImp = d3.max(Federacao, function(d){ return d.projetos_impacto});
-  var menorProjetosImp = d3.min(Federacao, function(d){ return d.projetos_impacto});
+  var menorFaturamento = d3.min(federacao, function(d){ return d.faturamento});
+  var maiorFaturamento = d3.max(federacao, function(d){ return d.faturamento});
+  var maiorProjetos = d3.max(federacao, function(d){ return d.n_projetos});
+  var menorProjetos = d3.min(federacao, function(d){ return d.n_projetos});
+  var maiorProjetosImp = d3.max(federacao, function(d){ return d.projetos_impacto});
+  var menorProjetosImp = d3.min(federacao, function(d){ return d.projetos_impacto});
 
 
   //Dimensões do meu svg
-  var width = 700;
+  var width = 1200;
   var height = 750;
 
   //Criação do svg
@@ -117,6 +79,7 @@ d3.csv("csv/teste2.csv", function(error, data) {
       .style("stroke", "black")
       .style("opacity", 1)
   }
+
   var mousemove = function(d) {
     Tooltip
       .html("Nome: " + d.nome + "<br>Faturamento: " + d.faturamento
@@ -124,6 +87,7 @@ d3.csv("csv/teste2.csv", function(error, data) {
       .style("left", (d3.mouse(this)[0]+10) + "px")
       .style("top", (d3.mouse(this)[1]) + "px")
   }
+
   var mouseleave = function(d) {
     Tooltip
       .style("opacity", 0)
@@ -135,7 +99,7 @@ d3.csv("csv/teste2.csv", function(error, data) {
 
   //Criando um circulo para cada posição do Array Federação
   var circulo = canvas.selectAll("circle")
-                  .data(Federacao)
+                  .data(federacao)
                   .enter()
                     .append("circle")
                     .attr("cx", function(d){ return (widthScale(d.faturamento))+5;})
@@ -145,19 +109,13 @@ d3.csv("csv/teste2.csv", function(error, data) {
                     .on("mouseover", mouseover)
                     .on("mousemove", mousemove)
                     .on("mouseleave", mouseleave);
-                    // .on("mouseup",function(d){
-                    //     d3.select(this);
-                                    
-                    //     console.log(d.nome);
-                    // });
 
     //Adicionando uma animação ao carregar a página
     circulo
         .transition()
-          .duration(2000)
-          // .attr("cy", function(d){ return (heightScale(d.n_projetos));})
-          // .attr("cx", function(d){ return (widthScale(d.faturamento))+5;})
+          .duration(1000)
         .transition()
           .attr("r", function(d){ return raioScale(d.projetos_impacto); })
           .attr("fill",function(d,i){return color(i);});
-});
+}
+start();

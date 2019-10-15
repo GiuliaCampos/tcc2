@@ -6,20 +6,14 @@
 	<div class="container">
 		<div class="grafico" style="width: 80%;">
 			<h2 class="titulo">Faturamento Estadual</h2>
-			<!-- <p class="legenda">
-				Legenda: Tamanho referente ao faturamento
-			</p> -->
+			
 			<div id="div_template"></div>
 		</div>
 
 		<div class="informacao" style="width: 20%;">
 			<p class="legenda">
 				<b>Legenda:</b> Tamanho referente ao faturamento absoluto anual da federãção.
-			</p>
-			<!-- <h6 class="nome">Nome: </h6>
-			<h6 id="nomeFed"> </h6>
-			<h6>Faturamento: </h6>
-			<h6 id="fatFed"> </h6> -->		
+			</p>	
 		</div>
 	</div>
 

@@ -1,11 +1,12 @@
-//EMPRESA,FED,CLUSTER,FATURAMENTO,PORCENTAGEM,N_PROJETOS,
-//ACOES_COMPARTILHADAS,PARTICIPACAO,NPS,PROJETOS_IMPACTO
-var fatFederacao = [];
+var federacao = [];
+var base = new metodosBase();
 
+async function start(){
+  federacao = await base.getFed();
+  await base.montarConjuntoFederacao(federacao); 
 
-
-  var menorFaturamento = d3.min(fatFederacao, function(d){ return d.faturamento});
-  var maiorFaturamento = d3.max(fatFederacao, function(d){ return d.faturamento});
+  var menorFaturamento = d3.min(federacao, function(d){ return d.faturamento});
+  var maiorFaturamento = d3.max(federacao, function(d){ return d.faturamento});
   var medioFaturamento = (maiorFaturamento + menorFaturamento)/2;
 
   var width = 1000;
@@ -60,7 +61,7 @@ var fatFederacao = [];
   }
 
     var bars = canvas.selectAll("rect")
-              .data(fatFederacao)
+              .data(federacao)
               .enter()
                 .append("rect")
                 .attr("width", 15)
@@ -86,7 +87,7 @@ var fatFederacao = [];
 
 
   var nome = canvas.selectAll("text")
-    .data(fatFederacao)
+    .data(federacao)
     .enter()
     .append("text")
       
@@ -121,6 +122,5 @@ var fatFederacao = [];
   canvas.append("g")
     .attr("transform", "translate(0 , " + xAxisTranslate2  +")")
     .call(x_axis2);
-
-  });
-});
+}
+start();

@@ -7,15 +7,14 @@
 			<h2 class="titulo">Faturamento e Número de projetos</h2>
 			<div id="div_template"></div>
 		</div>
-	</div>
 		<div class="informacao" style="width: 20%;">
-			<p class="legenda">
-				<b>Legenda:</b> 
-				<br> eixo x= Faturamento, 
-				<br> eixo y = nº de projetos, 
-				<br>raio = projetos de Impacto
-			</p>			
+			<div class="infoLegenda"><b>Legenda:</b></div>
+			<div class="infoLegenda">Eixo X: Faturamento;</div>
+			<div class="infoLegenda">Eixo Y: nº de projetos;</div>
+			<div class="infoLegenda">Raio: projetos de impacto</div>			
 		</div>
+	</div>
 
 <script src="d3/d3.min.js"></script>
+<script src="js/metodosBase.js"></script>
 <script src="js/gf-bolha.js"></script>

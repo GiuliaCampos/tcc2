@@ -1,70 +1,9 @@
 var ej = [];
-
-function montarConjuntoEjs(){
-  return new Promise((resolve, reject) => {
-    d3.csv("csv/teste2.csv", function(error, data) {
-      d3.csv("csv/monthly_editado.csv", function(error, data1){
-
-        var auxCluster;
-        data.forEach(function(d){
-          if(d.CLUSTER == "S/N") auxCluster = 1;
-          else auxCluster = +d.CLUSTER;
-
-          d.PORCENTAGEM = +d.PORCENTAGEM;
-          d.N_PROJETOS = +d.N_PROJETOS;
-          d.FATURAMENTO = +d.FATURAMENTO;
-          d.ACOES_COMPARTILHADAS = +d.ACOES_COMPARTILHADAS;
-          d.PARTICIPACAO_EVENTOS = +d.PARTICIPACAO_EVENTOS;
-          d.NPS = +d.NPS;
-          d.PROJETOS_IMPACTO = +d.PROJETOS_IMPACTO;
-
-          ej.push({
-            nome: d.EMPRESA_JUNIOR,
-            federacao: d.FED,
-            cluster: auxCluster,
-            faturamento: d.FATURAMENTO,
-            n_projetos: d.N_PROJETOS,
-            meta_partc: 0,
-            n_membros: 0,
-            tempoProj: 1,
-            indice: 0
-          });
-
-        });
-
-        data1.forEach(function(d){
-          ej.forEach(function(e, index){
-            var qntMembros;
-            if(d.EMPRESA_JUNIOR == e.nome){
-              d.MEMBROS = +d.MEMBROS;
-              e.n_membros = d.MEMBROS;
-              d.META_participacao_eventos = +d.META_participacao_eventos;
-              e.meta_partc = d.META_participacao_eventos;
-
-              qntMembros = (d.MEMBROS * d.META_participacao_eventos)/100;
-              e.meta_partc = qntMembros;
-
-              if( (d.TEMPO_MEDIO_DIAS == "NaN") || (d.TEMPO_MEDIO_DIAS == "N/A")){
-                e.tempoProj = 1;
-              }
-              else{
-                d.TEMPO_MEDIO_DIAS = +d.TEMPO_MEDIO_DIAS;
-                e.tempoProj = d.TEMPO_MEDIO_DIAS;
-              }
-            }
-            if(ej.length === index + 1){
-              resolve(ej);
-            }
-          });
-        });
-
-      });
-    });
-  });
-}
+var base = new metodosBase();
+ej = base.getEj();
 
 async function start(){
-  await montarConjuntoEjs(); 
+  await base.montarConjuntoEjs(ej); 
 
   var calculaIndiceCluster = ej.forEach(function(d){
     var indice;

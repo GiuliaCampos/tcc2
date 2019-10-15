@@ -1,10 +1,9 @@
 var ej = [];
 var base = new metodosBase();
-base.montarConjuntoEjs();
 ej = base.getEj();
 
 async function start(){
-  await base.montarConjuntoEjs(); 
+  await base.montarConjuntoEjs(ej); 
 
   var calculaIndiceCluster = ej.forEach(function(d){
     var indice;

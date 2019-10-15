@@ -18,4 +18,5 @@
 		</div>
 	</div>
 <script src="d3/d3.min.js"></script>
+<script src="js/metodosBase.js"></script>
 <script src="js/parallel-coordinates-part-eventos.js"></script>

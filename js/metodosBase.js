@@ -85,6 +85,7 @@ class metodosBase{
               faturamento: d.FATURAMENTO,
               n_projetos: d.N_PROJETOS,
               n_membros: 0,
+              meta_partc: 0,
               tempoProj: 1,
               indice_2020: 0
             });
@@ -93,9 +94,16 @@ class metodosBase{
 
           data1.forEach(function(d){
             ej.forEach(function(e, index){
+              var qntMembros;
               if(d.EMPRESA_JUNIOR == e.nome){
                 d.MEMBROS = +d.MEMBROS;
                 e.n_membros = d.MEMBROS;
+                d.META_participacao_eventos = +d.META_participacao_eventos;
+                e.meta_partc = d.META_participacao_eventos;
+
+                qntMembros = (d.MEMBROS * d.META_participacao_eventos)/100;
+                e.meta_partc = qntMembros;
+
                 if( (d.TEMPO_MEDIO_DIAS == "NaN") || (d.TEMPO_MEDIO_DIAS == "N/A")){
                   e.tempoProj = 1;
                 }

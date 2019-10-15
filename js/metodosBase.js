@@ -25,6 +25,7 @@ class metodosBase{
               nome: e.federacao,
               estado: e.Unidade,
               faturamento: 0,
+              faturamentoReal: null,
               n_projetos: 0,
               projetos_impacto: 0,
               ticket: 0,
@@ -73,6 +74,12 @@ class metodosBase{
             d.PORCENTAGEM = +d.PORCENTAGEM;
             d.N_PROJETOS = +d.N_PROJETOS;
             d.FATURAMENTO = +d.FATURAMENTO;
+
+            var tmp = d.FATURAMENTO+'00';
+            tmp = tmp.replace(/([0-9]{2})$/g, ",$1");
+            if( tmp.length > 6 )
+              tmp = tmp.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
+
             d.ACOES_COMPARTILHADAS = +d.ACOES_COMPARTILHADAS;
             d.PARTICIPACAO_EVENTOS = +d.PARTICIPACAO_EVENTOS;
             d.NPS = +d.NPS;
@@ -83,6 +90,7 @@ class metodosBase{
               federacao: d.FED,
               cluster: auxCluster,
               faturamento: d.FATURAMENTO,
+              faturamentoReal: tmp,
               n_projetos: d.N_PROJETOS,
               n_membros: 0,
               meta_partc: 0,
@@ -134,9 +142,16 @@ class metodosBase{
             else auxCluster = +d.CLUSTER;
 
             if(auxCluster == clusterNumber){
+              d.FATURAMENTO = +d.FATURAMENTO;
+
+              var tmp = d.FATURAMENTO+'00';
+              tmp = tmp.replace(/([0-9]{2})$/g, ",$1");
+              if( tmp.length > 6 )
+                tmp = tmp.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
+              //console.log(tmp);
+
               d.PORCENTAGEM = +d.PORCENTAGEM;
               d.N_PROJETOS = +d.N_PROJETOS;
-              d.FATURAMENTO = +d.FATURAMENTO;
               d.ACOES_COMPARTILHADAS = +d.ACOES_COMPARTILHADAS;
               d.PARTICIPACAO_EVENTOS = +d.PARTICIPACAO_EVENTOS;
               d.NPS = +d.NPS;
@@ -147,6 +162,7 @@ class metodosBase{
                 federacao: d.FED,
                 cluster: auxCluster,
                 faturamento: d.FATURAMENTO,
+                faturamentoReal: tmp,
                 n_projetos: d.N_PROJETOS,
                 n_membros: 0,
                 tempoProj: 1,
@@ -177,5 +193,7 @@ class metodosBase{
       });
     });
   }
+
+
 
 }

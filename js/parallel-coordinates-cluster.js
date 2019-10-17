@@ -5,10 +5,10 @@ ej = base.getEj();
 async function start(){
   await base.montarConjuntoEjs(ej); 
 
-  var calculaIndiceCluster = ej.forEach(function(d){
-    var indice;
-    indice = (d.tempoProj * d.n_projetos * d.faturamento) / (d.n_membros);
-    d.indice_2020 =  indice;
+  // var calculaIndiceCluster = ej.forEach(function(d){
+  //   var indice;
+  //   indice = (d.tempoProj * d.n_projetos * d.faturamento) / (d.n_membros);
+  //   d.indice_2020 =  indice;
     // if(indice < 118523) d.cluster = 1;
     // else if((indice > 118523)&&(indice < 544805)) d.cluster = 2;
     // else if((indice > 544805)&&(indice < 1480970)) d.cluster = 3;
@@ -17,8 +17,8 @@ async function start(){
     //   d.cluster = 5;
     //   d.indice = 4943242;
     // }
-    if(indice > 4943241)d.indice_2020 = 4943242;
-  });
+  //   if(indice > 4943241)d.indice_2020 = 4943242;
+  // });
   
   // set the dimensions and margins of the graph
   var margin = {top: 30, right: 50, bottom: 10, left: 50},
@@ -39,25 +39,25 @@ async function start(){
       .range(['#F55F4F','#FFFF6A','#59F54F', '#4FF5F2', '#C66AFF']);
 
     // Here I set the list of dimension manually to control the order of axis:
-    dimensions = ["tempoProj", "n_projetos", "n_membros", "indice_2020", "faturamento"];
+    dimensions = ["tempoProjMedio", "n_projetosMeta", "n_membros", "indice_2020", "faturamentoMeta"];
 
     // For each dimension, I build a linear scale. I store all in a y object
     var y = {};
 
-    var maiorProjetos = d3.max(ej, function(d){ return d.n_projetos});
-    var menorProjetos = d3.min(ej, function(d){ return d.n_projetos});
-    var maiorFaturamento = d3.max(ej, function(d){ return d.faturamento});
-    var menorFaturamento = d3.min(ej, function(d){ return d.faturamento});
+    var maiorProjetos = d3.max(ej, function(d){ return d.n_projetosMeta});
+    var menorProjetos = d3.min(ej, function(d){ return d.n_projetosMeta});
+    var maiorFaturamento = d3.max(ej, function(d){ return d.faturamentoMeta});
+    var menorFaturamento = d3.min(ej, function(d){ return d.faturamentoMeta});
     var maiorMembros = d3.max(ej, function(d){ return d.n_membros});
     var menorMembros = d3.min(ej, function(d){ return d.n_membros});
-    var maiorTempo = d3.max(ej, function(d){ return d.tempoProj});
-    var menorTempo = d3.min(ej, function(d){ return d.tempoProj});
+    var maiorTempo = d3.max(ej, function(d){ return d.tempoProjMedio});
+    var menorTempo = d3.min(ej, function(d){ return d.tempoProjMedio});
 
-    y["n_projetos"] = d3.scaleLinear()
+    y["n_projetosMeta"] = d3.scaleLinear()
     .domain([menorProjetos, maiorProjetos])
     .range([height, 0]);
 
-    y["faturamento"] = d3.scaleLinear()
+    y["faturamentoMeta"] = d3.scaleLinear()
     .domain([menorFaturamento, maiorFaturamento])
     .range([height, 0]);
 
@@ -65,7 +65,7 @@ async function start(){
     .domain([menorMembros, maiorMembros])
     .range([height, 0]);
 
-    y["tempoProj"] = d3.scaleLinear()
+    y["tempoProjMedio"] = d3.scaleLinear()
     .domain([menorTempo, maiorTempo])
     .range([height, 0]);
 
@@ -99,7 +99,7 @@ async function start(){
   var mousemove = function(d) {
     Tooltip
       .html("Nome: " + d.nome + "<br>Faturamento: R$" + d.faturamentoReal
-        + "<br>Projetos: " + d.n_projetos + "<br>Cluster: " + d.cluster)
+        + "<br>Projetos: " + d.n_projetosMeta + "<br>Cluster: " + d.cluster)
       .style("left", (d3.mouse(this)[0]+10) + "px")
       .style("top", (d3.mouse(this)[1]) + "px")
   }

@@ -1,0 +1,841 @@
+ID,EMPRESA_JUNIOR,FED,CLUSTER,FATURAMENTO,PORCENTAGEM_MEMBROS,N_PROJETOS,ACOES_COMPARTILHADAS,PARTICIPACAO,NPS,PROJETOS_IMPACTO
+696,Edificar Engenharia Jr,FEMTEJ,1,10500,0,15,0,0,0,0
+732,In Loco Jr,FEJEMG,1,18000,60,15,1,60,15,8
+441,Projagro,Juniores,2,52040.04,80,24,5,50,75,18
+343,Júnior Design,FEJEPAR,3,42000,85,32,10,90,50,20
+741,Prospere Consultoria,FEJEPE,2,36255,100,18,1,33,1,1
+588,Floema Júnior Consultoria Florestal - UFES,Juniores,1,6000,60,25,2,60,50,13
+9,Completur Jr,FEJEMG,1,25000,37,15,2,100,26,4
+437,Potencial - Consultoria e Projetos Elétricos,FEJESP,1,18000,58,12,1,64,25,3
+840,EMPsi Jr,FEJESP,2,13000,83,13,1,45,50,7
+230,Econsul,RN Júnior,1,12000,70,9,2,50,45,5
+1261,Escritório modelo de contabilidade ,Acre Júnior,S/N,0,0,0,0,0,0,0
+1265,Dynamo Junior,Roraima Júnior,S/N,0,0,0,0,0,0,0
+383,Titanus Soluções Sustentáveis,RioJunior,1,14971,80,12,3,40,66,8
+133,Empresa Jr. ESPM,FEJERS,4,189750,80,23,2,80,40,10
+11,Code Empresa Júnior de Computação,FEJEMG,2,40000,54,15,5,35,50,8
+188,ITEP Jr,FEJERS,4,132641.13,80,40,1,80,50,20
+104,Global Jr.,FEJERS,2,45510,75,8,1,70,100,8
+1132,TRIUNITY CONSULTORIA JR,FEJEMS,1,5000,45,10,1,33,50,5
+315,CONSET,FEJEPAR,1,19000,95,25,3,75,75,19
+345,PSIQUE,FEJEPAR,1,9000,80,20,1,60,37,8
+589,Empresa Júnior Engenharia Mackenzie,FEJESP,3,86362,27,30,1,33,1,15
+778,Inovale Jr,FEJECE,2,22500,100,23,2,90,65,15
+684,Effectus Júnior,FEJEMS,1,15000,50,12,2,60,50,6
+316,EMJEL,FEJEPAR,1,23750,80,19,2,85,50,11
+321,Engenium - Empresa Junior,FEJEPAR,2,18000,80,22,2,70,80,3
+333,PROJr - Empresa Júnior de Engenharia Civil,FEJEPAR,1,11000,56,20,1,50,76,16
+13,EJEP,FEJESC,5,250000,94,46,10,75,50,23
+122,GEPEA - Consultoria em Alimentos,FEJESP,5,750000,75,60,20,80,1,4
+100,EESC jr.,FEJESP,4,262000,50,58,2,60,43,25
+1266,Portal Empresa Júnior de Engenharia Civil - PENGE,Roraima Júnior,1,2500,100,5,1,33,50,3
+530,Contrate uma EJ,Brasil Júnior,1,22.22,40,20,1,60,40,8
+332,Solumax ,FEJEPAR,1,7597,63,7,1,77,50,4
+3,Econsult Consultoria Econômica,Concentro,5,360000,85,68,10,75,20,14
+27,A.C.E. Consultoria,FEJEPE,5,500000,80,89,4,100,90,81
+62,Energy Junior,Juniores,4,150000,75,12,2,86,50,6
+319,INOVATECH,FEJEPAR,3,76300,75,26,1,80,50,13
+789,Decisão Consultoria Júnior,FEJEMG,1,15000,100,30,1,66,50,30
+447,UEZO Jr. Consultoria,RioJunior,S/N,0,0,0,0,0,0,0
+498,Concretize Jr,UNIJr-BA,4,65000,70,75,2,50,8,6
+335,Engenharia de Materiais Júnior  EMa-Jr,FEJEPAR,3,37000,44,45,2,70,25,12
+524,AGROVALE Junior ,FEMTEJ,S/N,0,0,0,0,0,0,0
+15,Hidros Consultoria,RioJunior,4,117000,73,39,3,50,90,36
+28,Ex Lege Júnior,Goiás Júnior,3,22500,96,42,2,43,9,4
+418,Empreender Jr. ,FEJESP,2,28188.3,75,22,1,50,75,17
+544,PROADE,Concentro,1,650,80,10,3,80,1,1
+1117,Odisseia - Consultoria Literária,FEJESP,1,8462.14,75,31,2,33,1,1
+546,DECON,PB Júnior,1,18000,100,18,1,35,30,9
+1269,Aditum Júnior,Roraima Júnior,S/N,0,0,0,0,0,0,0
+121,Júnior FEI,FEJESP,2,92811,60,6,1,33,44,3
+559,LEX - Empresa Júnior de Direito da UEL,FEJEPAR,2,25031.01,75,48,1,80,75,36
+442,ORBE,FEJESP,1,18400,90,10,1,40,1,1
+547,GEIA Jr.,FEJEMG,3,72000,75,27,2,85,50,17
+8,Mecajun,Concentro,2,29500,50,26,4,50,20,6
+146,Engeali,FEJESP,3,36800,85,63,1,62,50,32
+14,Mult Jr - Consultoria e Projetos,FEJEMG,1,30000,56,9,3,53,50,5
+787,Cápsula Júnior,RN Júnior,1,8000,72,10,2,60,30,3
+42,Fluxo Consultoria,RioJunior,5,1500000,90,400,6,80,80,320
+548,Líderi Jr.,PB Júnior,1,7000,60,6,1,73,51,4
+549,Degrau,PB Júnior,1,8500,83,30,4,40,75,23
+16,Mosaico Comunicação Júnior,FEJEMG,2,20000,75,64,10,33,5,9
+87,Matriz Engenharia de Energia,Concentro,1,10000,55,10,4,60,20,2
+636,Aspecto Empreendimento Criativo,FEJEMG,3,35000,100,75,8,33,50,40
+226,Linked Informatica Junior,FEJEMG,2,21840,27,15,3,33,1,1
+1271,In Project Jr.,Pará Júnior,S/N,0,0,0,0,0,0,0
+114,Pupila Audiovisual,Concentro,2,50000,88,36,3,43,56,21
+568,EtaTesla - Engenharia Elétrica,FEJEPAR,1,4500,46,6,1,60,37,3
+444,Animalia,Acre Júnior,1,2000,40,1,1,40,1,1
+246,Ômega Júnior,FEJEMG,3,48029,75,31,2,40,50,16
+5,Prospect Empresa Júnior de Administração,PB Júnior,4,60000,100,15,3,50,55,9
+327,EJEQ,FEJEPAR,4,130000,100,52,5,95,50,26
+41,Terra Fértil Soluções Agrícolas,FEJEMS,1,11603.06,75,9,1,90,75,7
+579,Vale J Jr,FEJECE,3,33000,75,55,3,50,55,31
+376,Universitur,RN Júnior,3,109522.33,88,40,3,60,62,25
+574,AD Júnior Consultoria e Projetos,RioJunior,1,12000,52,8,1,52,83,7
+32,Poli Júnior Engenharia,FEJEPE,2,120000,75,20,2,35,1,10
+567,EletronJun,Concentro,1,18888.89,77,26,5,52,48,13
+21,Concreta Consultoria e Serviços,Concentro,4,220000,75,70,3,40,85,60
+48,EJESAM,FEJESC,2,21391.15,75,17,3,68,1,2
+565,Uni-FACEF Júnior,FEJESP,2,36075,65,18,1,60,22,5
+1218,Innovare - Consultoria Júnior em Psicologia,FEJEMG,1,7161.08,85,22,2,41,10,3
+292,Olé Júnior,Concentro,1,4000,0,8,0,0,0,0
+211,UP Consultoria Jr.,FEJEMG,2,34093.61,100,22,1,60,80,18
+36,EPEC,FEJESC,5,185000,75,47,8,80,55,26
+64,Equacione Jr.,Juniores,1,15000,100,35,7,80,50,18
+68,EJECiv,FEJERS,4,90000,85,40,4,78,50,20
+75,Phygeo - Soluções em Geofísica e Geotecnologia,Concentro,5,500000,75,25,1,90,30,10
+463,Empresa Júnior IDE,FEJERS,2,70000,100,24,6,100,60,15
+17,EJUDI Soluções Jurídicas,FEJECE,5,130000,97,100,7,54,91,91
+63,PROTEQ ,FEJEA,4,100000,75,50,5,80,1,5
+59,CEFET Jr. Consultoria,RioJunior,4,160000,80,55,3,80,50,28
+199,Ação Júnior,FEJESC,4,200000,73,20,3,60,40,10
+739,Dual Jr,FEJECE,1,4000,100,6,3,55,35,3
+96,CJR,Concentro,3,70000,78,21,2,70,90,19
+576,Maximiza Consultoria,FEJEPAR,1,11600,52,12,1,59,25,3
+49,Elementus Júnior Consultoria,FEJEPE,4,120000,90,50,3,90,50,25
+82,Poli Júnior​,FEJESP,5,341000,95,23,3,33,86,20
+99,Equilíbrio Assessoria Econômica,FEJERS,4,55960,68,186,2,65,1,12
+74,EMBRAGEA,Concentro,2,16746,60,16,1,50,20,4
+861,Cultivar Jr,Juniores,1,6000,40,10,1,35,50,5
+86,Lamparina Design,Concentro,3,61000,100,30,6,80,13,4
+81,Adapti ,Juniores,3,45657,45,35,3,78,30,11
+215,Brava Consultoria Jr.,Goiás Júnior,1,15000,65,12,1,50,12,2
+1264,MUSEOTEC - consultoria e serviços em museologia,Concentro,S/N,0,0,0,0,0,0,0
+552,Pórticos Empresa Júnior de Engenharia Civil,FEJEPAR,3,32000,57,40,2,64,80,32
+575,Precisão Engenharia Empresa Junior de Engenharia Mecânica,FEJESP,1,4813,60,10,1,33,1,2
+1222,CodeX,PB Júnior,1,7034,80,5,2,53,50,3
+351,Alcance Engenharia Junior,FEJEPAR,4,90000,85,60,3,90,85,51
+717,Struct,Concentro,2,26750,83,10,3,50,25,3
+336,Business Consultoria,FEJEPAR,4,120000,85,35,4,80,55,20
+137,Júnior FEA-RP,FEJESP,3,100000,80,30,4,60,50,15
+83,Click Júnior,Juniores,2,16956,60,22,4,60,70,16
+401,Empresa Junior FGV,FEJESP,5,580000,75,39,4,42,50,20
+147,EJEAmb,FEJESP,1,15000,85,15,2,50,40,6
+163,Produção Jr,FEJESP,3,140000,90,25,3,42,50,13
+465,Praxis - Empresa Jr.,UNIJr-BA,3,100000,75,70,14,80,50,35
+1131,Virtù Consultoria Política,FEJEPE,1,5000,60,4,1,55,50,2
+19,Sem Fronteiras Consultoria Jr,FEJESC,1,15000,68,12,1,43,1,3
+150,Executive Consultoria Júnior,PB Júnior,5,6000,60,15,1,51,60,9
+177,Inventório - Empresa Júnior de Design e Moda,FEJESC,5,120000,75,70,10,70,1,1
+1118,Provisão Empresa Júnior,FEJEMG,1,6312.5,27,11,1,33,20,3
+155,Pro Junior - Projetos e Consultoria em Engenharia e Arquitetura,FEJESP,4,140000,85,51,3,95,35,20
+181,Esag Jr.,FEJESC,5,700000,75,82,12,100,70,82
+583,CONSTAT - Consultoria Estatística,Juniores,2,23600,52,20,1,47,10,10
+207,CONSELT,FEJEMG,2,35000,80,25,2,33,90,23
+139,Humanus Empresa Junior,FEJESP,2,27000,75,25,1,66,50,13
+1022,Energy Projetos Elétricos e Consultoria,FEMTEJ,1,25000,70,7,2,33,30,3
+347,Tetris Empresa Júnior ,FEJEPAR,4,83000,75,48,3,80,80,39
+527,Bevilaqua - Escritório Modelo Empresarial,FEJEPE,2,18000,70,27,5,85,60,17
+299,CLÍNQUER,UNIJr-BA,1,8500,55,10,2,50,50,5
+152,Jr. Eng,FEJESP,2,57380,75,4,1,33,50,2
+196,EIXO Consultoria,FEJEPE,3,107190,53,30,1,33,36,11
+202,Ideal Consultoria e Empreendimentos,FEJEMG,2,40000,100,55,5,50,50,28
+585,Tecno System,UNIJr-BA,2,28800,45,5,2,33,60,8
+586,Salto Consultoria,RioJunior,1,8710,69,13,2,66,66,9
+185,EJMinas,FEJERS,2,33100,75,8,1,58,26,3
+229,Reina Consultoria Internacional,SERJÚNIOR,1,10046.4,75,20,1,80,50,10
+228,Sinergia,FEJEMG,1,13492,60,33,6,43,40,14
+1219,Tristate,FEJEMG,1,15740,60,9,1,43,25,3
+1088,Ecoalize - Consultoria Ambiental Jr.,FEJEPAR,1,32284.5,75,6,1,38,30,2
+353,EJUVV,Juniores,4,90000,60,45,3,60,90,41
+481,Civil Júnior,FEJEMG,3,60000,100,50,5,100,90,45
+404,Empresa Júnior Pharma ,FEJEMS,1,9125,75,5,1,80,50,3
+231,Include Engenharia,RN Júnior,1,22000,70,19,3,43,35,7
+238,LUMUS Engenharia,RN Júnior,3,75000,70,35,5,47,51,18
+232,Trópicos Empresa Júnior,Piauí Júnior,1,8200,75,11,1,80,1,1
+594,Projetos Jr. Consultoria,FEJEPE,2,30000,63,20,1,50,60,12
+242,Projet,FEJEMG,4,99200,100,32,2,90,39,16
+243,Projecta - Arquitetura e Urbanismo UFBA,UNIJr-BA,2,35500,80,60,3,57,80,48
+466,Ayra Consultoria,RioJunior,4,173194.2,80,70,2,33,35,25
+468,Consultoria e Inovação Mecânica - CIM,FEMTEJ,1,0,0,0,0,0,0,0
+276,CIMATEC  jr,UNIJr-BA,3,80000,75,45,4,40,1,3
+267,ESA JR,UNIJr-BA,2,27000,85,30,4,60,33,10
+371,XPORT Jr. Consultoria e Suporte Internacional,RioJunior,1,10000,27,20,1,33,1,1
+285,AgroPlan-UFV,FEJEMG,1,7000,80,15,3,80,85,13
+359,Agronômica: Consultoria e Projetos Agropecuários,FEJECE,2,16800,70,27,1,75,32,9
+307,COPLAF,FEJEPAR,2,33671.4,75,20,2,80,50,10
+1167,Publicae Consultoria Jr,Concentro,1,30000,60,6,2,50,50,3
+512,Elabora Conteúdo Criativo,PB Júnior,4,60000,100,52,6,80,35,19
+858,O2 Consultoria Ambiental Júnior,Concentro,1,8000,60,10,2,35,50,5
+24,EngeFour Jr.,FEJEMS,2,70000,70,50,5,45,50,25
+240,Mais Consultoria,FEJEMG,5,236662,85,40,5,75,76,31
+510,Fácil Consultoria,FEMTEJ,S/N,0,0,0,0,0,0,0
+286,Solucione Jr. - Consultoria e Projetos de Engenharia ,UNIJr-BA,2,29500,55,29,3,50,7,5
+356,Datum Engenharia Jr.,UNIJr-BA,3,25200,100,20,6,100,90,18
+277,Fórmula Consultoria - Empresa  Júnior Faculdade de Farmácia UFRJ,RioJunior,2,26500,85,58,1,33,54,32
+145,Dinâmica Engenharia Júnior,FEJESP,1,15000,27,6,1,33,1,1
+454,Consenso,FEJEMG,2,21000,73,20,2,75,60,12
+313,CONSEQ,FEJEPAR,4,70000,75,30,4,80,90,27
+493,UFMG Consultoria Júnior,FEJEMG,5,277501.9,75,116,6,57,70,82
+903,Actions Consultoria Junior,FEJEPAR,1,5000,75,6,1,80,35,3
+303,EQ Júnior - Consultoria e Projetos,FEJESP,2,24200,64,13,1,80,1,3
+429,CETA Jr. ,RioJunior,4,65000,65,60,5,50,60,36
+295,LIFE Jr. Laboratório de Inovações,UNIJr-BA,2,41952.64,66,45,1,44,6,3
+911,UP Foods - Empresa Júnior de Engenharia de Alimentos,FEJEPAR,1,6000,58,7,1,60,51,4
+350,Edifique Jr,RN Júnior,3,70000,75,55,1,33,50,28
+905,PRESERVARE,FEJEPAR,1,6700,70,15,2,66,13,2
+213,Arq Jr. Projetos e Consultorias,FEJEMG,2,24800,100,28,10,75,8,8
+910,EMVEP jr.,FEJESP,1,10000,73,25,7,33,60,15
+339,Calculus Jr,UNIJr-BA,2,17370.78,60,24,1,75,1,1
+342,ECOSSAM Junior,RioJunior,1,8303.89,67,25,2,33,35,9
+362,Matriz Comunicação ,Concentro,3,29637.9,50,15,1,33,30,5
+311,Engrena Soluções em Engenharia,Concentro,1,5000,74,12,2,75,40,9
+354,Pulso Consultoria,RioJunior,5,151856.77,90,65,1,71,75,49
+373,Quatro Elementos,RN Júnior,1,5500,48,5,1,37,50,3
+357,INOVE Consultoria Júnior,FEJECE,1,2000,100,8,1,33,8,8
+367,Consultec Jr - Projetos em Arquitetura e Engenharia Civil,FEJECE,5,170000,100,125,5,85,56,70
+385,Propeq - Projeto e Pesquisa em Engenharia Química,FEJESP,2,42000,75,18,3,50,1,1
+173,Uipi - Empresa Júnior de Design da UFSC,FEJESC,2,20900,100,15,1,50,50,8
+379,Rastro Agência Jr.,FEJECE,1,11400,27,27,1,33,2,2
+906,ENTRE Arquitetura ,Concentro,2,30503.28,80,5,1,33,43,3
+396,I9 Engenharia Jr.,FEJEA,3,43000,80,50,4,100,1,1
+391,Inova Consultoria Jr,FEJEMG,1,10000,75,10,1,76,60,6
+421,Qualimentos Júnior,FEJESP,5,110000,80,120,3,48,70,100
+432,PUC Júnior Consultoria,FEJESP,3,90000,63,18,2,33,1,1
+370,EJCON - Empresa Junior de Consultoria,Maranhão Júnior,1,6500,75,7,1,60,1,2
+1250,Performance Júnior,FEJESP,1,18819.8,75,13,1,33,1,1
+365,OPTIMUS Jr. Controle e Automação,UNIJr-BA,1,14200,70,8,1,60,33,4
+926,ENGAJ - Engenharia de Alimentos Jr.,FEJEMG,2,13085.35,75,20,19,55,50,10
+208,Meta Consultoria,FEJEMG,2,51500,75,22,1,33,10,3
+102,EPR Consultoria,FEJERS,5,370000,85,25,3,90,80,20
+413,RH Consultoria Júnior - UFMG ,FEJEMG,1,12681.01,72,12,2,58,75,9
+399,Enpro Júnior,Juniores,3,44556.47,92,22,3,90,50,11
+610,Projeta Júnior,Juniores,2,27000,50,30,3,67,38,12
+378,Multiconsultoria,RioJunior,1,48000,80,24,3,33,75,18
+374,ECONOMUS CONSULTORIA JUNIOR,RioJunior,1,5000,50,3,1,50,50,2
+390,Sigma Engenharia,FEJEA,2,20100,65,30,2,80,1,2
+901,Desenvolve Consultoria Junior ,FEJEPAR,1,6000,70,12,1,33,20,4
+1092,Apta Consultoria Jr,RN Júnior,1,6000,65,5,1,60,50,3
+1242,Açafrão Jr.,FEJERS,1,25000,0,35,0,0,0,0
+1156,Consflor Consultoria e Serviços Florestais,Pará Júnior,2,50000,50000,4,50000,50000,0,0
+1255,Empazep jr,FEMTEJ,1,0,0,0,0,0,0,0
+555,Singular,UNIJr-BA,1,4000,100,4,1,33,50,2
+1055,Mutare Empresa Júnior de Relações Públicas,Goiás Júnior,1,4000,100,6,2,50,50,5
+400,EJUR - Soluções Jurídicas,FEJESP,5,136000,72,80,3,70,65,52
+526,CRIATIVA EJ ,FEMTEJ,S/N,0,0,0,0,0,0,0
+372,IN Junior,RioJunior,3,65831.81,80,15,3,50,38,6
+452,FEA júnior USP,FEJESP,5,655500,75,60,12,80,38,23
+225,Cráton,Concentro,2,72000,100,36,2,80,1,18
+405,Materiais Júnior,FEJESP,1,25000,80,20,5,50,11,3
+76,UFMG Informática Júnior,FEJEMG,2,31000,27,15,1,60,70,11
+312,TerGeo Consultoria Socioambiental,FEJEPAR,1,5200,60,13,3,60,30,4
+448,Insight Consultoria,RioJunior,2,50000,100,40,2,33,80,32
+79,Zetta Júnior,Juniores,5,134400,71,35,3,80,40,14
+474,GTi Engenharia Jr,FEJECE,4,79738.62,85,31,3,75,50,16
+1251,ICBjr,FEJESP,1,4000,100,12,2,60,60,8
+461,Comp Júnior,FEJEMG,1,15000,70,10,2,80,8,3
+445,Minas Júnior Consultoria Mineral,FEJEMG,2,39940,74,42,1,44,14,6
+458,ACPE Consultoria Jr.,FEJEMG,3,62000,71,24,5,70,75,18
+488,Conalimentos Jr,FEJECE,3,25226,92,25,4,70,20,5
+451,Capital Júnior,Acre Júnior,1,0,0,0,0,0,0,0
+1221,EJECart - Empresa Júnior de Engenharia Cartográfica,FEJESP,1,12002.5,63,15,1,50,1,1
+6,Zenit Aerospace,Concentro,2,36000,90,50,1,50,37,19
+387,FGV Jr.,RioJunior,1,0,0,0,0,0,0,0
+496,Labotur Empresa Júnior de Turismo,Maranhão Júnior,1,0,0,0,0,0,0,0
+459,Produtora Júnior,UNIJr-BA,3,60000,100,60,5,33,55,35
+604,Faísca Design Júnior,FEJERS,2,40000,83,37,10,80,50,19
+1188,L2 Júnior Consultoria,Concentro,1,7000,27,50,2,33,20,10
+743,GESTOR JUNIOR ,UNIJr-BA,1,3000,80,5,5,40,80,10
+1272,Inova Jr. Unifei,FEJEMG,S/N,0,0,0,0,0,0,0
+495,ACE Jr.,FEJEMG,2,45838.5,80,15,2,60,75,12
+1276,Tetra Jr,FEJEMG,S/N,0,0,0,0,0,0,0
+174,Reação Jr.,FEJESC,1,5000,75,25,1,80,60,21
+55,Soluções Consultoria,FEJEMG,4,51878,75,25,1,50,50,13
+446,EJIPTA - Empresa Junior de Inovação e Pesquisa Tecnológica em Alimentos,FEJEMS,1,9500,100,12,3,50,50,6
+491,Caroá Design,RN Júnior,2,20700,100,60,4,78,60,36
+556,TRIEQ,FEJEMG,2,28100,75,18,4,80,40,8
+557,Fator Júnior,FEJEMG,3,77000,81,23,3,90,65,15
+1225,DNADM Consultoria,FEJEMG,1,9315,64,6,1,33,50,3
+581,Milênio Júnior,Juniores,1,10000,45,10,2,35,5,1
+2,CSTQ Jr.,Concentro,3,125000,85,50,2,60,15,15
+598,Rural Consultoria Junior,RioJunior,2,23000,50,30,5,75,45,15
+331,Teófilos - Assessoria e Consultoria Farmacêutica Júnior,FEJEPAR,1,2437.5,71,7,1,40,29,3
+595,EngePro Consultoria Júnior,FEJEPAR,2,36000,60,40,6,60,40,16
+1273,HidroLógica - Desenvolvimento em Engenharia Hídrica,FEJERS,S/N,0,0,0,0,0,0,0
+689,Juniores Engenharia,FEMTEJ,1,54045.19,75,10,1,40,30,3
+1226,SoluAli Jr ,Juniores,3,34000,27,18,1,70,40,8
+1120,Atria Júnior,FEJESP,1,11062,65,6,1,65,1,1
+256,TM Jr,UNIJr-BA,1,22000,60,25,2,33,40,10
+34,Holística,Pará Júnior,1,30000,70,40,2,56,90,36
+149,EJA Consultoria,PB Júnior,5,120000,80,22,3,60,60,14
+608,Lignum Ambiental Jr.,RioJunior,2,15000,75,25,1,60,100,25
+382,P&Q Engenharia Jr,RioJunior,5,131308,27,50,1,43,50,25
+619,Vitalis Consultoria,FEJEA,1,4120,81,8,2,90,2,2
+614,Setup Jr - Consultoria e Desenvolvimento,FEJEPAR,1,9000,70,8,2,50,26,4
+1121,ZOOT Jr.,FEJESP,1,4500,60,15,1,57,1,1
+601,Oikos Consultoria - Empresa Júnior,Goiás Júnior,1,2500,27,6,1,50,25,2
+867,Union,RioJunior,2,20000,90,15,2,50,15,4
+569,Sage - Empresa Júnior de Relações Internacionais,FEJESP,1,9857,75,9,1,33,1,1
+632,ECONCI Engenharia JR,FEJERO,1,10000,100,13,2,100,21,5
+687,JEF - CONSULTORIA TECNOLÓGICA,FEJEMS,1,1000,30,3,1,50,50,2
+310,Elo Consultoria,FEJEPAR,1,6000,37,18,2,50,90,17
+1019,MORPHEUS.JR,Juniores,1,4000,60,4,5,50,50,2
+623,EMPEAL - Empresa Júnior de Engenharia de Alimentos,Baré Júnior,3,23244.3,80,10,2,95,22,3
+1279,Tríade Empresa Júnior,FEJESC,S/N,0,0,0,0,0,0,0
+305,Energize Jr.,UNIJr-BA,1,15000,55,17,1,55,50,9
+631,A5 Engenharia Júnior ,FEJERO,1,6000,60,12,1,75,50,6
+1274,Byte Jr. ,FEJERS,S/N,0,0,0,0,0,0,0
+1280,Atrium Junior,FEJEMG,S/N,0,0,0,0,0,0,0
+918,EJEM - UFSC,FEJESC,1,6500,60,10,1,53,10,1
+912,diElétrica,FEJEMG,2,14000,70,14,1,50,30,7
+320,PARTHENON,FEJEPAR,3,35000,68,40,1,80,6,3
+45,Ecofarma Jr.,FEJEMG,3,26575.32,80,40,2,85,80,32
+388,AD&M,Concentro,5,700000,82,45,4,50,15,7
+622,Agro Júnior Consultoria e Assistência Agronômica,Goiás Júnior,2,12000,43,15,3,80,1,2
+534,PROJEQ,PB Júnior,2,100000,100,25,3,80,85,22
+879,PROMAD Jr.,FEJESP,1,32000,35,8,1,33,1,1
+381,Cinética Júnior,Juniores,1,6228,90,15,2,90,40,6
+633,Enagri Jr - Projetos e Consultoria Agrícola,FEJEMG,4,122662,68,20,1,60,60,12
+870,Premium Consultoria,FEJECE,3,21160,78,8,2,75,33,3
+917,Atlas Soluções em Tecnologia,FEJEMG,1,14000,58,12,3,58,1,1
+164,Humaniza Consultoria Júnior em Gestão de Pessoas,Goiás Júnior,1,2150,90,15,3,75,14,3
+302,Paulista Jr. Projetos & Consultoria,FEJESP,3,125500,76,36,3,80,50,18
+582,Archipolis Júnior,Juniores,2,15000,100,20,3,60,1,3
+435,SEC Jr. Consultoria,FEJEMG,2,25130,100,70,1,43,10,7
+1281,Júnior Legis: Consultoria Jurídica ,FEJEA,S/N,0,0,0,0,0,0,0
+236,Dinâmica Consultoria Jr.,FEJEMG,4,62037.7,75,20,2,60,30,6
+93,Praxis Consultoria Jr. ,Concentro,3,100000,100,30,6,75,65,20
+57,AEC Júnior,FEJEA,1,14000,60,16,1,35,13,3
+219,MASCI Consultoria Jr.,FEJEMG,3,80000,70,25,2,45,80,20
+263,Sete Jr. - Empresa Junior da Faculdade Adventista da Bahia,UNIJr-BA,1,12000,43,22,1,33,24,12
+872,Consultoria Empresarial de Engenharia Química - CEJEQ,FEJESC,1,3000,62,10,2,40,10,2
+680,Metrus,FEJEMG,2,30000,100,32,2,75,13,10
+29,FCAP JR. Consultoria,FEJEPE,5,850000,79,71,4,90,85,61
+592,Orc'estra Gamificação,Concentro,2,46000,90,12,4,60,25,3
+856,Haken - Empresa Júnior de Ciência da Computação,FEJEPAR,2,12034.1,75,6,1,75,50,3
+801,IPRO Jr. - Inovações em Projetos Júnior,FEJEMG,1,15000,60,15,2,47,84,13
+871,Projetta Júnior,FEJECE,2,20000,100,35,1,81,60,21
+1123,AJEA Consultoria & Projetos,FEJEMG,1,19213.23,90,21,1,51,1,1
+681,Magna Empresa Jurídica Júnior,FEJEMG,1,18000,60,45,2,33,1,1
+679,InfoAlto Empresa Júnior,FEJEMG,1,18000,70,15,1,70,45,7
+927,EdificarSe Engenharia & Projetos,SERJÚNIOR,1,101000,46,68,4,50,50,34
+58,CONEX - Consultoria em Negócios Exteriores,Concentro,2,18500,100,26,1,70,1,13
+175,EJAUFS Consultoria,SERJÚNIOR,2,38337.5,27,12,1,33,1,1
+538,Empresa Júnior de Assistência Veterinária,FEJESP,2,19721,72,13,1,80,1,1
+1275,Máxima Consultoria Jr,FEJERO,S/N,0,0,0,0,0,0,0
+682,ECoA Química Júnior,Baré Júnior,1,7000,100,14,3,70,32,5
+609,UFABC Jr.,FEJESP,4,100000,80,24,2,50,1,1
+736,TIJUC - Tiradentes Júnior Consulting,FEJEA,1,2500,38,4,1,36,1,1
+600,Quanta Jr,FEJESP,2,35501.54,85,32,1,72,1,1
+591,Emzootec Júnior ,FEJECE,1,3774,90,8,1,60,5,5
+22,EPRO Consultoria,FEJECE,4,105000,80,25,6,80,50,13
+593,GeoCapta,FEJECE,1,6400,95,14,2,33,75,13
+688,Qualitas Jr,FEJESP,1,11000,77,6,1,33,1,1
+50,EJECT,RN Júnior,4,81000,67,30,3,50,50,15
+693,GeoAmbiental Jr,FEJESP,2,42607.66,85,33,2,50,1,1
+233,Análise Consultoria Econômica,Piauí Júnior,2,28800,100,16,1,100,50,8
+424,CACE Consultoria Jr.,FEJEMG,1,19666.66,71,15,2,65,80,12
+691,Atom Jr.,FEJESP,2,57266.61,68,12,1,51,1,1
+539,Pilares Engenharia Júnior,RN Júnior,1,14000,76,15,1,44,50,8
+564,Estat Júnior,FEJESP,1,27500,65,25,2,40,25,7
+882,CAP Jr Consultoria,FEJESP,2,22000,27,30,1,50,7,3
+695,Nuclêa Jr ,Pará Júnior,1,5000,0,4,0,0,0,0
+73,Ciclo Jr.,FEJECE,3,100000,90,50,8,60,50,25
+165,SofTeam,SERJÚNIOR,2,58759,27,33,1,33,2,1
+809,Genesys Biotecnologia,Concentro,1,9600,55,24,3,76,1,1
+698,Prospector Jr - Soluções em geologia e meio ambiente,Pará Júnior,1,10000,75,15,1,60,45,7
+393,Empresa Junior de Administração - EJAD,Maranhão Júnior,1,19215.51,75,9,2,40,23,3
+923,Floresta Júnior - Projetos e Consultoria em Engenharia Florestal,FEJEMG,1,12500,83,12,2,33,14,2
+1253,CPEn Jr,FEJERS,1,3600,53,6,1,33,1,1
+885,CincoLinha Jr.,FEJERS,1,4905,50,11,3,70,36,4
+706,Horizonte Soluções Geofísicas,RioJunior,2,50000,80,13,1,40,44,6
+888,Farma Júnior,FEJESP,1,22000,45,20,3,38,1,1
+768,CONSTRUFT,Tocantins Júnior,1,5000,0,5,0,0,0,0
+705,Tectus Jr.,Juniores,2,20000,60,30,5,58,50,15
+221,EFICAP,FEJEMG,2,35529,70,8,1,33,1,1
+704,Excelência Jr,SERJÚNIOR,1,30000,80,8,4,80,75,8
+580,SELECT,FEJEPAR,2,40000,70,30,5,78,20,12
+440,Alicerce Empresa Júnior de Engenharia Civil,FEJESP,2,30000,70,15,1,80,35,6
+876,Múltipla Júnior,FEJEMS,1,12000,70,6,1,70,50,3
+329,TCP Engenharia Civil,FEJEPAR,2,22786.78,75,26,1,80,50,13
+144,Irhis Consultoria Júnior em Psicologia,FEJESP,2,32520,70,12,1,33,17,3
+930,Projet Jr - Consultoria e Projetos em Engenharia e Arquitetura,SERJÚNIOR,1,19410,50,32,3,33,40,13
+384,BRENT Engenharia,RN Júnior,1,5000,60,4,2,70,50,10
+18,Iniciativa Consultoria,RioJunior,3,112600,100,47,4,70,80,40
+309,ENGETEC JR.,Pará Júnior,2,14573,60,85,2,35,70,60
+330,Vulcano Empresa Jr,FEJEPAR,2,32460,74,17,1,35,50,9
+1228,UNUS - Consultoria Ambiental, Biológica e Biotecnológica,FEJEMS,1,2550,50,4,1,33,50,2
+715,Seres Jr. - Inovações em Medicina veterinária,FEMTEJ,1,1600,100,4,1,100,1,1
+707,Esquadro Projetos e Consultoria,Pará Júnior,1,15265.12,50,30,1,50,15,0
+289,Ecomp Jr,UNIJr-BA,1,17000,75,14,1,90,80,12
+925,Mude! UFMG Jr. ,FEJEMG,2,19747,90,10,1,100,25,3
+713,EM&S Júnior,Pará Júnior,1,5000,0,4,0,0,0,0
+714,JekuaAve ,FEJEMS,1,5000,90,10,1,70,38,4
+756,Vital Jr Consultoria,RioJunior,3,30000,90,30,2,33,1,1
+878,Ábaco Consultoria Contábil Júnior,Concentro,2,67728.43,75,20,1,74,50,11
+84,Alimentos Júnior Consultoria,FEJEMG,3,50900,59,34,5,33,50,17
+718,MAE Jr,Piauí Júnior,1,5000,80,5,1,80,1,1
+505,EJEC - Empresa Júnior de Engenharia de Computação,FEJESC,2,28253,70,5,2,80,1,1
+304,Ágil Engenharia Júnior ,Maranhão Júnior,2,40000,72,14,1,75,50,7
+719,ENGAGE Consultoria e Serviços de Engenharia,Concentro,1,10000,80,10,1,33,25,5
+1224,Solução Consultoria Jr,FEJEMG,1,8500,75,13,2,70,41,6
+69,ESALQ Jr. Consultoria,FEJESP,4,115000,75,40,1,75,1,4
+621,OPUS ENGENHARIA EJ,Maranhão Júnior,2,20000,80,24,1,50,40,10
+724,Info Jr,FEJESP,2,21500.5,75,7,2,40,1,1
+123,Base Júnior,FEJERS,4,125000,75,30,4,85,51,16
+722,EME Jr.,FEJERS,2,65000,60,10,1,65,1,1
+386,expresse! consultoria,RioJunior,5,120000,100,100,8,67,80,80
+279,Mensurar Júnior,RioJunior,2,18000,100,23,2,33,50,12
+891,Alphabio- Consultoria e Projetos em Ciências Biológicas,FEJESP,1,10000,70,10,2,40,1,1
+560,Impacto Jr,FEJEMG,4,110000,75,40,3,40,1,5
+716,Mecaniza Jr,FEJECE,1,18851.44,55,14,3,33,50,7
+157,Ibmec Jr.,RioJunior,4,119700,87,24,5,66,48,24
+1229,AZTEC,Juniores,1,2000,40,5,5,33,1,1
+607,Biossistec Jr,FEJESP,1,7250,54,15,1,40,1,1
+734,UP Engenharia,FEJEPAR,2,28500,77,20,2,88,50,10
+892,Floresta Jr- Consultoria e Planejamento Ambiental e Florestal,FEJERS,1,12068.25,75,15,4,80,15,3
+502,EfloPI Jr,Piauí Júnior,1,2112.5,27,5,1,33,1,1
+47,SEA Jr,RN Júnior,4,42000,70,16,3,50,8,6
+35,Facto Empresa Junior de Comunicação,Concentro,4,124213.5,75,66,4,40,4,3
+783,Renova Ambiental Jr. - UEFS,UNIJr-BA,1,2000,40,6,1,40,33,2
+1243,Jovens Projetistas,FEJESP,1,12000,61,16,1,40,12,3
+266,No Bugs,FEJEMG,2,40000,60,25,2,33,40,10
+293,Preserva Jr. Projetos e Consultoria Ambiental e Sanitária,FEJEMG,4,138153,66,19,1,70,50,10
+731,Ópera Krios - Empresa Júnior de Arquitetura e Urbanismo,FEJESP,2,20000,75,15,3,40,1,10
+406,Physis Jr.,FEJESP,1,30000,85,17,1,33,55,10
+131,Engrenar Jr,FEJESP,2,40000,55,20,1,40,10,2
+1230,MinasBio Consultoria Ambiental,FEJEMG,2,28709,85,10,1,50,30,3
+20,CITi,FEJEPE,4,132000,75,36,1,80,1,1
+562,ConsultAgro Jr.,UNIJr-BA,1,6662.5,50,15,1,50,50,8
+721,Prisma Consultoria Internacional,FEJESP,1,9000,40,4,1,45,50,2
+558,SEMPRE - Soluções Empresariais Jr.,FEJEMG,1,3000,75,5,2,60,41,3
+348,Project Jr,RN Júnior,2,36000,70,18,1,78,62,12
+1071,Nautilus Consultoria,FEJEPE,1,15000,60,10,2,80,40,4
+1,EngNet Consultoria,Concentro,1,65000,100,23,3,60,9,3
+551,Projep,FEJEMG,3,55066,80,29,2,100,57,23
+91,TECMEC,Concentro,5,134810.5,84,74,5,55,11,9
+683,Pró Engenharia Jr,FEJESC,2,25000,100,22,1,80,1,1
+725,SIE - Soluções e Inovações em Energia,PB Júnior,2,25000,45,18,1,80,50,9
+519,Arco Consultoria,FEJEPE,4,180000,80,70,4,100,50,35
+244,Arché Empresa Júnior,FEJEMG,3,48852.45,75,32,12,65,50,16
+545,Visão Tecnologia e Sistemas,FEJEMG,1,8205.69,90,15,2,75,75,12
+227,ENGETOP,UNIJr-BA,5,150000,100,135,3,45,100,136
+368,Index Consultoria Júnior,FEJECE,1,13950,76,13,1,75,65,9
+67,EJEC - Arquitetura e Engenharia Civil,FEJEA,5,150000,82,105,1,90,5,6
+1234,Motora Junior Empresa de Consultoria,FEJERS,1,35000,80,14,1,43,30,5
+1236,Phi Consultoria,FEJERS,1,14700,66,12,2,60,50,6
+469,Consultoria Júnior Pública - FGV,FEJESP,3,177714,62,16,2,33,21,4
+392,EmpNut,FEJEMG,2,9906,100,58,1,90,75,44
+142,ICMC Junior,FEJESP,3,55000,75,24,1,55,51,13
+203,Comunica! Empresa Júnior de Jornalismo,FEJESC,2,25000,75,24,10,50,30,8
+37,Pacto Consultoria Jr.,RioJunior,3,63168.28,60,15,1,55,50,8
+30,ADM Soluções,FEJECE,5,257468.43,88,71,15,90,90,64
+1126,Jornal Jr.,FEJESP,1,10034.85,72,39,1,40,1,1
+402,ESTAT Consultoria Estatística,Concentro,4,100000,100,60,15,60,15,9
+201,ConsultEQ - Empresa Júnior de Soluções em Engenharia Química,FEJEMG,1,12000,64,5,1,47,41,3
+1235,META Empresa Júnior de Administração,Concentro,1,20000,0,40,0,0,0,0
+849,Sustentar Júnior,Goiás Júnior,1,8081.87,47,9,1,33,50,5
+1078,CMEC Engenharia,Concentro,1,2000,27,3,2,33,1,1
+282,InfoJr UFBA,UNIJr-BA,2,24000,100,6,1,45,100,6
+426,Interage Jr,FEJESP,1,6109,75,16,2,33,84,14
+98,PS Júnior,FEJERS,5,500000,85,65,5,80,80,52
+935,Alligare Júnior,Pará Júnior,1,0,0,0,0,0,0,0
+120,Ecoceano,Juniores,2,20217.22,100,8,1,100,1,1
+110,UniSigma Consultoria,PB Júnior,3,22500,75,15,6,80,8,2
+161,Motriz Empresa Júnior,FEJESP,5,300000,90,38,4,80,65,25
+60,Acesso Comunicação Júnior,FEJEMG,3,41200,80,58,5,80,39,23
+737,Tesla Jr.,RioJunior,1,16500,47,8,1,40,50,4
+318,Zootecnia Consultoria Junior,FEJEPAR,2,12285,53,14,1,33,63,9
+697,Bits JR - Soluções em TI,Pará Júnior,3,50000,65,65,3,67,50,33
+827,Habitat Consultoria Ambiental,FEJEPAR,2,18000,66,25,1,33,75,20
+1284,PontesJud Consultoria,FEJEA,S/N,0,0,0,0,0,0,0
+237,PJ Consultoria ,FEJEMG,5,171495.62,65,30,1,43,50,15
+271,Domani,Concentro,2,46500,60,15,2,60,40,8
+485,Arbórea Florestal ,FEJEMG,1,2312.5,27,3,1,33,1,1
+773,PROJIFTO - Empresa Júnior de Engenharia Civil do IFTO,Tocantins Júnior,1,10000,0,20,0,0,0,0
+740,Inovagro Jr,FEJEPE,1,6470,75,10,2,38,21,3
+942,DocWay Empresa Júnior,FEJEMG,1,17000,80,33,2,33,40,16
+753,Gama Jr,Juniores,1,5000,100,6,2,50,39,3
+1130,Liga Consultoria,FEJEPE,1,30000,53,15,10,60,1,1
+738,Dipolum Consultoria,FEJEPE,1,18000,60,6,2,40,35,3
+453,Construtiva Jr,FEJECE,3,100000.14,75,80,4,75,62,50
+119,Mecatron Projetos e Consultoria Jr.,FEJESP,2,140000,75,16,3,80,1,1
+352,Ecos Jr.,Juniores,3,50000,40,40,5,55,41,17
+1119,EEFUSP Júnior Consultoria ,FEJESP,1,8012.2,75,30,1,33,1,1
+148,Opção Consultoria ,RioJunior,3,104000,100,60,1,36,50,30
+94,Empresa JR. ADM UFBA,UNIJr-BA,5,286365.97,75,72,3,56,72,52
+613,CONSOAGRO ,FEJEPAR,3,50000,100,40,3,85,50,20
+427,UFV Coach,FEJEMG,2,4948.5,27,2,1,33,1,1
+7,Cria UFMG,FEJEMG,2,53400,75,62,8,70,65,45
+566,MecTRIA,FEJEMG,1,30600,62,18,1,76,45,9
+92,Agência de Comunicações ECA Jr.,FEJESP,3,102724.9,78,44,3,33,15,26
+257,EletroJr,UNIJr-BA,3,80000,80,45,1,50,50,30
+711,Sigma Júnior Consultoria Estatística ,FEJERS,2,28517.09,75,40,1,66,5,2
+692,Nutrirp,FEJESP,1,11020.37,80,40,1,37,77,31
+135,Caduceu Júnior,FEJERS,4,70000,100,629,1,75,50,400
+629,FLORESTA JR. ASSESSORIA AMBIENTAL,FEJERO,1,2500,50,2,2,40,2,2
+291,Prisma - Empresa Júnior de Engenharia Química da UFBa,UNIJr-BA,1,11500,65,14,3,50,98,14
+281,ADV Junior Consultoria Jurídica,UNIJr-BA,4,60000,100,45,7,65,50,23
+637,EMCOF - Empresa Júnior de Consultoria Florestal UFAM,Baré Júnior,3,18000,100,30,2,80,50,15
+308,Polaris Jr.,Concentro,2,15500,100,15,2,50,75,12
+71,Nutrir - Consultoria em Nutrição,Concentro,2,35000,100,55,10,33,50,28
+272,ESPM Jr. (Rio de Janeiro),RioJunior,3,127000,85,16,1,33,70,12
+166,Mauá Jr.,FEJESP,4,140000,60,16,2,46,21,4
+1277,EJ PRODCOM,FEJESC,S/N,0,0,0,0,0,0,0
+939,Building Engenharia Júnior,Pará Júnior,1,20000,70,20,1,55,50,10
+118,ADECON,FEJEPAR,5,418000,80,35,3,90,100,35
+788,Alimsete Empresa Júnior,FEJEMG,2,10483.63,80,28,3,60,9,3
+4,Grupo Gestão,Concentro,5,769921.98,75,200,6,60,85,170
+620,Inovepro Empresa Júnior,Baré Júnior,3,39600,82,15,6,75,50,8
+1237,Projep Jr.,FEJERS,1,5000,60,20,2,70,50,10
+416,Núcleo Consultoria Jr,RioJunior,2,20000,80,18,4,36,62,12
+940,EMEC - Engenharia Júnior,FEJEA,1,10800,80,12,1,60,1,1
+269,Ciclus Consultoria,FEJEPAR,2,38000,85,27,6,70,30,9
+143,Química Jr,FEJESP,2,43000,75,21,1,50,10,3
+941,Renotec Júnior,FEJEA,1,10000,75,7,1,33,1,4
+33,PCP Jr.,FEJEMG,1,28000,60,9,1,40,7,4
+46,Produtiva Júnior,RN Júnior,5,382500.19,92,85,3,80,43,43
+810,Consulte Jr - UEFS,UNIJr-BA,1,7500,80,8,1,50,50,6
+1258,Primus Consultoria Empresarial,UNIJr-BA,S/N,0,0,0,0,0,0,0
+375,Focus Consultoria,RioJunior,1,20651.8,75,11,1,80,21,3
+31,Proativa Jr,FEJECE,4,140000,75,26,5,70,50,13
+325,JR Consultoria ,FEJEPAR,5,220000,75,50,3,60,50,25
+346,Colucci Consultoria Jurídica Júnior,FEJEMG,5,61895.08,75,48,4,75,25,12
+419,Consultoria Rh Junior,FEJESP,2,59000,80,24,3,33,1,1
+191,Smart Consultoria Júnior,FEJESC,4,125000,75,35,2,75,50,18
+745,Onix Jr. Consultoria,RioJunior,1,35000,75,20,2,55,50,11
+602,Líder Jr.,FEJESP,2,48291.53,75,12,1,50,50,6
+1040,Sustenta,FEJEMG,2,35000,90,30,3,33,50,15
+210,Apoio Consultoria Júnior,FEJEMG,4,176000,75,43,5,80,50,22
+117,ACEEP Jr,Pará Júnior,2,88000,50,25,2,33,45,15
+363,Optimus Engenharia Junior ,UNIJr-BA,2,13702,70,10,1,35,7,5
+170,Caltech - Corporação Junior de Consultoria em Alimentos,FEJESC,3,48000,90,38,8,70,55,21
+154,Insper Jr Consulting,FEJESP,4,300000,100,22,1,33,16,4
+853,Ethos Consultoria Jr.,FEJEPE,1,25000,58,15,1,50,50,8
+471,Agrocon Júnior,PB Júnior,1,5000,68,30,3,43,50,15
+124,Visão Júnior,FEJERS,3,26145,65,17,1,58,1,1
+70,INTEGRA,FEJESP,3,80000,80,49,3,50,1,1
+182,ELO Júnior Engenharias e Arquitetura,Goiás Júnior,4,130000,70,75,4,80,70,68
+805,Ágora Engenharia,Maranhão Júnior,1,5000,60,4,1,70,40,2
+703,Sercivil,SERJÚNIOR,2,14000,80,32,2,80,37,12
+355,Ipharma Consultoria Farmacêutica Júnior,FEJECE,1,4620,75,38,2,70,7,3
+214,Minera Consultoria Júnior,FEJEPE,3,60210.42,60,19,1,60,50,10
+108,Planej - Empresa Júnior de Arquitetura e Urbanismo e Engenharia Civil,PB Júnior,5,135000,74,90,5,60,50,45
+537,EJr Contabilis ,PB Júnior,4,30000,75,135,2,55,40,54
+109,Factiva Consultoria,FEJEMS,2,23000,100,22,2,85,50,11
+389,ECOSIN Soluções Ambientais,RN Júnior,1,10000,75,8,3,75,50,4
+420,Consea Júnior ,FEJEMG,2,24000,80,44,3,50,70,31
+296,Verus Consultoria Jurídica ,FEJEMS,2,20000,75,45,2,85,50,23
+1238,SGPampa Jr.,FEJERS,1,4000,83,8,3,70,30,3
+112,CompAct Jr,FEJERS,2,36000,75,15,2,80,15,3
+115,OBJETIVA JR,FEJERS,4,170000,100,31,4,60,65,21
+248,ADM.Jr - UEFS,UNIJr-BA,2,18000,78,10,1,85,21,3
+337,EMPEC,FEJEPAR,4,70000,73,56,1,75,25,14
+812,GEOTEC,Maranhão Júnior,1,0,0,0,0,0,0,0
+301,3E-UEL,FEJEPAR,1,16000,64,8,1,80,75,8
+156,Pharmaceutica Jr.,FEJESP,4,54000,56,9,3,55,1,1
+61,Doisnovemeia Publicidade,Concentro,4,100000,97,80,5,90,60,45
+1128,All Química Consultoria Júnior,FEJESP,1,8500,45,9,2,33,1,1
+190,ENEjr,FEJESC,3,61000,49,15,1,80,16,3
+710,EmPhar - Empresa Júnior de Farmácia,Goiás Júnior,1,6000,58,12,1,80,18,3
+772,AMPLA - Consultoria Júnior,Tocantins Júnior,1,7000,0,15,0,0,0,0
+1031,Engene Jr,FEJECE,1,15000,44,12,1,33,1,1
+1240,Aliquam Engenharia e Saneamento,FEMTEJ,1,0,0,0,0,0,0,0
+222,ALFA Consultoria Júnior,UNIJr-BA,1,12222,50,20,1,95,90,18
+412,Ejel - Consultoria e Projetos Elétricos Jr.,FEJEMG,2,22000,75,19,8,70,50,10
+38,AGRIFES JÚNIOR,Juniores,2,36000,100,120,3,43,60,80
+183,Ciclo Consultoria,FEJEPE,4,120975.32,68,15,2,33,50,8
+198,ESAM Jr,Pará Júnior,5,450000,80,30,20,100,5,2
+425,Florestal Jr. Consultoria - UFV,FEJEMG,3,75000,70,30,3,60,90,27
+841,Controle Consultoria Jr ,UNIJr-BA,3,27000,100,22,3,80,56,13
+169,Advocatta,Concentro,4,117117,27,140,1,33,1,2
+674,Produza Consultoria Júnior,FEJEMG,2,78000,76,40,2,90,90,36
+111,CONAQ,FEJESC,4,132000,70,33,6,40,50,17
+274,Cristal Mineração e Petróleo Júnior,UNIJr-BA,1,30000,30,5,2,40,40,3
+43,Nutri Jr.,FEJESC,1,13000,90,88,4,50,45,40
+723,Farmacon Jr,FEJESP,1,15000,70,10,1,60,1,1
+184,PROJETA Ambiental Jr,FEJESC,2,28000,75,28,1,60,15,5
+842,3E Unicamp,FEJESP,2,35000,70,10,1,60,3,1
+1032,Geo Junior Consultoria,FEJESP,2,45000,39,15,1,33,1,1
+808,RENOVE JR. SOLUÇÕES AMBIENTAIS ,FEJERS,1,33314.28,73,18,2,75,32,6
+818,Solidus Júnior,RN Júnior,1,30000,60,16,3,53,75,12
+116,CONSULTI JÚNIOR,FEJEA,3,22641,75,15,1,80,1,2
+747,Flora Júnior,RioJunior,2,11375.91,27,14,1,33,50,7
+77,ENETEC - Consultoria Júnior,Concentro,2,60000,40,12,1,33,1,1
+180,Associação Simbiosis Empresa Júnior,FEJESC,1,9245,100,9,2,60,35,9
+685,Ápice Consultoria Jr.,FEJEMG,3,50000,62,14,1,66,55,8
+51,NuTEQ,RN Júnior,4,120000,75,40,1,35,80,32
+757,Inov ID - Empresa Jr,Goiás Júnior,1,1500,100,8,1,33,2,2
+835,Watt Consultoria,FEJEPE,1,40000,53,21,2,33,11,3
+179,Autojun,FEJESC,2,20608.6,50,10,1,60,40,4
+615,Brick - Empresa Junior de Engenharia Civil,FEJEPAR,1,6000,52,25,2,48,50,13
+572,ConstruREC,UNIJr-BA,1,19356.74,60,44,4,50,70,31
+101,OTMZA  Assessoria em Engenharia,FEJERS,4,115000,100,19,4,50,100,19
+542,Serra Jr. Engenharia,RioJunior,1,12000,100,7,2,50,38,7
+817,Quality Alimentos Jr.,Goiás Júnior,1,5000,52,8,1,37,1,1
+113,IME júnior,RioJunior,4,120000,90,48,2,35,80,39
+167,All Pharma Júnior,FEJESP,1,10000,70,12,2,33,1,6
+1087,Epq Jr.,FEJEPAR,1,16000,76,8,1,50,60,5
+422,Tecsys Jr.,FEJECE,3,71500,80,36,8,40,15,6
+1086,Criative Jr.,FEJEPAR,1,12000,70,24,1,70,33,8
+369,RETEC jr,FEJECE,2,22000,50,10,2,35,21,3
+25,Level 5,Goiás Júnior,1,20000,75,12,5,70,25,3
+397,Projetar Empresa Júnior de Desenho Industrial,FEJERS,1,15000,80,16,2,80,14,3
+857,Cacto Comunicação,FEJEPAR,1,1800,60,6,1,43,35,3
+408,Mandala Soluções em Engenharia Ambiental,FEJERS,2,48000,70,10,1,40,15,4
+107,CEANUT,FEJERS,3,39127.86,95,85,1,76,50,43
+774,Ibmex,FEJEMG,5,241000,82,40,3,55,80,32
+187,Nortear Jr. Engenharia,FEJEA,3,38900,80,30,1,82,1,7
+824,CAJ - Consultoria Agropecuária Júnior,FEJEPAR,1,5500,77,17,1,40,50,17
+859,BioTech Consultoria,FEJEPE,1,5000,48,8,1,75,70,6
+216,PUC Consultoria Jr.,FEJEMG,3,64409,73,19,1,33,9,2
+1021,Sinc,FEJERS,1,25000,75,11,4,70,20,3
+349,Empresa Júnior Unicap,FEJEPE,4,135000,75,70,4,85,50,35
+826,Intacto Soluções Ambientais,FEJEPAR,1,32000,60,12,1,70,32,4
+126,ECONOMICA,FEJESP,3,86364.65,75,16,1,74,37,6
+854,Conflor Júnior,FEJESP,2,60000,75,35,2,50,1,1
+80,Projetos Consultoria Integrada,Concentro,4,116255.22,72,60,3,70,5,3
+56,UNIFEI JUNIOR,FEJEMG,5,110431.27,75,27,2,43,50,14
+730,ACTUS Soluções e Consultoria,FEJEPAR,1,14760,70,23,1,50,79,19
+328,Quanttum Empresa Júnior,FEJEPAR,1,16000,50,10,1,68,21,3
+300,ECOFLOR - Consultoria Florestal,Concentro,1,25000,100,20,3,80,95,19
+132,RPjr,FEJESP,2,16900,75,15,4,33,13,3
+235,Granbery Consultoria,FEJEMG,2,25394.4,80,15,5,50,50,8
+53,ADM Consult,RN Júnior,5,326000,95,73,5,60,90,66
+220,Perfil Consultoria Jr.,FEJEMG,1,7000,75,17,1,36,50,9
+825,Maris - Empresa Júnior de Oceanografia,FEJEPAR,1,20000,50,3,1,33,3,1
+186,EnAção Consultoria Jr,Goiás Júnior,1,12723.7,80,12,2,36,30,4
+550,ENGENHE JR,UNIJr-BA,2,68000,69,50,4,33,50,25
+433,Alimentares Consultorias & Soluções,Juniores,1,3295,75,16,2,35,50,8
+217,ATP Jr.: Consultoria em Bioprocessos ,FEJEMG,1,10000,60,13,3,45,50,7
+275,Socius - Consultoria Júnior em Ciências Sociais,Concentro,1,16285,49,9,1,43,24,3
+197,Altaflora Jr,Pará Júnior,2,30000,0,16,0,0,0,0
+283,Terra Júnior Consultoria Agropecuária,FEJEMG,3,70000,70,115,3,100,50,60
+258,Otimiza Consultoria Jr,UNIJr-BA,4,81523.08,75,35,3,100,70,25
+364,Diferencial Jr,FEJECE,3,50000,100,18,5,33,27,5
+1034,AgroVale Júnior,FEMTEJ,1,1200,50,2,1,33,1,1
+806,Petra Jr.,FEJERS,1,8000,75,6,1,33,50,3
+403,Patamar Consultoria E.J.,RioJunior,4,62625.77,75,21,2,33,2,2
+172,ESATI ,FEJESC,1,12000,50,12,2,40,25,4
+771,iDealize Júnior,FEJESC,2,13959,100,17,2,60,57,11
+322,EMPEA Consultoria,FEJEPAR,3,33000,100,30,4,100,60,20
+178,Locus Iuris,FEJESC,5,130000,75,180,15,70,50,90
+141,Ínteri Júnior - Associação Empresa Junior de Relações Internacionais - UFGD,FEJEMS,2,22707.23,60,20,3,80,35,8
+884,Automatiza Júnior ,FEJERS,2,28902.95,35,12,2,56,1,1
+617,Empresa Junior Batuque,FEJEA,4,50000,75,60,8,80,1,6
+554,h7 - Engenharia Mecânica,FEJEPAR,1,11910,80,12,2,90,50,8
+394,Conpec,FEJESP,3,97000,53,24,1,65,50,12
+410,Farmácia Jr Consultoria UFMG,FEJEMG,1,4360,59,8,1,45,80,8
+1016,Expand Jr. - Consultoria Internacional,RioJunior,2,30000,71,20,4,55,70,14
+72,EJCM,RioJunior,3,80000,94,16,8,95,45,10
+948,Legado Consultoria Júnior,RioJunior,2,15000,75,30,3,33,50,15
+65,IDEAS - Projetos e Soluções Corporativas,Juniores,4,51000,62,20,1,80,40,8
+428,AGROBIO Consultoria júnior,FEJEMG,2,5000,86,30,1,70,80,24
+436,AEROJR. Consultoria e Capacitação,FEJEMG,1,23000,100,12,2,80,60,8
+720,ArtCom Jr,FEJESP,1,0,0,0,0,0,0,0
+1241,Tesla Engenharia,Tocantins Júnior,1,0,0,0,0,0,0,0
+1102,Automic - Empresa Júnior de Controle e Automação da Universidade Federal de Ouro Preto,FEJEMG,1,10601.76,60,9,3,50,55,5
+1103,Trifase Engenharia Júnior,RN Júnior,1,13500,41,14,2,40,50,7
+1107,ESALQ Júnior Florestal,FEJESP,1,12000,75,6,2,50,1,1
+612,Agrológica,FEJESP,1,25000,60,22,1,57,1,2
+597,PIXEL,FEJESC,2,12000,75,9,2,50,50,5
+1018,EcoLógica Jr.,FEJERS,3,40000,54,10,1,74,22,10
+1023,BIOMAS,FEJESP,1,582,73,4,1,83,1,1
+702,Fucape Jr,Juniores,2,72802.87,100,25,2,78,50,13
+1024,CiBi Jr. - Empresa Júnior de Ciências Biológicas,FEJESP,1,3000,80,10,1,33,8,1
+1029,IAG Júnior,FEJESP,1,13000,80,3,2,80,60,3
+475,Midas Consultoria Júnior ,RioJunior,1,0,0,0,0,0,0,0
+1027,ECAP Jr - Empresa de Consultoria Agropecuária Junior,FEJESP,2,18060,75,18,1,33,1,1
+54,JRS Consultoria,FEJEA,5,200000,75,50,5,75,50,25
+409,Co.De - Comunicação e Design Jr ESPM-Sul,FEJERS,1,0,0,0,0,0,0,0
+467,Alternativa Junior ,FEJERS,1,0,0,0,0,0,0,0
+212,VIA Jr Consultoria e Projetos,FEJEMG,2,33150,75,42,1,33,50,21
+1047,Robótica Jr,FEJEMG,2,35000,70,21,1,33,25,15
+1244,F5 Junior - Consultoria Internacional,FEJERS,1,7000,45,7,2,40,26,2
+1045,Dharma Jr Consultoria Ambiental,FEJEMG,2,30589.55,75,8,1,80,75,6
+268,Terapêutica Jr.,Concentro,1,10000,70,10,1,50,58,6
+1145,Sinergia Engenharia,Tocantins Júnior,1,10000,35,8,8,40,25,3
+1048,EJEET - Consultoria e Projetos em Engenharia Elétrica,FEJEMG,2,21000,70,14,3,60,50,7
+1056,Biomedic Júnior,RN Júnior,1,9000,60,10,2,34,55,6
+1058,ACCONT EMPRESA JÚNIOR,FEJECE,4,40000,80,80,4,80,90,72
+195,Consultoria e Projetos Elétricos Júnior,FEJEMG,4,162200,69,44,11,85,50,22
+1059,BioLógica Jr.,Juniores,1,2000,100,10,2,100,21,4
+1057,Verbalize Empresa Júnior,FEJEMG,1,11437.5,27,11,1,33,1,1
+1060,ProPartners,Goiás Júnior,1,5000,75,12,2,47,50,9
+1065,EJ BRAVA,FEJEMS,1,2562.5,66,4,1,60,50,2
+1066,Container Digital Júnior,FEJECE,1,18000,70,20,2,80,50,10
+686,THÊMIS,FEJEMS,1,8000,100,23,1,50,8,8
+777,ENGETEC-ENGENHARIA JÚNIOR ,UNIJr-BA,1,20000,50,30,2,50,30,9
+1068,TMC INTERNATIONAL (TRADE & MANAGEMENT CONSULTING),FEJEAP,1,9600,100,12,1,40,8,8
+1098,Eixo Público ,FEJESP,1,8500,65,8,1,33,37,3
+1112,Nutri Jr. USP,FEJESP,1,26134.07,100,52,2,33,2,3
+1061,Acens,FEJECE,1,14000,90,10,4,60,70,7
+816,Mata Branca Jr.,FEJECE,1,3500,75,5,2,40,30,2
+699,EJENUTRI - Empresa Júnior dos Estudantes de Nutrição,FEJESP,2,18804,75,80,3,60,2,2
+52,Porte Empresa Júnior,FEJEMG,5,500000,75,130,4,80,80,110
+1070,PROENGE Empresa Júnior,Goiás Júnior,1,7000,80,4,1,45,33,2
+1115,IO Júnior Consultoria e Educação Ambiental,FEJESP,1,15000,100,7,1,75,1,1
+1232,SetApp,FEJEMG,2,43580,90,20,3,70,70,14
+1079,AgriTec Consultoria Agronômica,Roraima Júnior,1,2000,0,15,0,0,0,0
+1080,PETROJr.,FEJESC,1,4120,55,4,1,55,3,2
+727,CONSEJ - Consultoria Jurídica Júnior,RN Júnior,3,36000,85,60,3,65,50,30
+1114,Ecoflorestal Jr. Empresa Consultoria Florestal ,FEJESP,2,38217.39,75,10,1,33,1,1
+1073,Integra Consultoria Júnior,FEJEAP,1,5000,0,5,0,0,0,0
+1082,ProSigma Jr,FEJEA,1,12600,75,12,5,33,1,5
+1069,EASY Jr - Soluções Ambientais ,SERJÚNIOR,1,2500,80,5,4,80,60,5
+1072,CONEQ - Consultoria Engenheria Química,FEJESC,1,15000,75,4,2,60,40,2
+1161,ACONT - ASSESSORIA E CONSULTORIA CONTÁBIL,RN Júnior,2,28000,100,357,2,60,60,215
+1076,Robótica Tucuju Enterprise,FEJEAP,1,500,72,8,1,80,75,6
+571,CATALISA - Soluções em Engenharia Química,FEJERS,3,80041.34,78,17,2,77,5,1
+634,Galo Jr. Comunicação,FEJESC,2,10935,27,15,1,33,1,1
+1093,Ecomp,FEJEPAR,1,17000,52,8,3,50,80,7
+766,AZ Consultoria,Baré Júnior,1,10000,60,13,2,60,40,6
+1110,Concrete,RN Júnior,1,33000,77,45,3,60,45,21
+1106,Constru Soluções em Engenharia,FEJEMG,1,30000,85,20,5,68,50,10
+12,INOVA EJ,FEJECE,5,274000,73,50,4,70,50,25
+1094,Diferencial EJ,FEJEMG,2,23000,90,15,2,43,54,9
+482,VetJr,FEJEMG,2,18000,80,26,2,33,50,13
+1096,PQ Júnior - Projetos e Consultoria,FEJEMG,2,12000,64,15,2,45,45,7
+1099,Cenagri Jr.,FEJESP,1,20000,27,20,3,33,60,12
+1091,TENORIS,FEJEPAR,1,20000,65,20,2,50,10,2
+1083,Tática Jr,Juniores,1,5000,45,10,3,60,80,9
+1108,Bioprox Júnior,FEJESP,1,16000,60,15,2,33,1,1
+791,Arco - Consultoria em Arquitetura e Design,Baré Júnior,2,14600,100,24,10,53,60,15
+1062,Lógica Consultoria,Concentro,1,4000,50,20,1,50,15,10
+1020,Quimlabor Jr.,FEJERS,1,12500,80,12,3,80,18,3
+516,Prisma Consultoria e Serviços em Engenharia,FEJEPE,4,100000,85,60,4,100,40,25
+1033,META JUNIOR,FEJESP,1,8163,90,7,1,53,1,1
+726,Otimiza ,FEJEPAR,3,33000,55,33,2,50,52,18
+450,UFAC Florestal Júnior,Acre Júnior,1,3000,100,3,2,70,10,3
+1113,OTIMIZA EMPRESA JUNIOR,FEJESP,1,2000,50,3,1,33,50,2
+127,Empresa Junior Mackenzie Consultoria,FEJESP,5,470338.7,65,44,2,35,80,36
+338,AgroJr. Consultoria ,FEJEPAR,1,0,0,0,0,0,0,0
+223,CECCO Consultoria Contábil,FEJEMG,3,27916.85,75,170,1,33,39,67
+395,Ambiental Jr.,FEJEMG,1,0,0,0,0,0,0,0
+834,StartUP! Engenharia,FEJESP,1,5700,43,7,2,35,35,3
+103,EJUCS,FEJERS,1,56000,50,36,1,70,14,12
+1134,Conecta Jr.,FEJEMS,1,8000,80,8,2,70,50,4
+1084,Prosseq Jr,Pará Júnior,1,18000,50,20,3,52,50,10
+1143,Canindé Design Empresa Júnior,Goiás Júnior,1,5000,50,15,3,33,12,6
+1137,Agrosertão Jr,SERJÚNIOR,1,10000,70,10,1,60,50,5
+1140,MAJ - Mecatrônica e Automação Júnior,FEJESC,1,20000,75,5,2,70,85,5
+1139,Astrodatum,Concentro,1,1500,60,20,2,33,20,4
+616,COLTECH,Baré Júnior,3,43000,70,36,2,90,35,13
+1124,Esamb,FEJEMG,1,10000,75,40,2,80,75,30
+1142,Projete JR,FEJESC,1,13000,77,15,1,50,13,3
+1144,Luminus Jr.,UNIJr-BA,1,20000,45,20,1,33,50,10
+88,Ejcad Consultoria,Juniores,2,60000,90,20,2,70,90,18
+895,Cromo Consultoria,FEJEPAR,1,50000,60,20,1,38,60,12
+1081,Flua Consultoria Ambiental,Concentro,1,25000,80,15,5,70,63,15
+1141,Eumeca - Empresa Júnior de Engenharia Mecatrônica,FEJESC,1,10000,75,10,5,70,60,6
+1168,STARTEQ Engenharia,SERJÚNIOR,1,20000,60,25,1,33,50,13
+1159,AlQualis Júnior,RioJunior,5,298592,27,20,3,100,1,5
+205,Konvex Consultoria,FEJESC,2,32000,65,16,2,44,1,9
+755,Engloba Consultoria,RioJunior,2,19872.4,85,17,2,50,50,9
+1146,NutrESul Jr,Juniores,1,3500,75,15,4,90,2,1
+1148,ADCONT JR,Pará Júnior,1,10000,0,10,0,0,0,0
+1136,Apetite,FEJEMS,1,3500,70,10,1,60,50,5
+1151,Unijus,FEJECE,1,10000,50,20,2,50,5,5
+701,Carajás Jr - Serviços e Consultoria Mineral e Ambiental ,Pará Júnior,1,7000,27,4,1,33,50,2
+1165,InFocus Jr,Pará Júnior,1,2500,0,4,0,0,0,0
+125,ITA Júnior,FEJESP,3,138901.5,60,15,3,60,46,7
+1154,CEOS - Empresa Jr. da Computação UFC,FEJECE,1,18200,75,9,3,60,50,5
+1155,Contiesrsa,Piauí Júnior,1,1000,30,20,1,50,1,1
+1030,EMPRESA JÚNIOR ARAGUAIA XINGU (EJAX - Consultoria Agropecuária),FEMTEJ,1,5000,95,5,1,33,41,3
+1162,ENGAJA - Engenharia de Alimentos Júnior Assessoria,PB Júnior,2,38000,76,25,5,60,51,13
+1153,Konsili Jr,Pará Júnior,1,6000,50,12,1,33,65,8
+1157,Chronos Jr.,Pará Júnior,1,3000,0,3,0,0,0,0
+130,Biotec Júnior,FEJESP,3,35100,75,25,1,33,1,1
+1160,Aurea,RioJunior,1,8500,50,12,1,40,1,2
+1158,LEVE Consultoria e Gestão de Projetos,RioJunior,1,20437.04,75,10,2,52,1,1
+1166,PETR-AM ,Baré Júnior,1,9000,70,16,4,75,15,4
+1038,CONCRETA - Soluções em Engenharia,FEJEMG,2,30000,100,50,2,50,13,7
+1192,Melius Empresa Junior ,FEJEMG,2,10000,80,12,2,35,50,8
+1194,Alfa Pública Consultoria Júnior em Gestão,FEJEMG,1,310000,100,8,2,75,50,4
+1149,CORAq - Consultoria em Recursos Aquáticos,FEJECE,2,18000,94,23,1,45,50,12
+750,Engercon Jr,FEJECE,2,30000,80,25,2,60,15,5
+476,NovaMente - E.J. de Psicologia da UFMA,Maranhão Júnior,1,12831.63,92,8,1,73,50,4
+1169,StartHub,Baré Júnior,1,20000,100,12,4,50,60,8
+1170,iModa Jr ,FEJESC,1,3500,53,5,1,50,1,1
+605,Edifica Soluções,FEJECE,1,6000,67,10,1,70,1,1
+366,Metal Soluções Jr,FEJECE,1,15000,60,10,1,43,70,8
+1175,Hórus Júnior - Assessoria Contábil,FEJERS,2,44936.8,75,12,2,80,18,6
+1172,Pharmazon Jr.,Baré Júnior,1,5000,50,15,1,50,20,6
+1116,CSB Júnior,FEJESP,1,8000,27,12,1,33,1,1
+1173,Empresa Jr Analize - Assessoria Agropecuária,FEJESC,1,10000,75,24,5,70,50,12
+1174,Atena Jr,FEJERS,1,15000,75,14,2,80,50,7
+915,Economontes Empresa Junior,FEJEMG,2,20000,75,8,1,41,26,3
+1171,EJIFAR - Empresa Júnior Integrada de Farmácia,FEJESC,1,6000,75,10,2,40,21,3
+599,Xisto Jr. Consultoria,RioJunior,2,50224.29,76,45,3,75,55,25
+168,EDIFICar Jr,FEJESP,2,29300,72,15,1,33,50,8
+287,LEA Júnior Consultoria,UNIJr-BA,1,13311.88,75,30,2,74,8,6
+553,Semear Consultoria,FEJEPAR,3,15000,27,12,1,70,25,7
+944,Ampla Consultoria Jr.,FEJEMG,2,17529.2,90,13,3,67,95,13
+407,TechVet Júnior,FEJERS,2,13178,75,10,3,75,21,3
+749,Enfitec Júnior,FEJERS,1,29008.75,66,7,3,70,25,2
+1181,ALPE Engenharia,RN Júnior,1,4800,85,6,1,33,50,3
+1179,Pollaris Junior,Baré Júnior,2,20487.96,100,36,2,50,20,10
+587,EEL Júnior,FEJESP,2,40000,75,25,1,70,70,20
+590,SIGMAX - Soluções Empresariais,FEJEMS,3,40000,82,20,3,60,50,10
+1180,Actuar Consult Júnior,RN Júnior,1,10000,75,9,2,77,50,5
+1152,Sinapse Júnior - Consultoria e Soluções,Juniores,2,6275,100,10,2,60,2,1
+1203,Voltech Projetos e Consultoria Junior,PB Júnior,1,10000,75,8,1,33,10,1
+883,GDI Júnior,Juniores,2,16000,27,20,2,33,10,2
+748,Novare Consultoria ,Baré Júnior,3,61800,100,14,2,75,70,10
+902,Delfos,FEJEPAR,2,24000,80,10,3,50,50,5
+1182,Equip Consultoria,FEJEMG,1,10235,100,13,2,55,17,3
+1183,Atrium Engenharia Júnior,FEJESC,1,20000,60,6,2,33,50,3
+1185,59mil,RN Júnior,3,46000,77,27,8,63,50,14
+543,CATI Jr.,FEJESP,4,80000,80,5,2,75,50,3
+341,Inovar Eco Empresa Júnior,Maranhão Júnior,1,0,0,0,0,0,0,0
+625,Marisma Empresa Júnior de Oceanografia,Maranhão Júnior,1,0,0,0,0,0,0,0
+627,Psiworks,Maranhão Júnior,S/N,0,0,0,0,0,0,0
+775,Jurídica Júnior Consultoria Jurídica,FEJEMG,2,24640,100,40,1,45,7,3
+1186,Lamp Empresa Júnior de Engenharia Elétrica,FEJESC,1,10000,80,10,2,50,4,4
+457,Cia Júnior Consultoria,UNIJr-BA,1,18000,51,14,1,33,15,3
+1190,Vianna Consultoria Júnior ,FEJEMG,2,13000,100,12,2,60,46,8
+1193,Voluta Soluções Digitais,FEJEMG,1,7039,59,7,2,52,30,3
+324,Staff Consultoria ,FEJEPAR,2,26000,80,18,1,33,35,7
+1195,Pilares Consultoria Junior de Engenharia Civil,PB Júnior,2,25000,100,22,2,80,1,1
+1204,Otimize Consultoria,PB Júnior,2,60000,60,35,4,82,50,30
+1200,Polimerize,FEJEMG,1,40000,60,18,1,90,55,10
+1205,EcapJr,FEJEMG,3,7100,100,100,5,40,8,8
+1207,EP Consultoria Júnior,FEJEMG,1,10000,80,10,1,50,22,4
+1206,LS Consultoria Júnior,FEJESP,2,25000,63,10,1,58,1,1
+1210,ProHidro Jr.,FEJEMG,2,28000,100,28,4,90,9,6
+1211,EJCOMP - Empresa Júnior de Ciência da Computação,FEJESP,2,17000,65,7,1,33,1,1
+1212,Atmos Júnior,FEJESP,1,2000,41,17,1,33,1,1
+423,UFLA Júnior Consultoria Administrativa,FEJEMG,4,91000,80,32,3,65,41,23
+626,VALOR Empresa Junior,Maranhão Júnior,1,4000,27,5,1,33,1,1
+176,i9 CONSULTORIA,FEJESC,5,150000,80,53,2,33,35,21
+690,Marketing Júnior USP,FEJESP,4,145000,85,35,3,80,40,14
+326,Dinâmica Consultoria,FEJEPAR,5,300000,80,70,1,85,95,67
+464,PROJEC,FEJESP,4,220000,90,30,3,60,60,18
+733,Seed a Bit Tecnologia,FEJEPE,1,14000,52,7,1,80,50,4
+700,Pirâmides Topografia e Projetos,RN Júnior,2,24177.76,80,12,2,40,50,6
+317,Estratégica Empresa Júnior de Administração da UFMA,Maranhão Júnior,1,7161.75,100,10,1,66,1,1
+864,LabQI Jr. - Consultoria e Análises físico-químicas,Juniores,1,2660,60,16,2,55,50,8
+1049,QuímEJ  - Empresa Júnior de Soluções em Química,FEJEMG,1,10300,100,20,3,80,70,14
+1178,Pacta,Concentro,1,5000,50,15,2,50,50,8
+78,Agrha Consultoria,RioJunior,2,32000,75,15,1,70,14,5
+823,Massarani Consultoria Júnior em Engenharia Química,FEJEPAR,1,4000,73,5,1,67,1,1
+1026,Ramo da Terra Empresa Junior,FEJESP,1,6231.32,60,25,1,57,1,1
+596,Renova Jr.,FEJERS,1,30000,70,15,1,60,30,8
+455,Sênior Consultoria Ambiental,FEJEMG,1,850,80,5,2,59,50,11
+1127,EMC,FEJESP,1,3600,32,3,1,40,1,1
+234,GeoMaps Consultoria,FEJECE,1,25000,75,32,5,33,20,16
+39,EMAS Jr. Consultoria,FEJEMG,5,160000,70,90,5,75,50,45
+85,CJA - Consultores Juniores Associados/Ufes,Juniores,5,250000,75,35,3,70,1,1
+470,Empresa Júnior Meta Consultoria,RioJunior,4,183285.12,66,75,2,33,92,69
+90,CT Junior,Juniores,5,150000,75,40,3,60,50,20
+822,E3J - Empresa Júnior de Engenharia Elétrica,Pará Júnior,1,8500,93,30,3,40,5,3
+209,Campe Consultoria Jr,FEJEMG,5,211000,90,40,5,60,80,36
+945,EPAV JR,FEMTEJ,1,1000,50,3,1,50,1,1
+694,Argos Engenharia Júnior,Goiás Júnior,1,3275,41,5,2,33,50,3
+159,CIPPAL Engenharias Agrárias,Goiás Júnior,4,75000,67,24,2,60,8,2
+573,Impact,FEJECE,1,10000,95,10,1,70,50,5
+259,Campic Consultoria Jr.,FEJEMG,1,8500,100,12,1,58,18,3
+192,Strategos Consultoria Política Jr.,Concentro,3,123000,75,20,1,43,20,4
+1257,VALETUR,FEMTEJ,1,0,0,0,0,0,0,0
+434,EJE - Empresa Júnior de Estatística,FEJESP,2,17800,75,30,2,33,35,11
+472,C2E - Empresa Júnior de Consultoria em Engenharia Elétrica,FEJESC,4,70000,64,30,5,33,50,15
+828,Vetor Jr. ,FEJEA,2,13600,75,17,1,80,1,1
+635,InovEQ,FEJESC,1,6500,70,7,1,50,40,3
+499,Maximize - Soluções em Biotecnologia,PB Júnior,1,7000,80,41,3,80,50,23
+570,Eali Consultoria Junior em Engenharia de Alimentos,FEJERS,4,90000,92,40,4,80,80,32
+931,CERF - Soluções Tecnológicas,PB Júnior,1,20000,51,9,3,50,65,6
+735,Eleven Jr.,PB Júnior,1,700,51,8,1,43,26,3
+1197,Eagle - Soluções Inteligentes de Sistemas e Computação,PB Júnior,1,18000,70,12,3,33,30,8
+874,TEQInova - Tecnologia, Engenharia Química e Inovação,PB Júnior,1,8000,52,8,2,43,25,5
+290,João Pinheiro Jr.,FEJEMG,2,65000,63,8,1,70,50,4

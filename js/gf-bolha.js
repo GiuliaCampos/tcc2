@@ -3,7 +3,16 @@ var base = new metodosBase();
 
 async function start(){
   federacao = await base.getFed();
-  await base.montarConjuntoFederacao(federacao); 
+  await base.montarConjuntoFederacao(federacao);
+
+  var faturamentoReal = federacao.forEach(function(d){
+    var tmp = d.faturamento+'00';
+        tmp = tmp.replace(/([0-9]{2})$/g, ",$1");
+          if( tmp.length > 6 )
+            tmp = tmp.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
+
+    d.faturamentoReal = tmp;
+  }); 
 
   //Usados para criar as escalas do gráfico
   var menorFaturamento = d3.min(federacao, function(d){ return d.faturamento});
@@ -69,7 +78,7 @@ async function start(){
     .style("border", "solid")
     .style("border-width", "2px")
     .style("border-radius", "5px")
-    .style("padding", "5px")
+    .style("padding", "5px");
 
   // Three function that change the tooltip when user hover / move / leave a cell
   var mouseover = function(d) {
@@ -82,7 +91,7 @@ async function start(){
 
   var mousemove = function(d) {
     Tooltip
-      .html("Nome: " + d.nome + "<br>Faturamento: R$" + d.faturamento
+      .html("Nome: " + d.nome + "<br>Faturamento: R$" + d.faturamentoReal
         + "<br>Nº Projetos: " + d.n_projetos + "<br>Projetos de Impacto: " + d.projetos_impacto)
       .style("left", (d3.mouse(this)[0]+10) + "px")
       .style("top", (d3.mouse(this)[1]) + "px")

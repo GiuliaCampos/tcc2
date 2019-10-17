@@ -5,10 +5,10 @@ ej = base.getEj();
 async function start(){
   await base.montarConjuntoEjs(ej); 
 
-  var calculaIndiceCluster = ej.forEach(function(d){
-    var indice;
-    indice = (d.tempoProj * d.n_projetos * d.faturamento) / (d.n_membros);
-    d.indice_2020 =  indice;
+  // var calculaIndiceCluster = ej.forEach(function(d){
+  //   var indice;
+  //   indice = (d.tempoProj * d.n_projetos * d.faturamento) / (d.n_membros);
+  //   d.indice_2020 =  indice;
     // if(indice < 118523) d.cluster = 1;
     // else if((indice > 118523)&&(indice < 544805)) d.cluster = 2;
     // else if((indice > 544805)&&(indice < 1480970)) d.cluster = 3;
@@ -17,8 +17,8 @@ async function start(){
     //   d.cluster = 5;
     //   d.indice = 4943242;
     // }
-    if(indice > 4943241)d.indice_2020 = 4943242;
-  });
+  //   if(indice > 4943241)d.indice_2020 = 4943242;
+  // });
   
   // set the dimensions and margins of the graph
   var margin = {top: 30, right: 50, bottom: 10, left: 70},
@@ -39,19 +39,19 @@ async function start(){
       .range(['#F55F4F','#FFFF6A','#59F54F', '#4FF5F2', '#C66AFF']);
 
     // Here I set the list of dimension manually to control the order of axis:
-    dimensions = ["faturamento", "n_membros", "meta_partc"];
+    dimensions = ["faturamentoMeta", "n_membros", "partcEventosMeta"];
 
     // For each dimension, I build a linear scale. I store all in a y object
     var y = {};
 
-    var maiorFaturamento = d3.max(ej, function(d){ return d.faturamento});
-    var menorFaturamento = d3.min(ej, function(d){ return d.faturamento});
+    var maiorFaturamento = d3.max(ej, function(d){ return d.faturamentoMeta});
+    var menorFaturamento = d3.min(ej, function(d){ return d.faturamentoMeta});
     var maiorMembros = d3.max(ej, function(d){ return d.n_membros});
     var menorMembros = d3.min(ej, function(d){ return d.n_membros});
-    var maiorPart = d3.max(ej, function(d){ return d.meta_partc});
-    var menorPart = d3.min(ej, function(d){ return d.meta_partc});
+    var maiorPart = d3.max(ej, function(d){ return d.partcEventosMeta});
+    var menorPart = d3.min(ej, function(d){ return d.partcEventosMeta});
 
-    y["faturamento"] = d3.scaleLinear()
+    y["faturamentoMeta"] = d3.scaleLinear()
     .domain([menorFaturamento, maiorFaturamento])
     .range([height, 0]);
 
@@ -59,11 +59,11 @@ async function start(){
     .domain([menorMembros, maiorMembros])
     .range([height, 0]);
 
-    y["meta_partc"] = d3.scaleLinear()
+    y["partcEventosMeta"] = d3.scaleLinear()
     .domain([menorPart, 100])
     .range([height, 0]);
 
-    y["indice"] = d3.scaleLinear()
+    y["indice_2020"] = d3.scaleLinear()
     .domain([1, 4943241])
     .nice()
     .range([height, 0]);
@@ -93,7 +93,7 @@ async function start(){
   var mousemove = function(d) {
     Tooltip
       .html("Nome: " + d.nome + "<br>Faturamento: R$" + d.faturamentoReal
-        + "<br>Membros: " + d.n_membros + "<br>Participação: " + d.meta_partc)
+        + "<br>Membros: " + d.n_membros + "<br>Participação: " + d.partcEventosMeta)
       .style("left", (d3.mouse(this)[0]+10) + "px")
       .style("top", (d3.mouse(this)[1]) + "px")
   }

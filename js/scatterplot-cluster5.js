@@ -2,13 +2,13 @@ var ej = [];
 var base = new metodosBase();
 
 async function start(){
-  await base.montarConjuntoEjsCluster(5); 
+  await base.montarConjuntoEjsCluster(ej, 5); 
 
   //Usados para criar as escalas do gráfico
-  var menorFaturamento = d3.min(ej, function(d){ return d.faturamento});
-  var maiorFaturamento = d3.max(ej, function(d){ return d.faturamento});
-  var menorProjetos = d3.min(ej, function(d){ return d.n_projetos});
-  var maiorProjetos = d3.max(ej, function(d){ return d.n_projetos});
+  var menorFaturamento = d3.min(ej, function(d){ return d.faturamentoMeta});
+  var maiorFaturamento = d3.max(ej, function(d){ return d.faturamentoMeta});
+  var menorProjetos = d3.min(ej, function(d){ return d.n_projetosMeta});
+  var maiorProjetos = d3.max(ej, function(d){ return d.n_projetosMeta});
 
   //Dimensões do meu svg
   var width = 1200;

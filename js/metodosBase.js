@@ -63,15 +63,19 @@ class metodosBase{
 
   montarConjuntoEjs(ej){
     return new Promise((resolve, reject) => {
-      d3.csv("csv/teste2.csv", function(error, data) {
-        d3.csv("csv/monthly_editado.csv", function(error, data1){
+      d3.csv("csv/annual_metrics.csv", function(error, data) {
+        d3.csv("csv/monthly_updates_agosto.csv", function(error, data1){
 
-          var auxCluster;
+          var nome;
           data.forEach(function(d){
-            if(d.CLUSTER == "S/N") auxCluster = 1;
-            else auxCluster = +d.CLUSTER;
+            //console.log(nome);
 
-            d.PORCENTAGEM = +d.PORCENTAGEM;
+            d.ID = +d.ID;
+            d.ACOES_COMPARTILHADAS = +d.ACOES_COMPARTILHADAS;
+            d.PARTICIPACAO = +d.PARTICIPACAO;
+            d.NPS = +d.NPS;
+            d.PROJETOS_IMPACTO = +d.PROJETOS_IMPACTO;
+            d.PORCENTAGEM_MEMBROS = +d.PORCENTAGEM_MEMBROS;
             d.N_PROJETOS = +d.N_PROJETOS;
             d.FATURAMENTO = +d.FATURAMENTO;
 
@@ -80,120 +84,107 @@ class metodosBase{
             if( tmp.length > 6 )
               tmp = tmp.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
 
-            d.ACOES_COMPARTILHADAS = +d.ACOES_COMPARTILHADAS;
-            d.PARTICIPACAO_EVENTOS = +d.PARTICIPACAO_EVENTOS;
-            d.NPS = +d.NPS;
-            d.PROJETOS_IMPACTO = +d.PROJETOS_IMPACTO;
 
             ej.push({
+              ID: d.ID,
               nome: d.EMPRESA_JUNIOR,
               federacao: d.FED,
-              cluster: auxCluster,
-              faturamento: d.FATURAMENTO,
+              cluster: 1,
+              faturamentoMeta: d.FATURAMENTO,
               faturamentoReal: tmp,
-              n_projetos: d.N_PROJETOS,
+              membrosProjetosMeta: d.PORCENTAGEM_MEMBROS,
+              n_projetosMeta: d.N_PROJETOS,
+              acoesCompartilhadasMeta: d.ACOES_COMPARTILHADAS,
+              partcEventosMeta: d.PARTICIPACAO,
+              npsMeta: d.NPS,
+              projetoImpactoMeta: d.PROJETOS_IMPACTO,
+              ac: null,
+              tempoProjMedio: 1,
+              faturamentoAtual: 0,
+              n_projetosAtual: 0,
+              n_membrosProjeto: 0,
+              npsAtual: 0,
               n_membros: 0,
-              meta_partc: 0,
-              tempoProj: 1,
               indice_2020: 0
-            });
-
-          });
-
+            }); //fim do push
+          });// fim da leitura das metas
+          
+          var qntMembros;
           data1.forEach(function(d){
             ej.forEach(function(e, index){
-              var qntMembros;
-              if(d.EMPRESA_JUNIOR == e.nome){
+              d.ID = +d.ID;
+              //verifica se é a mesma ej
+              if(d.ID == e.ID){
+                //Armazenando nº de membros
                 d.MEMBROS = +d.MEMBROS;
                 e.n_membros = d.MEMBROS;
-                d.META_participacao_eventos = +d.META_participacao_eventos;
-                e.meta_partc = d.META_participacao_eventos;
 
-                qntMembros = (d.MEMBROS * d.META_participacao_eventos)/100;
-                e.meta_partc = qntMembros;
+                //qnt de membros que precisam ir em eventos
+                qntMembros = (d.MEMBROS * e.partcEventosMeta)/100;
+                e.partcEventosMeta = qntMembros;
 
-                if( (d.TEMPO_MEDIO_DIAS == "NaN") || (d.TEMPO_MEDIO_DIAS == "N/A")){
-                  e.tempoProj = 1;
+                //qnt de membros que precisam fazer projetos
+                qntMembros = (d.MEMBROS * e.membrosProjetosMeta)/100;
+                e.membrosProjetosMeta = qntMembros;
+
+                //caso onde o cluster é NaN
+                if((d.CLUSTER_2019 == "NaN") || (d.CLUSTER_2019 == NaN)) e.cluster = 1;
+                else{ //caso de um cluster válido
+                  d.CLUSTER_2019 = +d.CLUSTER_2019;
+                  e.cluster = d.CLUSTER_2019;
                 }
+
+                //0 para ej nãoAC e 1 para ej AC
+                if(d.AC == "Não") e.ac = 0;
+                else e.ac = 1;
+
+                d.TEMPO_MEDIO_DIAS = +d.TEMPO_MEDIO_DIAS;
+                e.tempoProjMedio = d.TEMPO_MEDIO_DIAS;
+
+                d.FATURAMENTO = +d.FATURAMENTO;
+                e.faturamentoAtual += d.FATURAMENTO;
+
+                e.n_projetosAtual += 1;
+
+                //Não é possível armazenar esse valor pq é referente a apenas 1 projeto
+                //d.N_MEMBROS_PROJETO = +d.N_MEMBROS_PROJETO;
+
+                if(d.NPS == 'N/A') e.npsAtual = 0;
                 else{
-                  d.TEMPO_MEDIO_DIAS = +d.TEMPO_MEDIO_DIAS;
-                  e.tempoProj = d.TEMPO_MEDIO_DIAS;
+                  d.NPS = +d.NPS;
+                  e.npsAtual = d.NPS;
                 }
-              }
+
+                var indice;
+                indice = (e.tempoProjMedio * e.n_projetosAtual * e.faturamentoAtual) / (e.n_membros);
+                e.indice_2020 =  indice;
+
+                return
+
+              }//fim do if da ej
               if(ej.length === index + 1){
                 resolve(ej);
               }
-            });
-          });
+            }); //fim do array de ejs
+          });//fim da leitura atual da ej
 
         });
       });
     });
   }
 
-  montarConjuntoEjsCluster(clusterNumber){
+  montarConjuntoEjsCluster(ej, clusterNumber){
     return new Promise((resolve, reject) => {
-      d3.csv("csv/teste2.csv", function(error, data) {
-        d3.csv("csv/monthly_editado.csv", function(error, data1){
-
-          var auxCluster;
-          data.forEach(function(d){
-            if(d.CLUSTER == "S/N") auxCluster = 1;
-            else auxCluster = +d.CLUSTER;
-
-            if(auxCluster == clusterNumber){
-              d.FATURAMENTO = +d.FATURAMENTO;
-
-              var tmp = d.FATURAMENTO+'00';
-              tmp = tmp.replace(/([0-9]{2})$/g, ",$1");
-              if( tmp.length > 6 )
-                tmp = tmp.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
-              //console.log(tmp);
-
-              d.PORCENTAGEM = +d.PORCENTAGEM;
-              d.N_PROJETOS = +d.N_PROJETOS;
-              d.ACOES_COMPARTILHADAS = +d.ACOES_COMPARTILHADAS;
-              d.PARTICIPACAO_EVENTOS = +d.PARTICIPACAO_EVENTOS;
-              d.NPS = +d.NPS;
-              d.PROJETOS_IMPACTO = +d.PROJETOS_IMPACTO;
-
-              ej.push({
-                nome: d.EMPRESA_JUNIOR,
-                federacao: d.FED,
-                cluster: auxCluster,
-                faturamento: d.FATURAMENTO,
-                faturamentoReal: tmp,
-                n_projetos: d.N_PROJETOS,
-                n_membros: 0,
-                tempoProj: 1,
-                indice_2020: 0
-              });
-
-              data1.forEach(function(d){
-                ej.forEach(function(e, index){
-                  if(d.EMPRESA_JUNIOR == e.nome){
-                    d.MEMBROS = +d.MEMBROS;
-                    e.n_membros = d.MEMBROS;
-                    if( (d.TEMPO_MEDIO_DIAS == "NaN") || (d.TEMPO_MEDIO_DIAS == "N/A")){
-                      e.tempoProj = 1;
-                    }
-                    else{
-                      d.TEMPO_MEDIO_DIAS = +d.TEMPO_MEDIO_DIAS;
-                      e.tempoProj = d.TEMPO_MEDIO_DIAS;
-                    }
-                  }
-                  if(ej.length === index + 1){
-                    resolve(ej);
-                  }
-                });
-              });
-            }
-          });
-        });
+      this.montarConjuntoEjs(ej);
+      ej.forEach(function(d, index){
+        if(d.cluster != clusterNumber){
+          ej.splice(index, 1);
+        }
+        if(ej.length === index + 1){
+          resolve(ej);
+        }
       });
     });
   }
-
-
 
 }

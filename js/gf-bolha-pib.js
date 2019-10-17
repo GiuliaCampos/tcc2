@@ -9,6 +9,15 @@ async function start(){
     d.ticket = (d.faturamento / d.n_projetos);
   });
 
+  var faturamentoReal = federacao.forEach(function(d){
+    var tmp = d.faturamento+'00';
+        tmp = tmp.replace(/([0-9]{2})$/g, ",$1");
+          if( tmp.length > 6 )
+            tmp = tmp.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
+
+    d.faturamentoReal = tmp;
+  });
+
   //Usados para criar as escalas do gráfico
   var menorFaturamento = d3.min(federacao, function(d){ return d.faturamento});
   var maiorFaturamento = d3.max(federacao, function(d){ return d.faturamento});
@@ -84,7 +93,7 @@ async function start(){
   }
   var mousemove = function(d) {
     Tooltip
-      .html("Nome: " + d.nome + "<br>Faturamento: R$" + d.faturamento
+      .html("Nome: " + d.nome + "<br>Faturamento: R$" + d.faturamentoReal
         + "<br>Pib: " + d.pib + "<br>Ticket: " + d.ticket)
       .style("left", (d3.mouse(this)[0]+10) + "px")
       .style("top", (d3.mouse(this)[1]) + "px")

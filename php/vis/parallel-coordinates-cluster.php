@@ -2,8 +2,18 @@
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/estilo.css">
 <meta charset="utf-8">
+	<div id="cssload-loader">
+		<div class="cssload-dot"></div>
+		<div class="cssload-dot"></div>
+		<div class="cssload-dot"></div>
+		<div class="cssload-dot"></div>
+		<div class="cssload-dot"></div>
+		<div class="cssload-dot"></div>
+		<div class="cssload-dot"></div>
+		<div class="cssload-dot"></div>
+	</div>
 	<div class="container">
-		<div class="grafico" style="width: 100%;">
+		<div class="grafico" style="width: 100%;" onload="document.getElementById('cssload-loader').style.visibility = "hidden">
 			<h2 class="titulo">EJ's de acordo com cluster</h2>
 			<div id="div_template"></div>
 		</div>
@@ -16,6 +26,11 @@
 			<div class="infoLegenda roxo sombraLegenda" style="margin-top: 15px">Roxo: Cluster 5</div>		
 		</div>
 	</div>
+	<script>
+		function Mudarestado(el) {
+	       	document.getElementById(el).style.display = 'none';
+    	}
+	</script>
 <script src="js/metodosBase.js"></script>
 <script src="d3/d3.min.js"></script>
 <script src="js/parallel-coordinates-cluster.js"></script>

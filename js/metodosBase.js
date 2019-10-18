@@ -93,12 +93,14 @@ class metodosBase{
               faturamentoMeta: d.FATURAMENTO,
               faturamentoReal: tmp,
               membrosProjetosMeta: d.PORCENTAGEM_MEMBROS,
+              membrosProjetosRealMeta: 0,
               n_projetosMeta: d.N_PROJETOS,
               acoesCompartilhadasMeta: d.ACOES_COMPARTILHADAS,
               partcEventosMeta: d.PARTICIPACAO,
+              partcEventosRealMeta: 0,
               npsMeta: d.NPS,
               projetoImpactoMeta: d.PROJETOS_IMPACTO,
-              ac: null,
+              ac: 0,
               tempoProjMedio: 1,
               faturamentoAtual: 0,
               n_projetosAtual: 0,
@@ -109,23 +111,27 @@ class metodosBase{
             }); //fim do push
           });// fim da leitura das metas
           
-          var qntMembros;
           data1.forEach(function(d){
             ej.forEach(function(e, index){
+              var qntMembros;
               d.ID = +d.ID;
               //verifica se é a mesma ej
               if(d.ID == e.ID){
+                qntMembros = 0;
                 //Armazenando nº de membros
                 d.MEMBROS = +d.MEMBROS;
                 e.n_membros = d.MEMBROS;
 
                 //qnt de membros que precisam ir em eventos
-                qntMembros = (d.MEMBROS * e.partcEventosMeta)/100;
-                e.partcEventosMeta = qntMembros;
+                if(e.ID == 1211){
+                  console.log(e.partcEventosMeta);
+                }
+                qntMembros = (+d.MEMBROS * e.partcEventosMeta)/100;
+                e.partcEventosRealMeta = qntMembros;
 
                 //qnt de membros que precisam fazer projetos
-                qntMembros = (d.MEMBROS * e.membrosProjetosMeta)/100;
-                e.membrosProjetosMeta = qntMembros;
+                qntMembros = (+d.MEMBROS * e.membrosProjetosMeta)/100;
+                e.membrosProjetosRealMeta = qntMembros;
 
                 //caso onde o cluster é NaN
                 if((d.CLUSTER_2019 == "NaN") || (d.CLUSTER_2019 == NaN)) e.cluster = 1;
@@ -157,7 +163,8 @@ class metodosBase{
 
                 var indice;
                 indice = (e.tempoProjMedio * e.n_projetosAtual * e.faturamentoAtual) / (e.n_membros);
-                e.indice_2020 =  indice;
+                if(indice > 4943241) e.indice_2020 = 4943242;
+                else e.indice_2020 =  indice;
 
                 return
 
@@ -167,23 +174,44 @@ class metodosBase{
               }
             }); //fim do array de ejs
           });//fim da leitura atual da ej
-
+          
         });
       });
     });
   }
 
-  montarConjuntoEjsCluster(ej, clusterNumber){
-    return new Promise((resolve, reject) => {
-      this.montarConjuntoEjs(ej);
-      ej.forEach(function(d, index){
+  async montarConjuntoEjsCluster(ej, clusterNumber){
+    return new Promise(async (resolve, reject) => {
+
+      let ejsFiltradas = [];
+      let ejota = [];
+      ejsFiltradas = await this.montarConjuntoEjs(ej)
+
+      ejsFiltradas.forEach(function(d, index){
         if(d.cluster != clusterNumber){
-          ej.splice(index, 1);
-        }
-        if(ej.length === index + 1){
-          resolve(ej);
-        }
-      });
+              ejota = ejsFiltradas.splice(index, 1);
+            }
+            if(ejsFiltradas.length === index + 1){
+              resolve(ejota);
+            }
+      })
+
+      console.log(ejota.length);
+      resolve(ejota);
+
+      // this.montarConjuntoEjs(ej).then(
+        // (ej) => {
+        //   ej.forEach(function(d, index){
+            // if(d.cluster != clusterNumber){
+            //   ej.splice(index, 1);
+            // }
+            // if(ej.length === index + 1){
+            //   resolve(ej);
+            // }
+      //   }
+      // );
+
+      // });
     });
   }
 

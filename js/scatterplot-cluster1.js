@@ -2,7 +2,7 @@ var ej = [];
 var base = new metodosBase();
 
 async function start(){
-  await base.montarConjuntoEjsCluster(ej, 1)
+  ej = await base.montarConjuntoEjsCluster(ej, 1)
     // .then(base.montarConjuntoEjs(ej)); 
 
   //Usados para criar as escalas do gráfico
@@ -94,7 +94,7 @@ async function start(){
     .data(ej)
     .enter()
       .append("circle")
-      .attr("cx", function(d){ return (widthScale(d.faturamentoMeta));})
+      .attr("cx", function(d){ return (widthScale(d.faturamentoMeta)+30);})
       .attr("cy", function(d){ return (heightScale(d.n_projetosMeta));})
       .attr("fill", function(d){ return (clusterScale(d.cluster));})
       .attr("r", 5)

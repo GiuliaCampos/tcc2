@@ -26,11 +26,7 @@
 			<div class="infoLegenda roxo sombraLegenda" style="margin-top: 15px">Roxo: Cluster 5</div>		
 		</div>
 	</div>
-	<script>
-		function Mudarestado(el) {
-	       	document.getElementById(el).style.display = 'none';
-    	}
-	</script>
+
 <script src="js/metodosBase.js"></script>
 <script src="d3/d3.min.js"></script>
 <script src="js/parallel-coordinates-cluster.js"></script>

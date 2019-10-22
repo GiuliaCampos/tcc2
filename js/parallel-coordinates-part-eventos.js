@@ -4,21 +4,6 @@ ej = base.getEj();
 
 async function start(){
   await base.montarConjuntoEjs(ej); 
-
-  // var calculaIndiceCluster = ej.forEach(function(d){
-  //   var indice;
-  //   indice = (d.tempoProj * d.n_projetos * d.faturamento) / (d.n_membros);
-  //   d.indice_2020 =  indice;
-    // if(indice < 118523) d.cluster = 1;
-    // else if((indice > 118523)&&(indice < 544805)) d.cluster = 2;
-    // else if((indice > 544805)&&(indice < 1480970)) d.cluster = 3;
-    // else if((indice > 1480970)&&(indice < 4943241)) d.cluster = 4;
-    // else {
-    //   d.cluster = 5;
-    //   d.indice = 4943242;
-    // }
-  //   if(indice > 4943241)d.indice_2020 = 4943242;
-  // });
   
   // set the dimensions and margins of the graph
   var margin = {top: 30, right: 50, bottom: 10, left: 70},

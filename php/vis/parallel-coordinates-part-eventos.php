@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 	<div class="container">
 		<div class="grafico" style="width: 100%;">
-			<h2 class="titulo">EJ's de acordo com cluster</h2>
+			<h2 class="titulo">Participação em Eventos</h2>
 			<div id="div_template"></div>
 		</div>
 		<div class="informacao" style="width: 20%;">

@@ -3,22 +3,9 @@ var base = new metodosBase();
 ej = base.getEj();
 
 async function start(){
-  await base.montarConjuntoEjs(ej); 
-
-  // var calculaIndiceCluster = ej.forEach(function(d){
-  //   var indice;
-  //   indice = (d.tempoProj * d.n_projetos * d.faturamento) / (d.n_membros);
-  //   d.indice_2020 =  indice;
-    // if(indice < 118523) d.cluster = 1;
-    // else if((indice > 118523)&&(indice < 544805)) d.cluster = 2;
-    // else if((indice > 544805)&&(indice < 1480970)) d.cluster = 3;
-    // else if((indice > 1480970)&&(indice < 4943241)) d.cluster = 4;
-    // else {
-    //   d.cluster = 5;
-    //   d.indice = 4943242;
-    // }
-  //   if(indice > 4943241)d.indice_2020 = 4943242;
-  // });
+  await base.montarConjuntoEjs(ej).then(() => {
+    document.getElementById('cssload-loader').style.display = 'none';   //quando obter resposta do await, muda o display da animacao
+  }); 
   
   // set the dimensions and margins of the graph
   var margin = {top: 30, right: 50, bottom: 10, left: 50},
@@ -39,7 +26,7 @@ async function start(){
       .range(['#F55F4F','#FFFF6A','#59F54F', '#4FF5F2', '#C66AFF']);
 
     // Here I set the list of dimension manually to control the order of axis:
-    dimensions = ["tempoProjMedio", "n_projetosMeta", "n_membros", "indice_2020", "faturamentoMeta"];
+    dimensions = ["tempoProjMedio", "n_membros", "indice_2020", "n_projetosMeta", "faturamentoMeta"];
 
     // For each dimension, I build a linear scale. I store all in a y object
     var y = {};
@@ -99,7 +86,8 @@ async function start(){
   var mousemove = function(d) {
     Tooltip
       .html("Nome: " + d.nome + "<br>Faturamento: R$" + d.faturamentoReal
-        + "<br>Projetos: " + d.n_projetosMeta + "<br>Cluster: " + d.cluster)
+        + "<br>Projetos: " + d.n_projetosMeta + "<br>Membros: " + d.n_membros
+        + "<br>Indice 2020: " + d.indice_2020 + "<br>Tempo Medio (dias): " + d.tempoProjMedio)
       .style("left", (d3.mouse(this)[0]+10) + "px")
       .style("top", (d3.mouse(this)[1]) + "px")
   }

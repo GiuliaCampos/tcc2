@@ -123,9 +123,6 @@ class metodosBase{
                 e.n_membros = d.MEMBROS;
 
                 //qnt de membros que precisam ir em eventos
-                if(e.ID == 1211){
-                  console.log(e.partcEventosMeta);
-                }
                 qntMembros = (+d.MEMBROS * e.partcEventosMeta)/100;
                 e.partcEventosRealMeta = qntMembros;
 
@@ -183,35 +180,15 @@ class metodosBase{
   async montarConjuntoEjsCluster(ej, clusterNumber){
     return new Promise(async (resolve, reject) => {
 
+      let ejs = await this.montarConjuntoEjs(ej);
       let ejsFiltradas = [];
-      let ejota = [];
-      ejsFiltradas = await this.montarConjuntoEjs(ej)
 
-      ejsFiltradas.forEach(function(d, index){
-        if(d.cluster != clusterNumber){
-              ejota = ejsFiltradas.splice(index, 1);
-            }
-            if(ejsFiltradas.length === index + 1){
-              resolve(ejota);
-            }
+      ejs.forEach(function(d, index){
+        if(d.cluster == clusterNumber) //  verifica se o cluster da iteracao eh o mesmo do desejado
+          ejsFiltradas.push(d) //guarda a ej na auxiliar
       })
 
-      console.log(ejota.length);
-      resolve(ejota);
-
-      // this.montarConjuntoEjs(ej).then(
-        // (ej) => {
-        //   ej.forEach(function(d, index){
-            // if(d.cluster != clusterNumber){
-            //   ej.splice(index, 1);
-            // }
-            // if(ej.length === index + 1){
-            //   resolve(ej);
-            // }
-      //   }
-      // );
-
-      // });
+      resolve(ejsFiltradas); //retorna a auxiliar
     });
   }
 

@@ -2,7 +2,7 @@ var ej = [];
 var base = new metodosBase();
 
 async function start(){
-  await base.montarConjuntoEjsCluster(ej, 3);
+  ej = await base.montarConjuntoEjsCluster(ej, 3);
 
   //Usados para criar as escalas do gráfico
   var menorFaturamento = d3.min(ej, function(d){ return d.faturamentoMeta});

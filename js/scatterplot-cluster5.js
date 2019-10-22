@@ -2,7 +2,7 @@ var ej = [];
 var base = new metodosBase();
 
 async function start(){
-  await base.montarConjuntoEjsCluster(ej, 5); 
+  ej = await base.montarConjuntoEjsCluster(ej, 5); 
 
   //Usados para criar as escalas do gráfico
   var menorFaturamento = d3.min(ej, function(d){ return d.faturamentoMeta});
@@ -75,7 +75,7 @@ async function start(){
   var mousemove = function(d) {
     Tooltip
       .html("Nome: " + d.nome + "<br>Faturamento: R$" + d.faturamentoReal
-        + "<br>Projetos: " + d.n_projetos + "<br>Cluster: " + d.cluster)
+        + "<br>Projetos: " + d.n_projetosMeta + "<br>Cluster: " + d.cluster)
       .style("left", (d3.mouse(this)[0]+10) + "px")
       .style("top", (d3.mouse(this)[1]) + "px")
   }
@@ -93,8 +93,8 @@ async function start(){
     .data(ej)
     .enter()
       .append("circle")
-      .attr("cx", function(d){ return (widthScale(d.faturamento));})
-      .attr("cy", function(d){ return (heightScale(d.n_projetos));})
+      .attr("cx", function(d){ return (widthScale(d.faturamentoMeta)+30);})
+      .attr("cy", function(d){ return (heightScale(d.n_projetosMeta));})
       .attr("fill", function(d){ return (clusterScale(d.cluster));})
       .attr("r", 5)
       .on("mouseover", mouseover)

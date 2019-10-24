@@ -3,8 +3,9 @@ var ej = [];
 ej = base.getEj();
 
 async function start(){
-  await base.montarConjuntoEjs(ej); 
-  //console.log(ej);
+  await base.montarConjuntoEjs(ej).then(() => {
+    document.getElementById('cssload-loader').style.display = 'none';   //quando obter resposta do await, muda o display da animacao
+  });  
   
   //Usados para criar as escalas do gráfico
   var menorFaturamento = d3.min(ej, function(d){ return d.faturamentoMeta});
@@ -96,6 +97,7 @@ async function start(){
     .data(ej)
     .enter()
       .append("circle")
+      .attr("class", function (d) { return "line" + d.cluster } )
       .attr("cx", function(d){ return (widthScale(d.faturamentoMeta)+30);})
       .attr("cy", function(d){ return (heightScale(d.n_projetosMeta));})
       .attr("fill", function(d){ return (clusterScale(d.cluster));})
@@ -103,6 +105,51 @@ async function start(){
       .on("mouseover", mouseover)
       .on("mousemove", mousemove)
       .on("mouseleave", mouseleave);
+
+      $(function(){
+        $('#cluster1').change(function(){
+          if(!($(this).prop('checked'))){
+            d3.selectAll(".line1").style("visibility", 'hidden');
+            d3.selectAll(".lineNaN").style("visibility", 'hidden');
+          }  
+          if(($(this).prop('checked'))){
+            d3.selectAll(".line1").style("visibility", 'visible');
+            d3.selectAll(".lineNaN").style("visibility", 'visible');
+          }
+        });
+        $('#cluster2').change(function(){
+          if(!($(this).prop('checked'))){
+            d3.selectAll(".line2").style("visibility", 'hidden');
+          }  
+          if(($(this).prop('checked'))){
+            d3.selectAll(".line2").style("visibility", 'visible');
+          }
+        });
+        $('#cluster3').change(function(){
+          if(!($(this).prop('checked'))){
+            d3.selectAll(".line3").style("visibility", 'hidden');
+          }  
+          if(($(this).prop('checked'))){
+            d3.selectAll(".line3").style("visibility", 'visible');
+          }
+        });
+        $('#cluster4').change(function(){
+          if(!($(this).prop('checked'))){
+            d3.selectAll(".line4").style("visibility", 'hidden');
+          }  
+          if(($(this).prop('checked'))){
+            d3.selectAll(".line4").style("visibility", 'visible');
+          }
+        });
+        $('#cluster5').change(function(){
+          if(!($(this).prop('checked'))){
+            d3.selectAll(".line5").style("visibility", 'hidden');
+          }  
+          if(($(this).prop('checked'))){
+            d3.selectAll(".line5").style("visibility", 'visible');
+          }
+        });
+      })
 }
 
   start()

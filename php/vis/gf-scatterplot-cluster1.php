@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/estilo.css">
 <meta charset="utf-8">
+
 	<div class="container">
 		<div class="grafico" style="width: 100%;">
 			<h2 class="titulo">EJ's de acordo com cluster</h2>

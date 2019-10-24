@@ -2,6 +2,16 @@
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/estilo.css">
 <meta charset="utf-8">
+	<div id="cssload-loader">
+		<div class="cssload-dot"></div>
+		<div class="cssload-dot"></div>
+		<div class="cssload-dot"></div>
+		<div class="cssload-dot"></div>
+		<div class="cssload-dot"></div>
+		<div class="cssload-dot"></div>
+		<div class="cssload-dot"></div>
+		<div class="cssload-dot"></div>
+	</div>
 	<div class="container">
 		<div class="grafico">
 			<h2 class="titulo">Faturamento e Número de projetos</h2>

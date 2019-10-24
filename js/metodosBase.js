@@ -78,6 +78,7 @@ class metodosBase{
             d.PORCENTAGEM_MEMBROS = +d.PORCENTAGEM_MEMBROS;
             d.N_PROJETOS = +d.N_PROJETOS;
             d.FATURAMENTO = +d.FATURAMENTO;
+            d.CLUSTER = +d.CLUSTER;
 
             var tmp = d.FATURAMENTO+'00';
             tmp = tmp.replace(/([0-9]{2})$/g, ",$1");
@@ -89,7 +90,7 @@ class metodosBase{
               ID: d.ID,
               nome: d.EMPRESA_JUNIOR,
               federacao: d.FED,
-              cluster: 1,
+              cluster: d.CLUSTER,
               faturamentoMeta: d.FATURAMENTO,
               faturamentoReal: tmp,
               membrosProjetosMeta: d.PORCENTAGEM_MEMBROS,
@@ -107,7 +108,8 @@ class metodosBase{
               n_membrosProjeto: 0,
               npsAtual: 0,
               n_membros: 0,
-              indice_2020: 0
+              indice_2020: 0,
+              faturamento_membro: 0
             }); //fim do push
           });// fim da leitura das metas
           
@@ -115,13 +117,17 @@ class metodosBase{
             ej.forEach(function(e, index){
               var qntMembros;
               d.ID = +d.ID;
+
               //verifica se é a mesma ej
               if(d.ID == e.ID){
                 qntMembros = 0;
-                //Armazenando nº de membros
-                d.MEMBROS = +d.MEMBROS;
-                e.n_membros = d.MEMBROS;
 
+                //Armazenando nº de membros
+                if(e.n_membros == 0){
+                  d.MEMBROS = +d.MEMBROS;
+                  e.n_membros = d.MEMBROS;
+                }
+                
                 //qnt de membros que precisam ir em eventos
                 qntMembros = (+d.MEMBROS * e.partcEventosMeta)/100;
                 e.partcEventosRealMeta = qntMembros;
@@ -147,6 +153,8 @@ class metodosBase{
                 d.FATURAMENTO = +d.FATURAMENTO;
                 e.faturamentoAtual += d.FATURAMENTO;
 
+                e.faturamento_membro = e.faturamentoAtual/e.n_membros;
+
                 e.n_projetosAtual += 1;
 
                 //Não é possível armazenar esse valor pq é referente a apenas 1 projeto
@@ -158,10 +166,18 @@ class metodosBase{
                   e.npsAtual = d.NPS;
                 }
 
+
                 var indice;
                 indice = (e.tempoProjMedio * e.n_projetosAtual * e.faturamentoAtual) / (e.n_membros);
-                if(indice > 4943241) e.indice_2020 = 4943242;
-                else e.indice_2020 =  indice;
+                if(indice == 0) e.indice_2020 = 1;
+                else if(indice > 4943241) e.indice_2020 = 5;
+                else if((indice > 1480970)&&(indice < 4943241)) e.indice_2020 = 4;
+                else if((indice > 544805)&&(indice < 1480970)) e.indice_2020 = 3;
+                else if((indice > 118523)&&(indice < 544805)) e.indice_2020 = 2;
+                else e.indice_2020 = 1;
+
+                // if(indice > 4943241) e.indice_2020 = 4943242;
+                // else e.indice_2020 =  indice;
 
                 return
 

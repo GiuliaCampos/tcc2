@@ -47,4 +47,4 @@
 
 <script src="js/metodosBase.js"></script>
 <script src="d3/d3.min.js"></script>
-<script src="js/parallel-coordinates-cluster.js"></script>
+<script src="js/parallel-coordinates-cluster-atual.js"></script>

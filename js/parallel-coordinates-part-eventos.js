@@ -3,7 +3,9 @@ var base = new metodosBase();
 ej = base.getEj();
 
 async function start(){
-  await base.montarConjuntoEjs(ej); 
+  await base.montarConjuntoEjs(ej).then(() => {
+    document.getElementById('cssload-loader').style.display = 'none';   //quando obter resposta do await, muda o display da animacao
+  }); 
   
   // set the dimensions and margins of the graph
   var margin = {top: 30, right: 50, bottom: 10, left: 70},
@@ -24,19 +26,19 @@ async function start(){
       .range(['#F55F4F','#FFFF6A','#59F54F', '#4FF5F2', '#C66AFF']);
 
     // Here I set the list of dimension manually to control the order of axis:
-    dimensions = ["faturamentoMeta", "n_membros", "partcEventosRealMeta"];
+    dimensions = ["faturamento_membro", "n_membros", "partcEventosRealMeta"];
 
     // For each dimension, I build a linear scale. I store all in a y object
     var y = {};
 
-    var maiorFaturamento = d3.max(ej, function(d){ return d.faturamentoMeta});
-    var menorFaturamento = d3.min(ej, function(d){ return d.faturamentoMeta});
+    var maiorFaturamento = d3.max(ej, function(d){ return d.faturamento_membro});
+    var menorFaturamento = d3.min(ej, function(d){ return d.faturamento_membro});
     var maiorMembros = d3.max(ej, function(d){ return d.n_membros});
     var menorMembros = d3.min(ej, function(d){ return d.n_membros});
     var maiorPart = d3.max(ej, function(d){ return d.partcEventosRealMeta});
     var menorPart = d3.min(ej, function(d){ return d.partcEventosRealMeta});
 
-    y["faturamentoMeta"] = d3.scaleLinear()
+    y["faturamento_membro"] = d3.scaleLinear()
     .domain([menorFaturamento, maiorFaturamento])
     .range([height, 0]);
 
@@ -71,13 +73,16 @@ async function start(){
     var mouseover = function(d) {
       Tooltip
         .style("opacity", 1)
+      d3.selectAll("path")
+        .style("opacity", 0.03)
       d3.select(this)
-        .style("stroke", "black")
+        .style("stroke", function(d){ return( color(d.cluster))})
         .style("opacity", 1)
     }
   var mousemove = function(d) {
     Tooltip
-      .html("Nome: " + d.nome + "<br>Faturamento: R$" + d.faturamentoReal
+      .html("Nome: " + d.nome + "<br>Faturamento: R$" + d.faturamento_membro
+        + "<br>Faturamento Total: R$" + d.faturamentoAtual
         + "<br>Membros: " + d.n_membros + "<br>Participação: " + d.partcEventosRealMeta 
         + "<br>Participação: " + d.partcEventosMeta +"%")
       .style("left", (d3.mouse(this)[0]+10) + "px")
@@ -86,6 +91,8 @@ async function start(){
   var mouseleave = function(d) {
     Tooltip
       .style("opacity", 0)
+    d3.selectAll("path")
+        .style("opacity", 1)
     d3.select(this)
       .style("stroke", function(d){ return( color(d.cluster))} )
       .style("opacity", 1)
@@ -102,11 +109,11 @@ async function start(){
     .data(ej)
     .enter()
     .append("path")
-        .attr("class", function (d) { return "line " + d.cluster } ) // 2 class for each line: 'line' and the group name
+        .attr("class", function (d) { return "line" + d.cluster } ) // 2 class for each line: 'line' and the group name
         .attr("d",  path)
         .style("fill", "none" )
         .style("stroke", function(d){ return( color(d.cluster))} )
-        .style("stroke-width", 2)
+        .style("stroke-width", 3)
         .style("opacity", 1)
         .on("mouseover", mouseover)
         .on("mousemove", mousemove)
@@ -128,6 +135,52 @@ async function start(){
       .attr("y", -9)
       .text(function(d) { return d; })
       .style("fill", "black");
+
+
+      $(function(){
+        $('#cluster1').change(function(){
+          if(!($(this).prop('checked'))){
+            d3.selectAll(".line1").style("visibility", 'hidden');
+            d3.selectAll(".lineNaN").style("visibility", 'hidden');
+          }  
+          if(($(this).prop('checked'))){
+            d3.selectAll(".line1").style("visibility", 'visible');
+            d3.selectAll(".lineNaN").style("visibility", 'visible');
+          }
+        });
+        $('#cluster2').change(function(){
+          if(!($(this).prop('checked'))){
+            d3.selectAll(".line2").style("visibility", 'hidden');
+          }  
+          if(($(this).prop('checked'))){
+            d3.selectAll(".line2").style("visibility", 'visible');
+          }
+        });
+        $('#cluster3').change(function(){
+          if(!($(this).prop('checked'))){
+            d3.selectAll(".line3").style("visibility", 'hidden');
+          }  
+          if(($(this).prop('checked'))){
+            d3.selectAll(".line3").style("visibility", 'visible');
+          }
+        });
+        $('#cluster4').change(function(){
+          if(!($(this).prop('checked'))){
+            d3.selectAll(".line4").style("visibility", 'hidden');
+          }  
+          if(($(this).prop('checked'))){
+            d3.selectAll(".line4").style("visibility", 'visible');
+          }
+        });
+        $('#cluster5').change(function(){
+          if(!($(this).prop('checked'))){
+            d3.selectAll(".line5").style("visibility", 'hidden');
+          }  
+          if(($(this).prop('checked'))){
+            d3.selectAll(".line5").style("visibility", 'visible');
+          }
+        });
+      })
 }
 
   start();

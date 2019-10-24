@@ -26,25 +26,25 @@ async function start(){
       .range(['#F55F4F','#FFFF6A','#59F54F', '#4FF5F2', '#C66AFF']);
 
     // Here I set the list of dimension manually to control the order of axis:
-    dimensions = ["tempoProjMedio", "n_membros", "n_projetosMeta", "faturamentoMeta", "indice_2020"];
+    dimensions = ["tempoProjMedio", "n_membros", "n_projetosAtual", "faturamentoAtual", "indice_2020"];
 
     // For each dimension, I build a linear scale. I store all in a y object
     var y = {};
 
-    var maiorProjetos = d3.max(ej, function(d){ return d.n_projetosMeta});
-    var menorProjetos = d3.min(ej, function(d){ return d.n_projetosMeta});
-    var maiorFaturamento = d3.max(ej, function(d){ return d.faturamentoMeta});
-    var menorFaturamento = d3.min(ej, function(d){ return d.faturamentoMeta});
+    var maiorProjetos = d3.max(ej, function(d){ return d.n_projetosAtual});
+    var menorProjetos = d3.min(ej, function(d){ return d.n_projetosAtual});
+    var maiorFaturamento = d3.max(ej, function(d){ return d.faturamentoAtual});
+    var menorFaturamento = d3.min(ej, function(d){ return d.faturamentoAtual});
     var maiorMembros = d3.max(ej, function(d){ return d.n_membros});
     var menorMembros = d3.min(ej, function(d){ return d.n_membros});
     var maiorTempo = d3.max(ej, function(d){ return d.tempoProjMedio});
     var menorTempo = d3.min(ej, function(d){ return d.tempoProjMedio});
 
-    y["n_projetosMeta"] = d3.scaleLinear()
+    y["n_projetosAtual"] = d3.scaleLinear()
     .domain([menorProjetos, maiorProjetos])
     .range([height, 0]);
 
-    y["faturamentoMeta"] = d3.scaleLinear()
+    y["faturamentoAtual"] = d3.scaleLinear()
     .domain([menorFaturamento, maiorFaturamento])
     .range([height, 0]);
 
@@ -87,8 +87,8 @@ async function start(){
     }
   var mousemove = function(d) {
     Tooltip
-      .html( d.nome + "<br>Faturamento: R$" + d.faturamentoReal
-        + "<br>Projetos: " + d.n_projetosMeta + "<br>Membros: " + d.n_membros
+      .html( d.nome + "<br>Faturamento: R$" + d.faturamentoAtual
+        + "<br>Projetos: " + d.n_projetosAtual + "<br>Membros: " + d.n_membros
         + "<br>Cluster 2020: " + d.indice_2020 
         + "<br>Tempo Medio (dias): " + d.tempoProjMedio)
       .style("left", (d3.mouse(this)[0]+20) + "px")

@@ -19,8 +19,8 @@
 					<a class="dropdown-item" href="index.php?menu=php/vis/gf-bolha">Faturamento x nº Proj</a>
 					<a class="dropdown-item" href="index.php?menu=php/vis/gf-bolha-pib">Faturamento x Pib Estadual</a>
 					<a class="dropdown-item" href="index.php?menu=php/vis/gf-scatterplot-cluster">Cluster Ejs</a>
-					<div class="dropdown-divider"></div>
-					<a class="dropdown-item" href="index.php?menu=php/vis/bubble">Bolhas</a>
+					<!-- <div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="index.php?menu=php/vis/bubble">Bolhas</a> -->
 				</div>
 			</li>
 			<li class="nav-item dropdown">
@@ -37,13 +37,14 @@
 				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Graficos de Barras</a>
 				<div class="dropdown-menu">
 					<a class="dropdown-item" href="index.php?menu=php/vis/gf-faturamento-estadualBarras">Faturamento Estadual</a>
-					<a class="dropdown-item" href="index.php?menu=php/vis/gf-empilhamento">Empilhamento</a>
+					<!-- <a class="dropdown-item" href="index.php?menu=php/vis/gf-empilhamento">Empilhamento</a> -->
 				</div>
 			</li>
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Coordenada Paralela</a>
 				<div class="dropdown-menu">
-					<a class="dropdown-item" href="index.php?menu=php/vis/parallel-coordinates-cluster">Cluster</a>
+					<a class="dropdown-item" href="index.php?menu=php/vis/parallel-coordinates-cluster">Análise Cluster por meta</a>
+					<a class="dropdown-item" href="index.php?menu=php/vis/parallel-coordinates-cluster-atual">Análise Cluster atual</a>
 					<a class="dropdown-item" href="index.php?menu=php/vis/parallel-coordinates-part-eventos">Participação em eventos</a>
 				</div>
 			</li>

@@ -9,9 +9,8 @@
 		</div>
 		<div class="informacao">
 			<div class="infoLegenda"><b>Legenda:</b></div>
-			<div class="infoLegenda">Eixo X: Faturamento;</div>
-			<div class="infoLegenda">Eixo Y: PIB;</div>
-			<div class="infoLegenda">Raio: ticket</div>
+			<div class="infoLegenda">Eixo X: Faturamento</div>
+				<div class="infoLegenda">Eixo Y: Nº de Projetos</div>
 		</div>
 	</div>
 <script src="d3/d3.min.js"></script>

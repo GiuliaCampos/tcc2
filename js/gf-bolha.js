@@ -2,8 +2,9 @@ var federacao = [];
 var base = new metodosBase();
 
 async function start(){
-  federacao = await base.getFed();
-  await base.montarConjuntoFederacao(federacao);
+  await base.montarConjuntoFederacao(federacao).then(() => {
+    document.getElementById('cssload-loader').style.display = 'none';   //quando obter resposta do await, muda o display da animacao
+  }); 
 
   var faturamentoReal = federacao.forEach(function(d){
     var tmp = d.faturamento+'00';
@@ -92,7 +93,9 @@ async function start(){
   var mousemove = function(d) {
     Tooltip
       .html("Nome: " + d.nome + "<br>Faturamento: R$" + d.faturamentoReal
-        + "<br>Nº Projetos: " + d.n_projetos + "<br>Projetos de Impacto: " + d.projetos_impacto)
+        + "<br>Nº Projetos: " + d.n_projetos 
+        + "<br>Projetos de Impacto: " + d.projetos_impacto
+        + "<br>Estado: " + d.estado)
       .style("left", (d3.mouse(this)[0]+10) + "px")
       .style("top", (d3.mouse(this)[1]) + "px")
   }

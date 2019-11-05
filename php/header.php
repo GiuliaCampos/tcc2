@@ -46,13 +46,16 @@
 					<a class="dropdown-item" href="index.php?menu=php/vis/parallel-coordinates-cluster">Análise Cluster por meta</a>
 					<a class="dropdown-item" href="index.php?menu=php/vis/parallel-coordinates-cluster-atual">Análise Cluster atual</a>
 					<a class="dropdown-item" href="index.php?menu=php/vis/parallel-coordinates-part-eventos">Participação em eventos</a>
+					<a class="dropdown-item" href="index.php?menu=php/vis/parallel-coordinates-comparativo-meta">Análise de Metas</a>
+				</div>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Radviz</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="index.php?menu=php/vis/radviz-cluster-meta">Cluster</a>
 				</div>
 			</li>
 		</ul>
-			<!-- <form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-			</form> -->
 		</div>
 	</nav>
 

@@ -137,11 +137,16 @@ class metodosBase{
                 e.membrosProjetosRealMeta = qntMembros;
 
                 //caso onde o cluster é NaN
-                if((d.CLUSTER_2019 == "NaN") || (d.CLUSTER_2019 == NaN)) e.cluster = 1;
+                if((d.CLUSTER_2019 == "NaN") || (d.CLUSTER_2019 == NaN) || (e.cluster == "S/N")
+                  || (e.cluster == NaN)) e.cluster = 1;
                 else{ //caso de um cluster válido
                   d.CLUSTER_2019 = +d.CLUSTER_2019;
                   e.cluster = d.CLUSTER_2019;
                 }
+
+                // if(e.ID == 1211){
+                //   e.cluster = 1211;
+                // }
 
                 //0 para ej nãoAC e 1 para ej AC
                 if(d.AC == "Não") e.ac = 0;

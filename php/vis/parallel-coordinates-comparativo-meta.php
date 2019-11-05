@@ -17,7 +17,7 @@
 	</div>
 	<div class="container">
 		<div class="grafico" style="width: 100%;" onload="document.getElementById('cssload-loader').style.visibility = "hidden">
-			<h2 class="titulo">Análise Cluster</h2>
+			<h2 class="titulo">Análise de Metas</h2>
 			<div id="div_template"></div>
 		</div>
 		<div class="informacao" style="width: 20%;">
@@ -47,35 +47,4 @@
 
 <script src="js/metodosBase.js"></script>
 <script src="d3/d3.min.js"></script>
-<script src="js/parallel-coordinates-cluster.js"></script>
-<script>
-	var ej = [];
-	var base = new metodosBase();
-	ej = base.getEj();
-	
-	async function _gerarCsv (){
-		await base.montarConjuntoEjs(ej)
-     
-		var csv = 'id; faturamento; projetos; tempo; membros; cluster\n';
-
-		console.log(ej);
-	    ej.forEach(function(row, index) {
-	    	// console.log(index);
-	        csv += row.ID;
-	        csv += ';'+ row.faturamentoMeta;
-	        csv += ';'+ row.n_projetosMeta;
-	        csv += ';'+ row.tempoProjMedio;
-	        csv += ';'+ row.n_membros;
-	        csv += ';'+ row.cluster;
-	        csv += '\n';
-	    });
-	  
-		    var hiddenElement = document.createElement('a');
-			    hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
-			    hiddenElement.target = '_blank';
-			    hiddenElement.download = 'pex.csv';
-			    hiddenElement.click();
-	};
-	
-	_gerarCsv();
-</script>
+<script src="js/parallel-coordinates-comparativo-meta.js"></script>

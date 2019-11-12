@@ -49,33 +49,33 @@
 <script src="d3/d3.min.js"></script>
 <script src="js/parallel-coordinates-cluster.js"></script>
 <script>
-	var ej = [];
-	var base = new metodosBase();
-	ej = base.getEj();
+	// var ej = [];
+	// var base = new metodosBase();
+	// ej = base.getEj();
 	
-	async function _gerarCsv (){
-		await base.montarConjuntoEjs(ej)
+	// async function _gerarCsv (){
+	// 	await base.montarConjuntoEjs(ej)
      
-		var csv = 'id; faturamento; projetos; tempo; membros; cluster\n';
+	// 	var csv = 'id; faturamento; projetos; tempo; membros; cluster\n';
 
-		console.log(ej);
-	    ej.forEach(function(row, index) {
-	    	// console.log(index);
-	        csv += row.ID;
-	        csv += ';'+ row.faturamentoMeta;
-	        csv += ';'+ row.n_projetosMeta;
-	        csv += ';'+ row.tempoProjMedio;
-	        csv += ';'+ row.n_membros;
-	        csv += ';'+ row.cluster;
-	        csv += '\n';
-	    });
+	// 	console.log(ej);
+	//     ej.forEach(function(row, index) {
+	//     	// console.log(index);
+	//         csv += row.ID;
+	//         csv += ';'+ row.faturamentoMeta;
+	//         csv += ';'+ row.n_projetosMeta;
+	//         csv += ';'+ row.tempoProjMedio;
+	//         csv += ';'+ row.n_membros;
+	//         csv += ';'+ row.cluster;
+	//         csv += '\n';
+	//     });
 	  
-		    var hiddenElement = document.createElement('a');
-			    hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
-			    hiddenElement.target = '_blank';
-			    hiddenElement.download = 'pex.csv';
-			    hiddenElement.click();
-	};
+	// 	    var hiddenElement = document.createElement('a');
+	// 		    hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
+	// 		    hiddenElement.target = '_blank';
+	// 		    hiddenElement.download = 'pex.csv';
+	// 		    hiddenElement.click();
+	// };
 	
-	_gerarCsv();
+	// _gerarCsv();
 </script>

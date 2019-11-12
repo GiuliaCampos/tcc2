@@ -47,6 +47,7 @@
 					<a class="dropdown-item" href="index.php?menu=php/vis/parallel-coordinates-cluster-atual">Análise Cluster atual</a>
 					<a class="dropdown-item" href="index.php?menu=php/vis/parallel-coordinates-part-eventos">Participação em eventos</a>
 					<a class="dropdown-item" href="index.php?menu=php/vis/parallel-coordinates-comparativo-meta">Análise de Metas</a>
+					<a class="dropdown-item" href="index.php?menu=php/vis/parallel-coordinates-federacao">Federação Trimestral</a>
 				</div>
 			</li>
 			<li class="nav-item dropdown">

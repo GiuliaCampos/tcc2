@@ -1,11 +1,12 @@
 var federacao = [];
+var ej = [];
 var base = new metodosBase();
 
 async function start(){
   federacao = await base.getFed();
   await base.montarConjuntoFederacao(federacao).then(() => {
     document.getElementById('cssload-loader').style.display = 'none';   //quando obter resposta do await, muda o display da animacao
-  });  
+  });
 
   var ticketMedio = federacao.forEach(function(d){
     d.ticket = (d.faturamento / d.n_projetos);
@@ -50,7 +51,8 @@ async function start(){
 
   //Escala no eixo y
   var heightScale = d3.scaleLinear()
-                      .domain([menorPib, maiorPib])
+                      //.domain([menorPib, maiorPib])
+                      .domain([menorPib, 640185780])
                       .range([height/1.5, 0])
                       .nice();
   var y_axis = d3.axisLeft()
@@ -107,7 +109,23 @@ async function start(){
     d3.select(this)
       .style("stroke", "none")
       .style("opacity", 1)
-  }
+  }  
+
+  // text label for the x axis
+  canvas.append("text")             
+      .attr("transform",
+            "translate(550, 530)")
+      .style("text-anchor", "middle")
+      .text("Faturamento");
+
+   // text label for the y axis
+  canvas.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", -60)
+      .attr("x", -210)
+      .attr("dy", "1em")
+      .style("text-anchor", "middle")
+      .text("PIB");
 
 
   //Criando um circulo para cada posição do Array Federação

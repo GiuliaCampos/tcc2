@@ -41,15 +41,15 @@ async function start(){
     var menorFaturamentoMeta = d3.min(ej, function(d){ return d.faturamentoMeta});
 
     y["n_projetosAtual"] = d3.scaleLinear()
-    .domain([menorProjetos, maiorProjetos])
+    .domain([menorProjetos, 200])
     .range([height, 0]);
 
     y["faturamentoAtual"] = d3.scaleLinear()
-    .domain([menorFaturamento, maiorFaturamento])
+    .domain([menorFaturamentoMeta, maiorFaturamentoMeta])
     .range([height, 0]);
 
     y["n_projetosMeta"] = d3.scaleLinear()
-    .domain([menorProjetos, maiorProjetos])
+    .domain([menorProjetos, 200])
     .range([height, 0]);
 
     y["faturamentoMeta"] = d3.scaleLinear()

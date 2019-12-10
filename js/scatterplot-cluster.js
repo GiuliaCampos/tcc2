@@ -23,11 +23,11 @@ async function start(){
     .attr("width", width)
     .attr("height", height)
     .append("g")
-    .attr("transform", "translate(30 , 40)");
+    .attr("transform", "translate(40 , 40)");
 
   //Escala no eixo x
   var widthScale = d3.scaleLinear()
-                    .domain([menorFaturamento, maiorFaturamento])
+                    .domain([menorFaturamento, 200000])
                     .range([1, width - 200])
                     .nice();
                     
@@ -36,7 +36,7 @@ async function start(){
 
   //Escala no eixo y
   var heightScale = d3.scaleLinear()
-                      .domain([menorProjetos, maiorProjetos])
+                      .domain([menorProjetos, 100])
                       .range([height/1.5, 0])
                       .nice();
   var y_axis = d3.axisLeft()
@@ -79,7 +79,7 @@ async function start(){
   var mousemove = function(d) {
     Tooltip
       .html("Nome: " + d.nome + "<br>Faturamento: R$" + d.faturamentoReal
-        + "<br>Projetos: " + d.n_projetosMeta + "<br>Cluster: " + d.cluster)
+        + "<br>Projetos: " + d.n_projetosMeta + "<br>Federação: " + d.federacao)
       .style("left", (d3.mouse(this)[0]+10) + "px")
       .style("top", (d3.mouse(this)[1]) + "px")
   }
@@ -91,6 +91,21 @@ async function start(){
       .style("opacity", 1)
   }
 
+  // text label for the x axis
+  canvas.append("text")             
+      .attr("transform",
+            "translate(540, 530)")
+      .style("text-anchor", "middle")
+      .text("Faturamento");
+
+   // text label for the y axis
+  canvas.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", -40)
+      .attr("x", -210)
+      .attr("dy", "1em")
+      .style("text-anchor", "middle")
+      .text("Projetos");
 
   //Criando um circulo para cada posição do Array Federação
   var circulo = canvas.selectAll("circle")

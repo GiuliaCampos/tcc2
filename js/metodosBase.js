@@ -15,20 +15,24 @@ class metodosBase{
 
   montarConjuntoFederacao(federacao){
     return new Promise((resolve, reject) => {
-      d3.csv("csv/teste2.csv", function(error, data) {
+      d3.csv("csv/annual_metrics.csv", function(error, data) {
         d3.csv("csv/pib_uf.csv", function(error, data1){
 
           //Criando o vetor com cada federação
           data1.forEach(function(e){
             e.valor = +e.valor;
+            e.renda = +e.renda;
             federacao.push({
               nome: e.federacao,
               estado: e.Unidade,
               faturamento: 0,
-              faturamentoReal: null,
+              faturamentoReal: 0,
               n_projetos: 0,
               projetos_impacto: 0,
               ticket: 0,
+              n_empresa:0,
+              n_pessoas:0,
+              renda: e.renda,
               pib: e.valor,
             });
           });
@@ -50,6 +54,7 @@ class metodosBase{
                 f.faturamento += d.FATURAMENTO;
                 f.n_projetos += d.N_PROJETOS;
                 f.projetos_impacto += d.PROJETOS_IMPACTO;
+                f.n_empresa += 1;
               }
               if(federacao.length === index + 1){
                 resolve(federacao);
@@ -137,7 +142,7 @@ class metodosBase{
     });
   }
 
-  montarConjuntoEjs(ej){
+  async montarConjuntoEjs(ej){
     return new Promise((resolve, reject) => {
       d3.csv("csv/annual_metrics.csv", function(error, data) {
         d3.csv("csv/monthly_updates_agosto.csv", function(error, data1){
@@ -298,6 +303,23 @@ class metodosBase{
       })
 
       resolve(ejsFiltradas); //retorna a auxiliar
+    });
+  }
+
+  async adicionarNumeroMembrosFederacao(ej, fed){
+    return new Promise(async(resolve,reject) => {
+      let ejs = await this.montarConjuntoEjs(ej);
+      let federacao = await this.montarConjuntoFederacao(fed);
+
+      ejs.forEach(function(d){
+        federacao.forEach(function(f){
+          //console.log(d.federacao);  
+          if(d.federacao == f.nome){
+            f.n_pessoas += d.n_membros;
+          }
+        });
+      });
+      resolve(federacao);
     });
   }
 

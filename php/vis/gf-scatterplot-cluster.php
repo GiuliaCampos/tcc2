@@ -16,7 +16,10 @@
 	</div>
 	<div class="container">
 		<div class="grafico" style="width: 100%;">
-			<h2 class="titulo">EJ's de acordo com cluster</h2>
+			<h3 class="titulo">EJs por cluster</h3>
+			<p class="titulo"> 
+				EJs confederadas a Brasil Junior em 2019, comparativo número de projetos anual e faturamento
+			</p>
 			<div id="div_template"></div>
 		</div>
 		<div class="informacao" style="width: 20%;">

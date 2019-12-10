@@ -14,7 +14,10 @@
 	</div>
 	<div class="container">
 		<div class="grafico" style="width: 100%;">
-			<h2 class="titulo">Comparativo de Faturamento e PIB</h2>
+			<h3 class="titulo">Avaliação Faturamento Estadual</h3>
+			<p class="titulo">
+				Faturamento absuloto anual por estado brasileiro comparado ao número de projetos
+			</p>
 			<div id="div_template"></div>
 		</div>
 		<div class="informacao" style="width: 20%;">

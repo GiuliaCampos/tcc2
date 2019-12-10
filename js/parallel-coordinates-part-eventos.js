@@ -26,7 +26,7 @@ async function start(){
       .range(['#F55F4F','#FFFF6A','#59F54F', '#4FF5F2', '#C66AFF']);
 
     // Here I set the list of dimension manually to control the order of axis:
-    dimensions = ["faturamento_membro", "n_membros", "partcEventosRealMeta"];
+    dimensions = ["faturamento_membro", "n_membros", "partcEventosMeta"];
 
     // For each dimension, I build a linear scale. I store all in a y object
     var y = {};
@@ -35,19 +35,19 @@ async function start(){
     var menorFaturamento = d3.min(ej, function(d){ return d.faturamento_membro});
     var maiorMembros = d3.max(ej, function(d){ return d.n_membros});
     var menorMembros = d3.min(ej, function(d){ return d.n_membros});
-    var maiorPart = d3.max(ej, function(d){ return d.partcEventosRealMeta});
-    var menorPart = d3.min(ej, function(d){ return d.partcEventosRealMeta});
+    var maiorPart = d3.max(ej, function(d){ return d.partcEventosMeta});
+    var menorPart = d3.min(ej, function(d){ return d.partcEventosMeta});
 
     y["faturamento_membro"] = d3.scaleLinear()
-    .domain([menorFaturamento, maiorFaturamento])
+    .domain([menorFaturamento, 10000])
     .range([height, 0]);
 
     y["n_membros"] = d3.scaleLinear()
     .domain([menorMembros, maiorMembros])
     .range([height, 0]);
 
-    y["partcEventosRealMeta"] = d3.scaleLinear()
-    .domain([menorPart, 100])
+    y["partcEventosMeta"] = d3.scaleLinear()
+    .domain([33, 100])
     .range([height, 0]);
 
     y["indice_2020"] = d3.scaleLinear()
@@ -81,7 +81,7 @@ async function start(){
     }
   var mousemove = function(d) {
     Tooltip
-      .html("Nome: " + d.nome + "<br>Faturamento: R$" + d.faturamento_membro
+      .html("Nome: " + d.nome + "<br>Faturamento/pessoa: R$" + d.faturamento_membro
         + "<br>Faturamento Total: R$" + d.faturamentoAtual
         + "<br>Membros: " + d.n_membros + "<br>Participação: " + d.partcEventosRealMeta 
         + "<br>Participação: " + d.partcEventosMeta +"%")

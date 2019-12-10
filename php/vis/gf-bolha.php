@@ -14,14 +14,17 @@
 	</div>
 	<div class="container">
 		<div class="grafico">
-			<h2 class="titulo">Faturamento e Número de projetos</h2>
+			<h3 class="titulo">Avaliação Número de Projetos</h3>
+			<p class="titulo"> 
+				Número de Projetos anual por estado brasileiro, comparado ao PIB estual
+			</p>
 			<div id="div_template"></div>
 		</div>
 		<div class="informacao" style="width: 20%;">
 			<div class="infoLegenda"><b>Legenda:</b></div>
-			<div class="infoLegenda">Eixo X: Faturamento;</div>
-			<div class="infoLegenda">Eixo Y: nº de projetos;</div>
-			<div class="infoLegenda">Raio: projetos de impacto</div>			
+			<div class="infoLegenda">Eixo X: Número de Projeros;</div>
+			<div class="infoLegenda">Eixo Y: PIB Estadual;</div>
+			<div class="infoLegenda">Raio: Projetos de Impacto</div>			
 		</div>
 	</div>
 

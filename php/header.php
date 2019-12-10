@@ -16,8 +16,8 @@
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ScatterPlot</a>
 				<div class="dropdown-menu">
-					<a class="dropdown-item" href="index.php?menu=php/vis/gf-bolha">Faturamento x nº Proj</a>
-					<a class="dropdown-item" href="index.php?menu=php/vis/gf-bolha-pib">Faturamento x Pib Estadual</a>
+					<a class="dropdown-item" href="index.php?menu=php/vis/gf-bolha">Avaliação Número de Projetos</a>
+					<a class="dropdown-item" href="index.php?menu=php/vis/gf-bolha-pib">Avaliação Faturamento Absoluto</a>
 					<a class="dropdown-item" href="index.php?menu=php/vis/gf-scatterplot-cluster">Cluster Ejs</a>
 					<!-- <div class="dropdown-divider"></div>
 					<a class="dropdown-item" href="index.php?menu=php/vis/bubble">Bolhas</a> -->
@@ -37,6 +37,7 @@
 				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Graficos de Barras</a>
 				<div class="dropdown-menu">
 					<a class="dropdown-item" href="index.php?menu=php/vis/gf-faturamento-estadualBarras">Faturamento Estadual</a>
+					<a class="dropdown-item" href="index.php?menu=php/vis/renda-nPessoas">Renda e Número de Pessoas</a>
 					<!-- <a class="dropdown-item" href="index.php?menu=php/vis/gf-empilhamento">Empilhamento</a> -->
 				</div>
 			</li>

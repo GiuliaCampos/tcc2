@@ -1,0 +1,137 @@
+var screePlotData = [
+	{
+		"nome":"Roraima Júnior",
+		"n_empresa":4,
+		"n_pessoas":41
+	},
+	{
+		"nome":"Acre Júnior",
+		"n_empresa":4,
+		"n_pessoas":13
+	},
+	{
+		"nome":"FEJEAP",
+		"n_empresa":3,
+		"n_pessoas":0
+	},
+	{
+		"nome":"Tocantins Júnior",
+		"n_empresa":5,
+		"n_pessoas":54
+	},
+	{
+		"nome":"SERJÚNIOR",
+		"n_empresa":10,
+		"n_pessoas":257
+	}, 
+	{
+		"nome":"FEJERO",
+		"n_empresa":4,
+		"n_pessoas":27
+	},
+	{
+		"nome":"Piauí Júnior",
+		"n_empresa":5,
+		"n_pessoas":63
+	},
+	{
+		"nome":"FEJEA",
+		"n_empresa":17,
+		"n_pessoas":280
+	},
+	{
+		"nome":"PB Júnior",
+		"n_empresa":23,
+		"n_pessoas":435
+	},
+	{
+		"nome":"RN Júnior",
+		"n_empresa":28,
+		"n_pessoas":695
+	},
+	{
+		"nome":"Maranhão Júnior",
+		"n_empresa":13,
+		"n_pessoas":155
+	},
+	{
+		"nome":"Baré Júnior",
+		"n_empresa":12,
+		"n_pessoas":136
+	},
+	{
+		"nome":"FEJEMS",
+		"n_empresa":18,
+		"n_pessoas":357
+	},
+	{
+		"nome":"Juniores",
+		"n_empresa":35,
+		"n_pessoas":627
+	},
+	{
+		"nome":"FEMTEJ",
+		"n_empresa":14,
+		"n_pessoas":68
+	},
+	{
+		"nome":"Pará Júnior",
+		"n_empresa":21,
+		"n_pessoas":277
+	},
+	{
+		"nome":"FEJECE",
+		"n_empresa":39,
+		"n_pessoas":898
+	},
+	{
+		"nome":"FEJEPE",
+		"n_empresa":23,
+		"n_pessoas":653
+	},
+	{
+		"nome":"Goiás Júnior",
+		"n_empresa":18,
+		"n_pessoas":280
+	},
+	{
+		"nome":"Concentro",
+		"n_empresa":52,
+		"n_pessoas":1314
+	},
+	{
+		"nome":"FEJESC",
+		"n_empresa":43,
+		"n_pessoas":737
+	},
+	{
+		"nome":"UNIJr-BA",
+		"n_empresa":41,
+		"n_pessoas":1103
+	},
+	{
+		"nome":"FEJEPAR",
+		"n_empresa":64,
+		"n_pessoas":1473
+	},
+	{
+		"nome":"FEJERS",
+		"n_empresa":48,
+		"n_pessoas":875
+	},
+	{
+		"nome":"FEJEMG",
+		"n_empresa":131,
+		"n_pessoas":3633
+	},
+	{
+		"nome":"RioJunior",
+		"n_empresa":50,
+		"n_pessoas":1293
+	},
+	{
+		"nome":"FEJESP",
+		"n_empresa":114,
+		"n_pessoas":3225
+	}
+];

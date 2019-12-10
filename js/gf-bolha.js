@@ -20,6 +20,8 @@ async function start(){
   var maiorFaturamento = d3.max(federacao, function(d){ return d.faturamento});
   var maiorProjetos = d3.max(federacao, function(d){ return d.n_projetos});
   var menorProjetos = d3.min(federacao, function(d){ return d.n_projetos});
+  var maiorPIB = d3.max(federacao, function(d){ return d.pib});
+  var menorPIB = d3.min(federacao, function(d){ return d.pib});
   var maiorProjetosImp = d3.max(federacao, function(d){ return d.projetos_impacto});
   var menorProjetosImp = d3.min(federacao, function(d){ return d.projetos_impacto});
 
@@ -34,11 +36,11 @@ async function start(){
                   .attr("width", width)
                   .attr("height", height)
                 .append("g")
-                  .attr("transform", "translate(60 , 40)");
+                  .attr("transform", "translate(60 , 60)");
 
   //Escala no eixo x
   var widthScale = d3.scaleLinear()
-                    .domain([menorFaturamento, maiorFaturamento])
+                    .domain([menorProjetos, maiorProjetos])
                     .range([0, width - 200])
                     .nice();
     var x_axis = d3.axisBottom()
@@ -46,20 +48,20 @@ async function start(){
 
   //Escala no eixo y
   var heightScale = d3.scaleLinear()
-                    .domain([menorProjetos, maiorProjetos])
+                    .domain([menorPIB, 640185780])
                     .range([height/1.5, 0])
                     .nice();
     var y_axis = d3.axisLeft()
       .scale(heightScale);
 
   canvas.append("g")
-    .attr("transform", "translate(0, 10)")
+    .attr("transform", "translate(30, 10)")
     .call(y_axis);
 
   var xAxisTranslate = height/1.5 + 10;
 
   canvas.append("g")
-    .attr("transform", "translate(5, " + xAxisTranslate  +")")
+    .attr("transform", "translate(35, " + xAxisTranslate  +")")
     .call(x_axis);  
 
   //Escala para o raio
@@ -92,7 +94,7 @@ async function start(){
 
   var mousemove = function(d) {
     Tooltip
-      .html("Nome: " + d.nome + "<br>Faturamento: R$" + d.faturamentoReal
+      .html("Nome: " + d.nome + "<br>PIB: R$" + d.pib
         + "<br>Nº Projetos: " + d.n_projetos 
         + "<br>Projetos de Impacto: " + d.projetos_impacto
         + "<br>Estado: " + d.estado)
@@ -108,14 +110,30 @@ async function start(){
       .style("opacity", 1)
   }
 
+  // text label for the x axis
+  canvas.append("text")             
+      .attr("transform",
+            "translate(550, 550)")
+      .style("text-anchor", "middle")
+      .text("Número de Projetos");
+
+   // text label for the y axis
+  canvas.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", -60)
+      .attr("x", -210)
+      .attr("dy", "1em")
+      .style("text-anchor", "middle")
+      .text("PIB");   
+
 
   //Criando um circulo para cada posição do Array Federação
   var circulo = canvas.selectAll("circle")
                   .data(federacao)
                   .enter()
                     .append("circle")
-                    .attr("cx", function(d){ return (widthScale(d.faturamento))+5;})
-                    .attr("cy", function(d){ return (heightScale(d.n_projetos));})
+                    .attr("cx", function(d){ return (widthScale(d.n_projetos))+35;})
+                    .attr("cy", function(d){ return (heightScale(d.pib));})
                     .attr("r", 5)
                     .attr("fill","black")
                     .on("mouseover", mouseover)

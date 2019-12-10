@@ -3,6 +3,13 @@
 <link rel="stylesheet" href="css/estilo.css">
 <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+<style>
+	.brush .extent {
+	  fill-opacity: .3;
+	  stroke: #fff;
+	  shape-rendering: crispEdges;
+	}
+</style>
 
 <meta charset="utf-8">
 	<div id="cssload-loader">

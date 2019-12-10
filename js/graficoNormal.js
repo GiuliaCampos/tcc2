@@ -10,13 +10,19 @@ async function start(){
   var medioFaturamento = (maiorFaturamento + menorFaturamento)/2;
 
   var width = 1000;
-  var height = 800;
+  var height = 700;
+
+  federacao.sort(function compare(a,b){
+    if(a.faturamento < b.faturamento) return -1;
+    if(a.faturamento > b.faturamento) return 1;
+    return 0;
+  });
 
   var canvas = d3.select(".grafico")
                 .append("svg")
                 .attr("width", width)
                 .attr("height", height)
-                .attr("transform", "translate(0 , 0)");
+                .attr("transform", "translate(15, 0)");
 
   var widthScale = d3.scaleLinear()
                     .domain([menorFaturamento, maiorFaturamento])
@@ -65,21 +71,15 @@ async function start(){
               .enter()
                 .append("rect")
                 .attr("width", 15)
-                .attr("height", 15)
+                .attr("height", 10)
                 .attr("fill", "#000")
                 .attr("y", 0)
                 .on("mouseover", mouseover)
                 .on("mousemove", mousemove)
                 .on("mouseleave", mouseleave);
-                // .on("mouseup",function(d){
-                //   d3.select(this);
-                //     document.getElementById("nomeFed").innerHTML = d.nome;
-                //     document.getElementById("fatFed").innerHTML = d.faturamento;
-                // });
-
       bars
         .transition()
-          .attr("y", function(d, i){ return (i+1) * 25})
+          .attr("y", function(d, i){ return (i+1) * 20})
         .transition()
           .duration(1500)
           .attr("width", function(d){ return widthScale(d.faturamento); })
@@ -92,7 +92,7 @@ async function start(){
     .append("text")
       
       .attr("x", function(d){return widthScale(d.faturamento) + 10})
-      .attr("y", function(d, i){ return (i+1) * 25 + 15})
+      .attr("y", function(d, i){ return (i+1) * 20 + 10})
       .attr("fill", "black")
       .attr("font-size", 15)
       .attr("font-family", "sans-serif");
@@ -101,26 +101,24 @@ async function start(){
       .transition()
       .delay(1500)
         .text(function(d){ return d.nome + " (" + d.estado + ")"});
-        // .text(function(d){ return d.nome + ´(${d.estado})´ });
-
 
   var x_axis = d3.axisBottom()
         .scale(widthScale);
 
-  var xAxisTranslate = 5;
+  var xAxisTranslate = 0;
 
   canvas.append("g")
-    .attr("transform", "translate(0 , " + xAxisTranslate  +")")
+    .attr("transform", "translate(-5 , " + xAxisTranslate  +")")
     .call(x_axis);
 
 
   var x_axis2 = d3.axisBottom()
         .scale(widthScale);
 
-  var xAxisTranslate2 = height - 60;
+  var xAxisTranslate2 = height - 130;
 
   canvas.append("g")
-    .attr("transform", "translate(0 , " + xAxisTranslate2  +")")
+    .attr("transform", "translate(-5, " + xAxisTranslate2  +")")
     .call(x_axis2);
 }
 start();

@@ -5,7 +5,7 @@
 
 	<div class="container">
 		<div class="grafico" style="width: 100%;">
-			<h2 class="titulo">EJ's de acordo com cluster</h2>
+			<h2 class="titulo">EJs de acordo com cluster</h2>
 			<div id="div_template"></div>
 		</div>
 		<div class="informacao" style="width: 20%;">

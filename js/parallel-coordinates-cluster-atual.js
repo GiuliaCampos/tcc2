@@ -7,12 +7,13 @@ async function start(){
     document.getElementById('cssload-loader').style.display = 'none';   //quando obter resposta do await, muda o display da animacao
   }); 
   
-  // set the dimensions and margins of the graph
   var margin = {top: 30, right: 50, bottom: 10, left: 50},
       width = 800 - margin.left - margin.right,
       height = 600 - margin.top - margin.bottom;
 
-  // append the svg object to the body of the page
+  var dragging = {}, extents;
+  // x = d3.scaleBand().rangeRound([0, width]).padding(1);
+
   var svg = d3.select(".grafico")
     .append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -20,16 +21,26 @@ async function start(){
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    // Color scale: give me a specie name, I return a color
     var color = d3.scaleOrdinal()
       .domain([1,2,3,4,5])
       .range(['#F55F4F','#FFFF6A','#59F54F', '#4FF5F2', '#C66AFF']);
 
-    // Here I set the list of dimension manually to control the order of axis:
     dimensions = ["tempoProjMedio", "n_membros", "n_projetosAtual", "faturamentoAtual", "indice_2020"];
+    // x.domain(dimensions);
 
     // For each dimension, I build a linear scale. I store all in a y object
-    var y = {};
+    var y = {}
+      //for (i in dimensions) {
+      //   name = dimensions[i]
+      //   y[name] = d3.scaleLinear()
+      //     //.domain( [0,8] ) // --> Same axis range for each group
+      //     // --> different axis range for each group --> 
+      //     //.domain( [d3.extent(data, function(d) { return +d[name]; })] )
+      //     .domain( [d3.extent(ej, function(d) { return d[name]; })] )
+      //     .range([height, 0])
+      // }
+
+      // console.log(y);
 
     var maiorProjetos = d3.max(ej, function(d){ return d.n_projetosAtual});
     var menorProjetos = d3.min(ej, function(d){ return d.n_projetosAtual});
@@ -63,8 +74,10 @@ async function start(){
 
     // Build the X scale -> it find the best position for each Y axis
     x = d3.scalePoint()
-    .range([0, width])
-    .domain(dimensions);
+      .range([0, width])
+      .domain(dimensions);
+
+      extents = dimensions.map(function(p) { return [0,0]; });
 
     var Tooltip = d3.select("#div_template")
     .append("div")
@@ -85,6 +98,7 @@ async function start(){
         .style("stroke",  function(d){ return( color(d.cluster))} )
         .style("opacity", 1)
     }
+
   var mousemove = function(d) {
     Tooltip
       .html( d.nome + "<br>Faturamento: R$" + d.faturamentoAtual
@@ -94,6 +108,7 @@ async function start(){
       .style("left", (d3.mouse(this)[0]+20) + "px")
       .style("top", (d3.mouse(this)[1]) + "px")
   }
+
   var mouseleave = function(d) {
     Tooltip
       .style("opacity", 0)
@@ -126,7 +141,7 @@ async function start(){
         .on("mouseleave", mouseleave);
 
     // Draw the axis:
-    svg.selectAll("myAxis")
+    var g = svg.selectAll("myAxis")
       // For each dimension of the dataset I add a 'g' element:
       .data(dimensions).enter()
       .append("g")
@@ -140,10 +155,48 @@ async function start(){
       .style("text-anchor", "middle")
       .attr("y", -9)
       .text(function(d) { return d; })
-      .style("fill", "black");
+      .style("fill", "black")
+      .call(d3.drag()
+        .subject(function(d) { return {x: x(d)}; })
+        .on("start", function(d) {
+          dragging[d] = x(d);
+          svg.attr("visibility", "hidden");
+        })
+        .on("drag", function(d) {
+          dragging[d] = Math.min(width, Math.max(0, d3.event.x));
+          foreground.attr("d", path);
+          dimensions.sort(function(a, b) { return position(a) - position(b); });
+          x.domain(dimensions);
+          svg.attr("transform", function(d) { return "translate(" + position(d) + ")"; })
+        })
+        .on("end", function(d) {
+          delete dragging[d];
+          transition(d3.select(this)).attr("transform", "translate(" + x(d) + ")");
+          transition(foreground).attr("d", path);
+          svg
+              .attr("d", path)
+            .transition()
+              .delay(500)
+              .duration(0)
+              .attr("visibility", null);
+        })
+      );
 
+      g.append("g")
+        .attr("class", "brush")
+        .each(function(d) {
+          d3.select(this).call(d3.brushY().extent([[-8, 0], [8,height]])
+            .on("start", brushstart).on("brush", brush_parallel_chart));
+        })
+        .selectAll("rect")
+          .attr("x", -8)
+          .attr("width", 16);
 
-      $(function(){
+      
+}
+  start();
+
+  $(function(){
         $('#cluster1').change(function(){
           if(!($(this).prop('checked'))){
             d3.selectAll(".line1").style("visibility", 'hidden');
@@ -186,8 +239,38 @@ async function start(){
             d3.selectAll(".line5").style("visibility", 'visible');
           }
         });
-      })
+      });
+
+
+  function position(d) {
+    var v = dragging[d];
+    return v == null ? x(d) : v;
+  }
+
+  function transition(g) {
+    return g.transition().duration(500);
+  }
+
+  function brushstart() {
+    d3.event.sourceEvent.stopPropagation();
+  }
+
+ 
+// Handles a brush event, toggling the display of foreground lines.
+function brush_parallel_chart() {    
+    for(var i=0;i<dimensions.length;++i){
+        if(d3.event.target==y[dimensions[i]].brush) {
+            extents[i]=d3.event.selection.map(y[dimensions[i]].invert,y[dimensions[i]]);
+
+        }
+    }
+
+      foreground.style("display", function(d) {
+        return dimensions.every(function(p, i) {
+            if(extents[i][0]==0 && extents[i][0]==0) {
+                return true;
+            }
+          return extents[i][1] <= d[p] && d[p] <= extents[i][0];
+        }) ? null : "none";
+      });
 }
-
-  start();
-

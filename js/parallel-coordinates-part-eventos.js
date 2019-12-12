@@ -82,7 +82,7 @@ async function start(){
   var mousemove = function(d) {
     Tooltip
       .html("Nome: " + d.nome + "<br>Faturamento/pessoa: R$" + d.faturamento_membro
-        + "<br>Faturamento Total: R$" + d.faturamentoAtual
+      + "<br>Federação: " + d.federacao
         + "<br>Membros: " + d.n_membros + "<br>Participação: " + d.partcEventosRealMeta 
         + "<br>Participação: " + d.partcEventosMeta +"%")
       .style("left", (d3.mouse(this)[0]+10) + "px")

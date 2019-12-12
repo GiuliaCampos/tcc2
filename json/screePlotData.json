@@ -1,4 +1,4 @@
-var screePlotData = [
+screePlotData = [
 	{
 		"nome":"Roraima Júnior",
 		"n_empresa":4,
@@ -136,6 +136,8 @@ var screePlotData = [
 	}
 ];
 
+
+//NUMERO DO ESTADO, NRO EMPRESAS, NRO PESSOAS
 //     var screePlotData = [
 // 	{
 // 		"factor":1,
@@ -274,6 +276,8 @@ var screePlotData = [
 // 	}
 // ];
 
+
+//NOME ESTADO, NRO EMPRESAS, NRO PESSOAS
 // var screePlotData = [
 // 	{
 // 		"factor":"Roraima Júnior",
@@ -412,7 +416,7 @@ var screePlotData = [
 // 	}
 // ];
 
-
+//SIGLA ESTADO, NRO EMPRESAS, NRO PESSOAS
 // var screePlotData = [
 // 	{
 // 		"factor":"RR",
@@ -548,5 +552,145 @@ var screePlotData = [
 // 		"factor":"SP",
 // 		"eigenvalue":114,
 // 		"cumulative_eigenvalue":3225
+// 	}
+// ];
+
+
+//NRO ESTADO, NRO EMPRESAS, RENDA MEDIA
+// var screePlotData = [
+// 	{
+// 		"factor":1,
+// 		"eigenvalue":4,
+// 		"cumulative_eigenvalue":1204
+// 	},
+// 	{
+// 		"factor":2,
+// 		"eigenvalue":4,
+// 		"cumulative_eigenvalue":909
+// 	},
+// 	{
+// 		"factor":3,
+// 		"eigenvalue":3,
+// 		"cumulative_eigenvalue":857
+// 	},
+// 	{
+// 		"factor":4,
+// 		"eigenvalue":5,
+// 		"cumulative_eigenvalue":1045
+// 	},
+// 	{
+// 		"factor":5,
+// 		"eigenvalue":10,
+// 		"cumulative_eigenvalue":906
+// 	}, 
+// 	{
+// 		"factor":6,
+// 		"eigenvalue":4,
+// 		"cumulative_eigenvalue":1113
+// 	},
+// 	{
+// 		"factor":7,
+// 		"eigenvalue":5,
+// 		"cumulative_eigenvalue":817
+// 	},
+// 	{
+// 		"factor":8,
+// 		"eigenvalue":17,
+// 		"cumulative_eigenvalue":714
+// 	},
+// 	{
+// 		"factor":9,
+// 		"eigenvalue":23,
+// 		"cumulative_eigenvalue":898
+// 	},
+// 	{
+// 		"factor":10,
+// 		"eigenvalue":28,
+// 		"cumulative_eigenvalue":956
+// 	},
+// 	{
+// 		"factor":11,
+// 		"eigenvalue":13,
+// 		"cumulative_eigenvalue":605
+// 	},
+// 	{
+// 		"factor":12,
+// 		"eigenvalue":12,
+// 		"cumulative_eigenvalue":791
+// 	},
+// 	{
+// 		"factor":13,
+// 		"eigenvalue":18,
+// 		"cumulative_eigenvalue":1439
+// 	},
+// 	{
+// 		"factor":14,
+// 		"eigenvalue":35,
+// 		"cumulative_eigenvalue":1295
+// 	},
+// 	{
+// 		"factor":15,
+// 		"eigenvalue":14,
+// 		"cumulative_eigenvalue":1386
+// 	},
+// 	{
+// 		"factor":16,
+// 		"eigenvalue":21,
+// 		"cumulative_eigenvalue":863
+// 	},
+// 	{
+// 		"factor":17,
+// 		"eigenvalue":39,
+// 		"cumulative_eigenvalue":855
+// 	},
+// 	{
+// 		"factor":18,
+// 		"eigenvalue":23,
+// 		"cumulative_eigenvalue":871
+// 	},
+// 	{
+// 		"factor":19,
+// 		"eigenvalue":18,
+// 		"cumulative_eigenvalue":1323
+// 	},
+// 	{
+// 		"factor":20,
+// 		"eigenvalue":52,
+// 		"cumulative_eigenvalue":2460
+// 	},
+// 	{
+// 		"factor":21,
+// 		"eigenvalue":43,
+// 		"cumulative_eigenvalue":1660
+// 	},
+// 	{
+// 		"factor":22,
+// 		"eigenvalue":41,
+// 		"cumulative_eigenvalue":841
+// 	},
+// 	{
+// 		"factor":23,
+// 		"eigenvalue":64,
+// 		"cumulative_eigenvalue":1607
+// 	},
+// 	{
+// 		"factor":24,
+// 		"eigenvalue":48,
+// 		"cumulative_eigenvalue":1705
+// 	},
+// 	{
+// 		"factor":25,
+// 		"eigenvalue":131,
+// 		"cumulative_eigenvalue":1322
+// 	},
+// 	{
+// 		"factor":26,
+// 		"eigenvalue":50,
+// 		"cumulative_eigenvalue":1689
+// 	},
+// 	{
+// 		"factor":27,
+// 		"eigenvalue":114,
+// 		"cumulative_eigenvalue":1898
 // 	}
 // ];

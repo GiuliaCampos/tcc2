@@ -75,7 +75,8 @@ async function start(){
   var mousemove = function(d) {
     Tooltip
       .html("Nome: " + d.nome + "<br>Faturamento: R$" + d.faturamentoReal
-        + "<br>Projetos: " + d.n_projetosMeta + "<br>Cluster: " + d.cluster)
+        + "<br>Projetos: " + d.n_projetosMeta + "<br>Cluster: " + d.cluster
+        + "<br>Federação: " + d.federacao)
       .style("left", (d3.mouse(this)[0]+10) + "px")
       .style("top", (d3.mouse(this)[1]) + "px")
   }

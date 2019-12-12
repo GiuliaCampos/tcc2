@@ -38,140 +38,142 @@
 <script rel="stylesheet" href="d3-screeplot/d3-screeplot/dist/ScreePlot.css"></script>
 <script src="d3-screeplot/d3-screeplot/dist/ScreePlot.js"></script>
 <script>
+
+// nro estado, nro pessoas, renda media
 var screePlotData = [
 	{
 		"factor":1,
-		"eigenvalue":4,
+		"eigenvalue":41,
 		"cumulative_eigenvalue":1204
 	},
 	{
 		"factor":2,
-		"eigenvalue":4,
+		"eigenvalue":13,
 		"cumulative_eigenvalue":909
 	},
 	{
 		"factor":3,
-		"eigenvalue":3,
+		"eigenvalue":0,
 		"cumulative_eigenvalue":857
 	},
 	{
 		"factor":4,
-		"eigenvalue":5,
+		"eigenvalue":54,
 		"cumulative_eigenvalue":1045
 	},
 	{
 		"factor":5,
-		"eigenvalue":10,
+		"eigenvalue":257,
 		"cumulative_eigenvalue":906
 	}, 
 	{
 		"factor":6,
-		"eigenvalue":4,
+		"eigenvalue":27,
 		"cumulative_eigenvalue":1113
 	},
 	{
 		"factor":7,
-		"eigenvalue":5,
+		"eigenvalue":63,
 		"cumulative_eigenvalue":817
 	},
 	{
 		"factor":8,
-		"eigenvalue":17,
+		"eigenvalue":280,
 		"cumulative_eigenvalue":714
 	},
 	{
 		"factor":9,
-		"eigenvalue":23,
+		"eigenvalue":435,
 		"cumulative_eigenvalue":898
 	},
 	{
 		"factor":10,
-		"eigenvalue":28,
+		"eigenvalue":695,
 		"cumulative_eigenvalue":956
 	},
 	{
 		"factor":11,
-		"eigenvalue":13,
+		"eigenvalue":155,
 		"cumulative_eigenvalue":605
 	},
 	{
 		"factor":12,
-		"eigenvalue":12,
+		"eigenvalue":136,
 		"cumulative_eigenvalue":791
 	},
 	{
 		"factor":13,
-		"eigenvalue":18,
+		"eigenvalue":357,
 		"cumulative_eigenvalue":1439
 	},
 	{
 		"factor":14,
-		"eigenvalue":35,
+		"eigenvalue":627,
 		"cumulative_eigenvalue":1295
 	},
 	{
 		"factor":15,
-		"eigenvalue":14,
+		"eigenvalue":68,
 		"cumulative_eigenvalue":1386
 	},
 	{
 		"factor":16,
-		"eigenvalue":21,
+		"eigenvalue":277,
 		"cumulative_eigenvalue":863
 	},
 	{
 		"factor":17,
-		"eigenvalue":39,
+		"eigenvalue":898,
 		"cumulative_eigenvalue":855
 	},
 	{
 		"factor":18,
-		"eigenvalue":23,
+		"eigenvalue":653,
 		"cumulative_eigenvalue":871
 	},
 	{
 		"factor":19,
-		"eigenvalue":18,
+		"eigenvalue":280,
 		"cumulative_eigenvalue":1323
 	},
 	{
 		"factor":20,
-		"eigenvalue":52,
+		"eigenvalue":1314,
 		"cumulative_eigenvalue":2460
 	},
 	{
 		"factor":21,
-		"eigenvalue":43,
+		"eigenvalue":737,
 		"cumulative_eigenvalue":1660
 	},
 	{
 		"factor":22,
-		"eigenvalue":41,
+		"eigenvalue":1103,
 		"cumulative_eigenvalue":841
 	},
 	{
 		"factor":23,
-		"eigenvalue":64,
+		"eigenvalue":1473,
 		"cumulative_eigenvalue":1607
 	},
 	{
 		"factor":24,
-		"eigenvalue":48,
+		"eigenvalue":875,
 		"cumulative_eigenvalue":1705
 	},
 	{
 		"factor":25,
-		"eigenvalue":131,
+		"eigenvalue":3633,
 		"cumulative_eigenvalue":1322
 	},
 	{
 		"factor":26,
-		"eigenvalue":50,
+		"eigenvalue":1293,
 		"cumulative_eigenvalue":1689
 	},
 	{
 		"factor":27,
-		"eigenvalue":114,
+		"eigenvalue":3225,
 		"cumulative_eigenvalue":1898
 	}
 ];
@@ -180,30 +182,30 @@ var screePlotData = [
         domElement: "#screePlot",
         width: $('#screePlot').parent().width(),
         height: 550,
-        margin:{top: 20,right: 20,bottom: 20,left: 35},
-        showGridlines:true,
-        noOfGridlines:10,
+        margin:{top: 20,right: 20,bottom: 20,left: 50},
+        showGridlines: true,
+        noOfGridlines: 10,
         showAxes:false,
         svgBackground:'#FFFFFF',
-        barFill:'#3498db',
+        barFill: "rgb(0,64,128)",
         barStroke:'#FFFFFF',
         barStrokeWidth:0,
-        selBarFill:'#2ECC71',
+        selBarFill:'rgb(255,0,128)',
         selBarStroke:'#FFFFFF',
         selBarStrokeWidth:0,
-        circleFill:'#3498db',
+        circleFill:'rgb(0,64,128)',
         circleStroke:'#FFFFFF',
         circleStrokeWidth:1,
-        selCircleFill:'#2ECC71',
+        selCircleFill:'rgb(255,183,255)',
         selCircleStroke:'#FFFFFF',
         selCircleStrokeWidth:1,
         lineStrokeWidth:2,
         filterLineStrokeWidth:2,
-        nodeTextColor:"#ffff00"
+        nodeTextColor:"black"
     };
 
     var screePlotDataOptions = {
-        factorSelected:5
+        factorSelected:1
     }
 
     var screePlot = new ScreePlot(screePlotCSSOptions);

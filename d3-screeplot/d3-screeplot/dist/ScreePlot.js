@@ -165,8 +165,8 @@ function ScreePlot(options) {
             parent.y_gridlines.style("visibility", "hidden");
         }
         else{
-            parent.x_gridlines.style("visibility", "visible");
-            parent.y_gridlines.style("visibility", "visible");
+            parent.x_gridlines.style("visibility", "hidden");
+            parent.y_gridlines.style("visibility", "hidden");
         }
     }
 
@@ -306,7 +306,7 @@ function ScreePlot(options) {
             .style("text-anchor", "end")
             .attr("font-family", "sans-serif")
             .attr("font-size", "1em")
-            .text("X Axis");
+            .text("");
 
         // text label for the y axis
         parent.yAxisLabel = parent.g.append("text")
@@ -318,7 +318,7 @@ function ScreePlot(options) {
             .attr("font-family", "sans-serif")
             .attr("font-size", "1em")
             .style("text-anchor", "end")
-            .text("Y Axis");
+            .text("");
 
     }
 
@@ -455,7 +455,7 @@ function ScreePlot(options) {
 
             var factor = parent.x.invert(mouseX+parent.x.bandwidth()/2 + (parent.x.bandwidth()*0.1)/2) - 1;
 
-            parent.crosshairLabelX.attr("x",mouseX).attr("y",parent.y(115)-3.75).text(function() {
+            parent.crosshairLabelX.attr("x",mouseX).attr("y",parent.y(3700)-3.75).text(function() {
               return factor;
             });
 
@@ -464,7 +464,7 @@ function ScreePlot(options) {
             });
 
             parent.crosshairLabelYPath.attr("transform","translate(" + (-40) + "," + (mouseY-7) + ")");
-            parent.crosshairLabelXPath.attr("transform","translate(" + (mouseX - 20) + "," + (parent.y(115)-15) + ")");
+            parent.crosshairLabelXPath.attr("transform","translate(" + (mouseX - 20) + "," + (parent.y(3700)-15) + ")");
 
             d3.selectAll(".bar")
             .attr("fill",function(d){return d.factor <= factor ? parent.selBarFill : parent.barFill })
@@ -503,10 +503,10 @@ function ScreePlot(options) {
             parent.factorSelected = parent.x.invert(mouseX+parent.x.bandwidth()/2 + (parent.x.bandwidth()*0.1)/2) - 1;
             console.log(parent.factorSelected);
 
-            parent.filterLabelX.style("visibility","visible").attr("x",mouseX).attr("y",parent.y(115)-3.75).text(function() {
+            parent.filterLabelX.style("visibility","visible").attr("x",mouseX).attr("y",parent.y(3700)-3.75).text(function() {
               return parent.factorSelected;
             });
-            parent.filterLabelXPath.style("visibility","visible").attr("transform","translate(" + (mouseX- 20) + "," + (parent.y(115)-15) + ")");
+            parent.filterLabelXPath.style("visibility","visible").attr("transform","translate(" + (mouseX- 20) + "," + (parent.y(3700)-15) + ")");
           });
     }
 
@@ -533,7 +533,7 @@ function ScreePlot(options) {
         var domain = parent.dataset.map(function(d) { return d.factor; });
         domain.push(domain[domain.length-1]+1);
         parent.x.domain(domain);
-        parent.y.domain([0, 2500]);
+        parent.y.domain([0, 3700]);
 
         // custom invert function
         parent.x.invert = (function(){
@@ -665,11 +665,11 @@ function ScreePlot(options) {
           .attr("x2", parent.x(parent.factorSelected)+parent.x.bandwidth()/2)
           .attr("y2", parent.height);
 
-        parent.filterLabelX.style("visibility","visible").attr("x",parent.x(parent.factorSelected)+parent.x.bandwidth()/2).attr("y",parent.y(115)-3.75).text(function() {
+        parent.filterLabelX.style("visibility","visible").attr("x",parent.x(parent.factorSelected)+parent.x.bandwidth()/2).attr("y",parent.y(3700)-3.75).text(function() {
           return parent.factorSelected;
         });
 
-        parent.filterLabelXPath.style("visibility","visible").attr("transform","translate(" + (parent.x(parent.factorSelected)+parent.x.bandwidth()/2-20) + "," + (parent.y(115)-15) + ")");
+        parent.filterLabelXPath.style("visibility","visible").attr("transform","translate(" + (parent.x(parent.factorSelected)+parent.x.bandwidth()/2-20) + "," + (parent.y(3700)-15) + ")");
 
     }
 

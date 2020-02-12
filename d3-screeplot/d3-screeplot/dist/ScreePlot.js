@@ -520,6 +520,41 @@ function ScreePlot(options) {
 
     function render(dataset,options){
 
+        var Tooltip = d3.select("#div_template")
+            .append("div")
+            .style("opacity", 0)
+            .attr("class", "tooltip")
+            .style("background-color", "white")
+            .style("border", "solid")
+            .style("border-width", "2px")
+            .style("border-radius", "5px")
+            .style("padding", "5px");
+
+            var overmouse = function(d) {
+            Tooltip
+                .style("opacity", 1)
+            d3.selectAll("path")
+                .style("opacity", 0.03)
+            d3.select(this)
+                .style("stroke",  "black" )
+                .style("opacity", 1)
+            }
+        var movemouse = function(d) {
+            Tooltip
+            .html(d.sigla)
+            .style("left", (d3.mouse(this)[0]+20) + "px")
+            .style("top", (d3.mouse(this)[1]) + "px")
+        }
+        // var mouseleave = function(d) {
+        //     Tooltip
+        //     .style("opacity", 0)
+        //     d3.selectAll("path")
+        //         .style("opacity", 1)
+        //     d3.select(this)
+        //     .style("stroke", function(d){ return( color(d.cluster))} )
+        //     .style("opacity", 1)
+        // }
+
         parent.dataset = dataset;
         parent.dataOptions = options;
         parent.factorSelected = options.factorSelected;
@@ -573,7 +608,9 @@ function ScreePlot(options) {
               .attr("width", parent.x.bandwidth())
               .attr("y", function(d) { if(d.eigenvalue < 1){ return parent.height - 2;} else{return parent.y(d.eigenvalue);} })
               .attr("height", function(d) { if(d.eigenvalue < 1){return 2 } else{return parent.height - parent.y(d.eigenvalue);} })
-              .merge(parent.bars);
+              .merge(parent.bars)
+              .on("mouseover", overmouse)
+              .on("mousemove", movemouse);
 
         parent.bars.exit().remove();
 

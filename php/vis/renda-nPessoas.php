@@ -21,7 +21,8 @@
 	</div> -->
 	<div class="container">
 		<div class="grafico" style="width: 100%;" onload="document.getElementById('cssload-loader').style.visibility = "hidden">
-			<h2 class="titulo">Análise Cluster</h2>
+			<h2 class="titulo">Renda Média comparada ao Número de empresarios juniores estadual</h2>
+			<div id="div_template"></div>
 			<div id="screePlot"></div>
 		</div>
 		<div class="informacao" style="width: 20%;">
@@ -44,137 +45,164 @@ var screePlotData = [
 	{
 		"factor":1,
 		"eigenvalue":41,
-		"cumulative_eigenvalue":1204
+		"cumulative_eigenvalue":1204,
+		"sigla": "RR"
 	},
 	{
 		"factor":2,
 		"eigenvalue":13,
-		"cumulative_eigenvalue":909
+		"cumulative_eigenvalue":909,
+		"sigla": "AC"
 	},
 	{
 		"factor":3,
 		"eigenvalue":0,
-		"cumulative_eigenvalue":857
+		"cumulative_eigenvalue":857,
+		"sigla": "AP"
 	},
 	{
 		"factor":4,
 		"eigenvalue":54,
-		"cumulative_eigenvalue":1045
+		"cumulative_eigenvalue":1045,
+		"sigla": "TO"
 	},
 	{
 		"factor":5,
 		"eigenvalue":257,
-		"cumulative_eigenvalue":906
+		"cumulative_eigenvalue":906,
+		"sigla": "SE"
 	}, 
 	{
 		"factor":6,
 		"eigenvalue":27,
-		"cumulative_eigenvalue":1113
+		"cumulative_eigenvalue":1113,
+		"sigla": "RO"
 	},
 	{
 		"factor":7,
 		"eigenvalue":63,
-		"cumulative_eigenvalue":817
+		"cumulative_eigenvalue":817,
+		"sigla": "PI"
 	},
 	{
 		"factor":8,
 		"eigenvalue":280,
-		"cumulative_eigenvalue":714
+		"cumulative_eigenvalue":714,
+		"sigla": "AL"
 	},
 	{
 		"factor":9,
 		"eigenvalue":435,
-		"cumulative_eigenvalue":898
+		"cumulative_eigenvalue":898,
+		"sigla": "PB"
 	},
 	{
 		"factor":10,
 		"eigenvalue":695,
-		"cumulative_eigenvalue":956
+		"cumulative_eigenvalue":956,
+		"sigla": "RN"
 	},
 	{
 		"factor":11,
 		"eigenvalue":155,
-		"cumulative_eigenvalue":605
+		"cumulative_eigenvalue":605,
+		"sigla": "MA"
 	},
 	{
 		"factor":12,
 		"eigenvalue":136,
-		"cumulative_eigenvalue":791
+		"cumulative_eigenvalue":791,
+		"sigla": "AM"
 	},
 	{
 		"factor":13,
 		"eigenvalue":357,
-		"cumulative_eigenvalue":1439
+		"cumulative_eigenvalue":1439,
+		"sigla": "MS"
 	},
 	{
 		"factor":14,
 		"eigenvalue":627,
-		"cumulative_eigenvalue":1295
+		"cumulative_eigenvalue":1295,
+		"sigla": "ES"
 	},
 	{
 		"factor":15,
 		"eigenvalue":68,
-		"cumulative_eigenvalue":1386
+		"cumulative_eigenvalue":1386,
+		"sigla": "MT"
 	},
 	{
 		"factor":16,
 		"eigenvalue":277,
-		"cumulative_eigenvalue":863
+		"cumulative_eigenvalue":863,
+		"sigla": "PA"
 	},
 	{
 		"factor":17,
 		"eigenvalue":898,
-		"cumulative_eigenvalue":855
+		"cumulative_eigenvalue":855,
+		"sigla": "CE"
 	},
 	{
 		"factor":18,
 		"eigenvalue":653,
-		"cumulative_eigenvalue":871
+		"cumulative_eigenvalue":871,
+		"sigla": "PE"
 	},
 	{
 		"factor":19,
 		"eigenvalue":280,
-		"cumulative_eigenvalue":1323
+		"cumulative_eigenvalue":1323,
+		"sigla": "GO"
 	},
 	{
 		"factor":20,
 		"eigenvalue":1314,
-		"cumulative_eigenvalue":2460
+		"cumulative_eigenvalue":2460,
+		"sigla": "DF"
 	},
 	{
 		"factor":21,
 		"eigenvalue":737,
-		"cumulative_eigenvalue":1660
+		"cumulative_eigenvalue":1660,
+		"sigla": "SC"
 	},
 	{
 		"factor":22,
 		"eigenvalue":1103,
-		"cumulative_eigenvalue":841
+		"cumulative_eigenvalue":841,
+		"sigla": "BA"
 	},
 	{
 		"factor":23,
 		"eigenvalue":1473,
-		"cumulative_eigenvalue":1607
+		"cumulative_eigenvalue":1607,
+		"sigla": "PR"
 	},
 	{
 		"factor":24,
 		"eigenvalue":875,
-		"cumulative_eigenvalue":1705
+		"cumulative_eigenvalue":1705,
+		"sigla": "RS"
 	},
 	{
 		"factor":25,
 		"eigenvalue":3633,
-		"cumulative_eigenvalue":1322
+		"cumulative_eigenvalue":1322,
+		"sigla": "MG"
 	},
 	{
 		"factor":26,
 		"eigenvalue":1293,
-		"cumulative_eigenvalue":1689
+		"cumulative_eigenvalue":1689,
+		"sigla": "RJ"
 	},
 	{
 		"factor":27,
 		"eigenvalue":3225,
-		"cumulative_eigenvalue":1898
+		"cumulative_eigenvalue":1898,
+		"sigla": "SP"
 	}
 ];
 

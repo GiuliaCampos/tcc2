@@ -51,8 +51,8 @@ async function start(){
 
   //Escala no eixo y
   var heightScale = d3.scaleLinear()
-                      //.domain([menorPib, maiorPib])
-                      .domain([menorPib, 640185780])
+                      .domain([menorPib, maiorPib])
+                      //.domain([menorPib, 640185780])
                       .range([height/1.5, 0])
                       .nice();
   var y_axis = d3.axisLeft()
